@@ -7,12 +7,18 @@
 //
 
 import Foundation
-import Result
 import Alamofire_Result
+import SwiftyJSON
+import BrightFutures
 
 class AlamofireHttpClient: HttpClient {
 
-    func send(httpRequest: HttpRequest) -> Result<HttpResponse, NSError> {
-        return Result.Success(HttpResponse(statusCode: 200, body: ""))
+    func send(httpRequest: HttpRequest) -> Future<HttpResponse, NSError> {
+        let manager = Manager.sharedInstance
+        let promise = Promise<HttpResponse, NSError>()
+        manager.request(.GET, "https://httpbin.org/get").responseJSON { response in
+
+        }
+        return promise.future
     }
 }

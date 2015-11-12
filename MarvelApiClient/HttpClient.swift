@@ -7,10 +7,11 @@
 //
 
 import Foundation
-import Result
+import BrightFutures
+
 
 protocol HttpClient {
 
-    func send(httpRequest: HttpRequest) -> Result<HttpResponse, NSError>
+    func send(httpRequest: HttpRequest) -> Future<HttpResponse, NSError>
 
 }
