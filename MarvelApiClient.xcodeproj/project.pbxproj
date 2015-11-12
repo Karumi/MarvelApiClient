@@ -15,6 +15,8 @@
 		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
 		EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */; };
 		EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */; };
+		EBE70EAB1BF4FA2D00356CA4 /* AlamofireHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EAA1BF4FA2D00356CA4 /* AlamofireHttpClient.swift */; };
+		EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +43,8 @@
 		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
 		EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
 		EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpVerb.swift; sourceTree = "<group>"; };
+		EBE70EAA1BF4FA2D00356CA4 /* AlamofireHttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClient.swift; sourceTree = "<group>"; };
+		EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBE70EAC1BF4FA5300356CA4 /* Http */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 			);
 			path = MarvelApiClientTests;
@@ -126,6 +131,15 @@
 				EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */,
 				EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */,
 				EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */,
+				EBE70EAA1BF4FA2D00356CA4 /* AlamofireHttpClient.swift */,
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
+		EBE70EAC1BF4FA5300356CA4 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */,
 			);
 			name = Http;
 			sourceTree = "<group>";
@@ -278,6 +292,7 @@
 				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
 				EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */,
 				EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */,
+				EBE70EAB1BF4FA2D00356CA4 /* AlamofireHttpClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,16 +444,19 @@
 		EB52A0DD1BF4EBBA00AE003E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarvelApiClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.marvelapiclient.MarvelApiClientTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		EB52A0DE1BF4EBBA00AE003E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarvelApiClientTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.marvelapiclient.MarvelApiClientTests;
