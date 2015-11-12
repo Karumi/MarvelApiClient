@@ -11,6 +11,10 @@
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
 		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
+		EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */; };
+		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
+		EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */; };
+		EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,10 @@
 		EB52A0CF1BF4EBBA00AE003E /* MarvelApiClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelApiClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0D61BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
+		EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpResponse.swift; sourceTree = "<group>"; };
+		EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpVerb.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +104,7 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				EBE70E9A1BF4F4BE00356CA4 /* Http */,
 				EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */,
 				EB52A0CA1BF4EBBA00AE003E /* Info.plist */,
 			);
@@ -108,6 +117,17 @@
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 			);
 			path = MarvelApiClientTests;
+			sourceTree = "<group>";
+		};
+		EBE70E9A1BF4F4BE00356CA4 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */,
+				EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */,
+				EBE70E9F1BF4F73D00356CA4 /* HttpResponse.swift */,
+				EBE70EA11BF4F75D00356CA4 /* HttpVerb.swift */,
+			);
+			name = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,6 +274,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */,
+				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
+				EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */,
+				EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +392,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BB45DCAD9861AFDF4B16FCE1 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -378,6 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.karumi.marvelapiclient.MarvelApiClient;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -385,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ACFEAB9056BD2C36C1A05201 /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
