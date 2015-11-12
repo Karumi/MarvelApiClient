@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
-		EB52A0D51BF4EBBA00AE003E /* MarvelApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB52A0D41BF4EBBA00AE003E /* MarvelApiClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,7 +26,6 @@
 		EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelApiClient.h; sourceTree = "<group>"; };
 		EB52A0CA1BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB52A0CF1BF4EBBA00AE003E /* MarvelApiClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelApiClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB52A0D41BF4EBBA00AE003E /* MarvelApiClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelApiClientTests.swift; sourceTree = "<group>"; };
 		EB52A0D61BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -80,7 +78,6 @@
 		EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */ = {
 			isa = PBXGroup;
 			children = (
-				EB52A0D41BF4EBBA00AE003E /* MarvelApiClientTests.swift */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 			);
 			path = MarvelApiClientTests;
@@ -201,7 +198,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB52A0D51BF4EBBA00AE003E /* MarvelApiClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,6 +372,7 @@
 				EB52A0DB1BF4EBBA00AE003E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EB52A0DC1BF4EBBA00AE003E /* Build configuration list for PBXNativeTarget "MarvelApiClientTests" */ = {
 			isa = XCConfigurationList;
@@ -384,6 +381,7 @@
 				EB52A0DE1BF4EBBA00AE003E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
