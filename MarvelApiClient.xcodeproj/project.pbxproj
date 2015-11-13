@@ -32,10 +32,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.release.xcconfig"; sourceTree = "<group>"; };
 		2CD5ABCECE6CB6FB7339C827 /* Pods-MarvelApiClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClientTests/Pods-MarvelApiClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9BA6BA9D2827C99812A39F70 /* Pods-MarvelApiClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClientTests/Pods-MarvelApiClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		ACFEAB9056BD2C36C1A05201 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B1912EE03B21457D3F69B1FF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BB45DCAD9861AFDF4B16FCE1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelApiClient.h; sourceTree = "<group>"; };
@@ -82,6 +84,8 @@
 				ACFEAB9056BD2C36C1A05201 /* Pods.release.xcconfig */,
 				2CD5ABCECE6CB6FB7339C827 /* Pods-MarvelApiClientTests.debug.xcconfig */,
 				9BA6BA9D2827C99812A39F70 /* Pods-MarvelApiClientTests.release.xcconfig */,
+				B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */,
+				06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -466,7 +470,7 @@
 		};
 		EB52A0DA1BF4EBBA00AE003E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BB45DCAD9861AFDF4B16FCE1 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -485,7 +489,7 @@
 		};
 		EB52A0DB1BF4EBBA00AE003E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ACFEAB9056BD2C36C1A05201 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
