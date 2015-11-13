@@ -17,7 +17,7 @@ class AlamofireHttpClient: HttpClient {
         let promise = Promise<HttpResponse, NSError>()
         let verb = Method(rawValue: httpRequest.verb.toAlamofireVerb())!
 
-        manager.request(verb, httpRequest.url).responseString { response in
+        manager.request(verb, httpRequest.url, parameters: httpRequest.parameters).responseString { response in
             if let error = response.result.error {
                 promise.failure(error)
             }else if let httpResponse = response.response {

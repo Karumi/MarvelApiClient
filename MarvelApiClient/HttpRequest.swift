@@ -11,7 +11,7 @@ import Foundation
 struct HttpRequest {
 
     let url: String
-    let parameters: [String : String]
+    let parameters: [String : String]?
     let headers: [String : String]
     let verb: HttpVerb
 

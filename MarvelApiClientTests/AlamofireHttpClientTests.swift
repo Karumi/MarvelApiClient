@@ -135,10 +135,25 @@ class AlamofireHttpClientTests : XCTestCase {
         expect(error).toEventually(equal(anyError))
     }
 
-    private func givenOneHttpRequest(httpVerb: HttpVerb, url: String) -> HttpRequest {
-        let anyParams = [String : String]()
+    func testSendsParamsConfiguredInTheHttpRequest() {
+        stubRequest("GET", "http://www.any.com/?key=value")
+        let httpClient = AlamofireHttpClient()
+
+        let params = ["key" : "value"]
+        var requestFinished = false
+        let getRequest = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: params)
+        httpClient.send(getRequest).onSuccess { httpResponse in
+            requestFinished = true
+        }
+
+        httpClient.send(getRequest)
+
+        expect(requestFinished).toEventually(beTrue())
+    }
+
+    private func givenOneHttpRequest(httpVerb: HttpVerb, url: String, params: [String:String]? = nil) -> HttpRequest {
         let anyHeaders = [String : String]()
-        return HttpRequest(url: url, parameters: anyParams, headers: anyHeaders, verb: httpVerb)
+        return HttpRequest(url: url, parameters: params, headers: anyHeaders, verb: httpVerb)
     }
 
 }
