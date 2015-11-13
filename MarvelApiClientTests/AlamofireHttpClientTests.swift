@@ -37,14 +37,12 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsGetRequestToAnyPath() {
         stubRequest("GET", anyUrl)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
 
         var requestFinished = false
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             requestFinished = true
         }
-
-        httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
     }
@@ -52,14 +50,12 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsPostRequestToAnyPath() {
         stubRequest("POST", anyUrl)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.POST, url: anyUrl)
 
         var requestFinished = false
-        let getRequest = givenOneHttpRequest(.POST, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             requestFinished = true
         }
-
-        httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
     }
@@ -67,14 +63,12 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsPutRequestToAnyPath() {
         stubRequest("PUT", anyUrl)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.PUT, url: anyUrl)
 
         var requestFinished = false
-        let getRequest = givenOneHttpRequest(.PUT, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             requestFinished = true
         }
-
-        httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
     }
@@ -82,14 +76,12 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsDeleteRequestToAnyPath() {
         stubRequest("DELETE", anyUrl)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.DELETE, url: anyUrl)
 
         var requestFinished = false
-        let getRequest = givenOneHttpRequest(.DELETE, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             requestFinished = true
         }
-
-        httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
     }
@@ -97,14 +89,12 @@ class AlamofireHttpClientTests : XCTestCase {
     func testReceivesHttpStatusCodeInTheHttpResponse() {
         stubRequest("GET", anyUrl).andReturn(anyStatusCode)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
 
         var statusCode = 0
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             statusCode = httpResponse.statusCode
         }
-
-        httpClient.send(getRequest)
 
         expect(statusCode).toEventually(equal(anyStatusCode))
     }
@@ -112,9 +102,9 @@ class AlamofireHttpClientTests : XCTestCase {
     func testReceivesResponseBodyInTheHttpResponse() {
         stubRequest("GET", anyUrl).andReturn(200).withBody(anyBody)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
 
         var body = ""
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
         httpClient.send(getRequest).onSuccess { httpResponse in
             body = httpResponse.body!
         }
@@ -125,9 +115,9 @@ class AlamofireHttpClientTests : XCTestCase {
     func testPropagatesErrorsInTheFuture() {
         stubRequest("GET", anyUrl).andFailWithError(anyError)
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
 
         var error: NSError = NSError(domain: "", code: 0, userInfo: nil)
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
         httpClient.send(getRequest).onFailure { httpError in
             error = httpError
         }
@@ -138,10 +128,9 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsParamsConfiguredInTheHttpRequest() {
         stubRequest("GET", "http://www.any.com/?key=value")
         let httpClient = AlamofireHttpClient()
+        let getRequest = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: ["key" : "value"])
 
-        let params = ["key" : "value"]
         var requestFinished = false
-        let getRequest = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: params)
         httpClient.send(getRequest).onSuccess { httpResponse in
             requestFinished = true
         }
