@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/Alamofire_Result.framework"
   install_framework "Pods/BrightFutures.framework"
+  install_framework "Pods/Nimble.framework"
   install_framework "Pods/Nocilla.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SwiftyJSON.framework"
@@ -93,6 +94,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/Alamofire_Result.framework"
   install_framework "Pods/BrightFutures.framework"
+  install_framework "Pods/Nimble.framework"
   install_framework "Pods/Nocilla.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SwiftyJSON.framework"

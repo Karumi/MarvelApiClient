@@ -1,6 +1,7 @@
-pod 'Alamofire-Result', '~> 3.0.0-karumi'
-pod 'SwiftyJSON', '~> 2.3.0'
-pod 'BrightFutures', '~> 3.1.2'
+pod 'Alamofire-Result', '~> 3.1.1-karumi'
+pod 'SwiftyJSON'
+pod 'BrightFutures'
 pod 'Nocilla'
+pod 'Nimble'
 
 use_frameworks!
