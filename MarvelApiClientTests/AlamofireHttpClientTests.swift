@@ -18,7 +18,7 @@ class AlamofireHttpClientTests : XCTestCase {
 
     private let nocilla: LSNocilla = LSNocilla.sharedInstance()
 
-    private let anyUrl = "www.any.com"
+    private let anyUrl = "http://www.any.com"
 
     override func setUp() {
         nocilla.start()
@@ -38,6 +38,53 @@ class AlamofireHttpClientTests : XCTestCase {
         httpClient.send(getRequest).onSuccess { (httpResponse) -> Void in
             requestFinished = true
         }
+
+        httpClient.send(getRequest)
+
+        expect(requestFinished).toEventually(beTrue())
+    }
+
+    func testSendsPostRequestToAnyPath() {
+        stubRequest("POST", anyUrl)
+        let httpClient = AlamofireHttpClient()
+
+        var requestFinished = false
+        let getRequest = givenOneHttpRequest(.POST, url: anyUrl)
+        httpClient.send(getRequest).onSuccess { (httpResponse) -> Void in
+            requestFinished = true
+        }
+
+        httpClient.send(getRequest)
+
+        expect(requestFinished).toEventually(beTrue())
+    }
+
+    func testSendsPutRequestToAnyPath() {
+        stubRequest("PUT", anyUrl)
+        let httpClient = AlamofireHttpClient()
+
+        var requestFinished = false
+        let getRequest = givenOneHttpRequest(.PUT, url: anyUrl)
+        httpClient.send(getRequest).onSuccess { (httpResponse) -> Void in
+            requestFinished = true
+        }
+
+        httpClient.send(getRequest)
+
+        expect(requestFinished).toEventually(beTrue())
+    }
+
+    func testSendsDeleteRequestToAnyPath() {
+        stubRequest("DELETE", anyUrl)
+        let httpClient = AlamofireHttpClient()
+
+        var requestFinished = false
+        let getRequest = givenOneHttpRequest(.DELETE, url: anyUrl)
+        httpClient.send(getRequest).onSuccess { (httpResponse) -> Void in
+            requestFinished = true
+        }
+
+        httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
     }
