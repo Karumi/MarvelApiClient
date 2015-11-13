@@ -84,10 +84,18 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-MarvelApiClientTests/Alamofire_Result.framework"
+  install_framework "Pods-MarvelApiClientTests/BrightFutures.framework"
+  install_framework "Pods-MarvelApiClientTests/Result.framework"
+  install_framework "Pods-MarvelApiClientTests/SwiftyJSON.framework"
   install_framework "Pods-MarvelApiClientTests/Nimble.framework"
   install_framework "Pods-MarvelApiClientTests/Nocilla.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-MarvelApiClientTests/Alamofire_Result.framework"
+  install_framework "Pods-MarvelApiClientTests/BrightFutures.framework"
+  install_framework "Pods-MarvelApiClientTests/Result.framework"
+  install_framework "Pods-MarvelApiClientTests/SwiftyJSON.framework"
   install_framework "Pods-MarvelApiClientTests/Nimble.framework"
   install_framework "Pods-MarvelApiClientTests/Nocilla.framework"
 fi

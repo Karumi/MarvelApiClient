@@ -293,7 +293,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7D34AEACD866D445C34B075 /* Copy Pods Resources */ = {
