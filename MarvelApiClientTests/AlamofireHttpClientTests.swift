@@ -37,111 +37,116 @@ class AlamofireHttpClientTests : XCTestCase {
     func testSendsGetRequestToAnyPath() {
         stubRequest("GET", anyUrl)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
+        let request = givenOneHttpRequest(.GET, url: anyUrl)
 
-        var requestFinished = false
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            requestFinished = true
-        }
+        let result = httpClient.send(request)
 
-        expect(requestFinished).toEventually(beTrue())
+        expect(result).toEventually(beSuccess())
     }
 
     func testSendsPostRequestToAnyPath() {
         stubRequest("POST", anyUrl)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.POST, url: anyUrl)
+        let request = givenOneHttpRequest(.POST, url: anyUrl)
 
-        var requestFinished = false
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            requestFinished = true
-        }
+        let result = httpClient.send(request)
 
-        expect(requestFinished).toEventually(beTrue())
+        expect(result).toEventually(beSuccess())
     }
 
     func testSendsPutRequestToAnyPath() {
         stubRequest("PUT", anyUrl)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.PUT, url: anyUrl)
+        let request = givenOneHttpRequest(.PUT, url: anyUrl)
 
-        var requestFinished = false
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            requestFinished = true
-        }
+        let result = httpClient.send(request)
 
-        expect(requestFinished).toEventually(beTrue())
+        expect(result).toEventually(beSuccess())
     }
 
     func testSendsDeleteRequestToAnyPath() {
         stubRequest("DELETE", anyUrl)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.DELETE, url: anyUrl)
+        let request = givenOneHttpRequest(.DELETE, url: anyUrl)
 
-        var requestFinished = false
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            requestFinished = true
-        }
+        let result = httpClient.send(request)
 
-        expect(requestFinished).toEventually(beTrue())
+        expect(result).toEventually(beSuccess())
     }
 
     func testReceivesHttpStatusCodeInTheHttpResponse() {
         stubRequest("GET", anyUrl).andReturn(anyStatusCode)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
+        let request = givenOneHttpRequest(.GET, url: anyUrl)
 
-        var statusCode = 0
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            statusCode = httpResponse.statusCode
-        }
+        let result = httpClient.send(request)
 
-        expect(statusCode).toEventually(equal(anyStatusCode))
+        expect(result).toEventually(beSuccess())
     }
 
     func testReceivesResponseBodyInTheHttpResponse() {
         stubRequest("GET", anyUrl).andReturn(200).withBody(anyBody)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
+        let request = givenOneHttpRequest(.GET, url: anyUrl)
 
-        var body = ""
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            body = httpResponse.body!
-        }
+        let result = httpClient.send(request)
 
-        expect(body).toEventually(equal(anyBody))
+        expect(result).toEventually(containsBody(anyBody))
     }
 
     func testPropagatesErrorsInTheFuture() {
         stubRequest("GET", anyUrl).andFailWithError(anyError)
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
+        let request = givenOneHttpRequest(.GET, url: anyUrl)
 
-        var error: NSError = NSError(domain: "", code: 0, userInfo: nil)
-        httpClient.send(getRequest).onFailure { httpError in
-            error = httpError
-        }
+        let result = httpClient.send(request)
 
-        expect(error).toEventually(equal(anyError))
+        expect(result).toEventually(failWithError(anyError))
     }
 
     func testSendsParamsConfiguredInTheHttpRequest() {
         stubRequest("GET", "http://www.any.com/?key=value")
         let httpClient = AlamofireHttpClient()
-        let getRequest = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: ["key" : "value"])
+        let request = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: ["key" : "value"])
 
-        var requestFinished = false
-        httpClient.send(getRequest).onSuccess { httpResponse in
-            requestFinished = true
-        }
+        let result = httpClient.send(request)
 
-        httpClient.send(getRequest)
-
-        expect(requestFinished).toEventually(beTrue())
+        expect(result).toEventually(beSuccess())
     }
 
     private func givenOneHttpRequest(httpVerb: HttpVerb, url: String, params: [String:String]? = nil, headers: [String:String]? = nil) -> HttpRequest {
         return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
+    private func beSuccess<T>() -> MatcherFunc<T?> {
+        return MatcherFunc { actualExpression, failureMessage in
+            failureMessage.postfixMessage = "be success"
+            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
+            return future.isSuccess
+        }
+    }
+
+    private func failWithError<T>(expectedError: NSError) -> MatcherFunc<T?> {
+        return MatcherFunc { actualExpression, failureMessage in
+            failureMessage.postfixMessage = "has error"
+            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
+            if let error = future.error {
+                return expectedError == error
+            } else {
+                return false
+            }
+        }
+    }
+
+    private func containsBody<T>(expectedBody: String) -> MatcherFunc<T?> {
+        return MatcherFunc { actualExpression, failureMessage in
+            failureMessage.postfixMessage = "contains body"
+            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
+            if let result = future.result?.value {
+                return result.body == expectedBody
+            } else {
+                return false
+            }
+        }
+    }
 }
