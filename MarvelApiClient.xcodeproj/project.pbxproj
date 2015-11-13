@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2441E8236472990FFD210D51 /* Pods_MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */; };
-		45B286E21EF44AF0C8584BD5 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1912EE03B21457D3F69B1FF /* Pods.framework */; };
 		7686E5E5EE0B0DE444E1FE0E /* Pods_MarvelApiClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */; };
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
@@ -60,7 +59,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45B286E21EF44AF0C8584BD5 /* Pods.framework in Frameworks */,
 				2441E8236472990FFD210D51 /* Pods_MarvelApiClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
