@@ -19,6 +19,7 @@ class AlamofireHttpClientTests : XCTestCase {
     private let nocilla: LSNocilla = LSNocilla.sharedInstance()
 
     private let anyUrl = "http://www.any.com"
+    private let anyStatusCode = 201
 
     override func setUp() {
         nocilla.start()
@@ -87,6 +88,21 @@ class AlamofireHttpClientTests : XCTestCase {
         httpClient.send(getRequest)
 
         expect(requestFinished).toEventually(beTrue())
+    }
+
+    func testReceivesHttpStatusCodeInTheHttpResponse() {
+        stubRequest("GET", anyUrl).andReturn(anyStatusCode)
+        let httpClient = AlamofireHttpClient()
+
+        var statusCode = 0
+        let getRequest = givenOneHttpRequest(.GET, url: anyUrl)
+        httpClient.send(getRequest).onSuccess { (httpResponse) -> Void in
+            statusCode = httpResponse.statusCode
+        }
+
+        httpClient.send(getRequest)
+
+        expect(statusCode).toEventually(equal(anyStatusCode))
     }
 
     private func givenOneHttpRequest(httpVerb: HttpVerb, url: String) -> HttpRequest {
