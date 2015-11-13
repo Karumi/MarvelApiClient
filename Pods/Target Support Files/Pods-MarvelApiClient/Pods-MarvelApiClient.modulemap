@@ -1,6 +1,0 @@
-framework module Pods_MarvelApiClient {
-  umbrella header "Pods-MarvelApiClient-umbrella.h"
-
-  export *
-  module * { export * }
-}
