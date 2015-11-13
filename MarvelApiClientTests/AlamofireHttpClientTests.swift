@@ -151,9 +151,8 @@ class AlamofireHttpClientTests : XCTestCase {
         expect(requestFinished).toEventually(beTrue())
     }
 
-    private func givenOneHttpRequest(httpVerb: HttpVerb, url: String, params: [String:String]? = nil) -> HttpRequest {
-        let anyHeaders = [String : String]()
-        return HttpRequest(url: url, parameters: params, headers: anyHeaders, verb: httpVerb)
+    private func givenOneHttpRequest(httpVerb: HttpVerb, url: String, params: [String:String]? = nil, headers: [String:String]? = nil) -> HttpRequest {
+        return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
 }
