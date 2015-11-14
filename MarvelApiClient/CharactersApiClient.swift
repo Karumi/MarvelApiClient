@@ -9,10 +9,7 @@
 import Foundation
 import BrightFutures
 
-public class CharactersApiClient {
-
-    //TODO: Abstract this.
-    private let httpClient = AlamofireHttpClient()
+public class CharactersApiClient : BaseApiClient {
     
     public func getAll() -> Future<[Character],NSError> {
         let request = HttpRequest(url: "http://gateway.marvel.com:80/v1/public/characters?apikey=54355f684e1983a183d7bfec96a4bf81", parameters: [String:String](), headers: [String:String](), verb: .GET)

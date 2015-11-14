@@ -9,13 +9,13 @@
 import Foundation
 import BrightFutures
 
-class BaseApiClient {
+public class BaseApiClient {
     
     private let host = "http://gateway.marvel.com/v1/public/"
     private let defaultHeaders = ["Accept" : "application/json"]
     
-    private let httpClient: HttpClient
-    private let timeProvider: TimeProvider
+    let httpClient: HttpClient
+    let timeProvider: TimeProvider
     
     init(timeProvider: TimeProvider, httpClient: HttpClient) {
         self.timeProvider = timeProvider
