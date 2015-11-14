@@ -17,6 +17,8 @@
 		EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */; };
 		EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1E71BF79D9400591AEA /* MarvelHashGenerator.swift */; };
 		EBAFE1EB1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1EA1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift */; };
+		EBAFE1EE1BF7B10B00591AEA /* BaseApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1ED1BF7B10B00591AEA /* BaseApiClient.swift */; };
+		EBAFE1F11BF7B48200591AEA /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F01BF7B48200591AEA /* Dictionary.swift */; };
 		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
 		EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
@@ -55,6 +57,8 @@
 		EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersApiClientTests.swift; sourceTree = "<group>"; };
 		EBAFE1E71BF79D9400591AEA /* MarvelHashGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelHashGenerator.swift; sourceTree = "<group>"; };
 		EBAFE1EA1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelHashGeneratorTests.swift; sourceTree = "<group>"; };
+		EBAFE1ED1BF7B10B00591AEA /* BaseApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiClient.swift; sourceTree = "<group>"; };
+		EBAFE1F01BF7B48200591AEA /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -134,9 +138,11 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				EBAFE1EC1BF7A0FA00591AEA /* Base */,
 				EBAFE1E61BF79D5300591AEA /* Authentication */,
 				EBAFE1CD1BF7810600591AEA /* Characters */,
 				EBE70E9A1BF4F4BE00356CA4 /* Http */,
+				EBAFE1EF1BF7B47200591AEA /* Extensions */,
 				EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */,
 				EB52A0CA1BF4EBBA00AE003E /* Info.plist */,
 				EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */,
@@ -186,6 +192,22 @@
 				EBAFE1EA1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift */,
 			);
 			name = Authentication;
+			sourceTree = "<group>";
+		};
+		EBAFE1EC1BF7A0FA00591AEA /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EBAFE1ED1BF7B10B00591AEA /* BaseApiClient.swift */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		EBAFE1EF1BF7B47200591AEA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBAFE1F01BF7B48200591AEA /* Dictionary.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		EBE70E9A1BF4F4BE00356CA4 /* Http */ = {
@@ -400,9 +422,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAFE1EE1BF7B10B00591AEA /* BaseApiClient.swift in Sources */,
 				EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */,
 				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
 				EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */,
+				EBAFE1F11BF7B48200591AEA /* Dictionary.swift in Sources */,
 				EBAFE1D11BF7813600591AEA /* MarvelApiClient.swift in Sources */,
 				EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */,
 				EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */,
