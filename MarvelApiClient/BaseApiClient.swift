@@ -30,7 +30,7 @@ class BaseApiClient {
         let timestamp = NSDate().timeIntervalSince1970 * 1000
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
-        let hash = MarvelHashGenerator.generateHash(timestamp, privateKey: privateKey, publicKey: publicKey)
+        let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
         let authParams = [ "ts" : "\(timestamp)", "apiKey" : publicKey, "hash" : hash]
         return authParams + (params ?? [String:String]())
     }

@@ -11,7 +11,7 @@ import CryptoSwift
 
 class MarvelHashGenerator {
 
-    static func generateHash(timestamp: Double, privateKey: String, publicKey: String) -> String {
+    static func generateHash(timestamp: Int, privateKey: String, publicKey: String) -> String {
         let combinedHash = "\(timestamp)\(privateKey)\(publicKey)"
         return combinedHash.md5()
     }
