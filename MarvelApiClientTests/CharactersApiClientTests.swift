@@ -12,14 +12,4 @@ import XCTest
 
 class CharactersApiClientTests : XCTestCase {
 
-    func test() {
-        let api = CharactersApiClient()
-        api.getAll().onSuccess { charaters in
-            print(charaters)
-            }.onFailure { error in
-            print(error)
-        }
-        sleep(30)
-    }
-    
 }
