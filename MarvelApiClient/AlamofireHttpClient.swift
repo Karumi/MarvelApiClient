@@ -16,7 +16,7 @@ class AlamofireHttpClient: HttpClient {
         let manager = Manager.sharedInstance
         let promise = Promise<HttpResponse, NSError>()
         let verb = Method(rawValue: httpRequest.verb.toAlamofireVerb())!
-
+        print("Params -> \(httpRequest.parameters)")
         manager.request(verb, httpRequest.url, parameters: httpRequest.parameters).responseString { response in
             if let error = response.result.error {
                 promise.failure(error)
