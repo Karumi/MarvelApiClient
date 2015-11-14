@@ -48,6 +48,17 @@ class BaseApiClientTests : XCTestCase {
         expect(result).toEventually(beSuccess())
     }
     
+    func testSendsAuthParamsByDefaultPlusTheConfiguredOnes() {
+        let apiClient = BaseApiClient(timeProvider: timeProvider, httpClient: httpClient)
+        givenCredentialsConfigured(anyPublicKey, privateKey: anyPrivateKey)
+        givenCurrentTimeIs(1)
+        stubRequest("GET", "http://gateway.marvel.com/v1/public/path?apiKey=1234&hash=ffd275c5130566a2916217b101f26150&k=v&ts=1")
+        
+        let result = apiClient.sendRequest(.GET, path: anyPath,params: ["k":"v"])
+        
+        expect(result).toEventually(beSuccess())
+    }
+    
     private func givenCredentialsConfigured(publicKey: String, privateKey: String) {
         MarvelApiClient.configureCredentials(publicKey, privateKey: privateKey)
     }
