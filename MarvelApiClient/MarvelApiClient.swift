@@ -8,7 +8,7 @@
 
 import Foundation
 
-class MarvelApiClient {
+public class MarvelApiClient {
 
     static var publicKey: String = ""
     static var privateKey: String = ""
@@ -17,5 +17,11 @@ class MarvelApiClient {
         MarvelApiClient.publicKey = publicKey
         MarvelApiClient.privateKey = privateKey
     }
+    
+    public static var charactersApiClient = CharactersApiClient(timeProvider: timeProvider,httpClient: httpClient)
+    
+    private static var timeProvider = TimeProvider()
+    
+    private static var httpClient = AlamofireHttpClient()
     
 }

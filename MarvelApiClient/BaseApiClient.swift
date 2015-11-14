@@ -37,7 +37,7 @@ public class BaseApiClient {
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ "ts" : "\(timestamp)", "apiKey" : publicKey, "hash" : hash]
+        let authParams = [ "ts" : "\(timestamp)", "apikey" : publicKey, "hash" : hash]
         return authParams + (params ?? [String:String]())
     }
 }

@@ -51,6 +51,7 @@
 		B1912EE03B21457D3F69B1FF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BB45DCAD9861AFDF4B16FCE1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelApiClientPlayground.playground; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelApiClient.h; sourceTree = "<group>"; };
 		EB52A0CA1BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +128,7 @@
 		EB52A0BB1BF4EBBA00AE003E = {
 			isa = PBXGroup;
 			children = (
+				EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */,
 				EBE70E981BF4F11700356CA4 /* Podfile */,
 				EB52A0C71BF4EBBA00AE003E /* MarvelApiClient */,
 				EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */,

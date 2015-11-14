@@ -11,6 +11,6 @@ import Foundation
 class TimeProvider {
 
     func currentTimeMillis() -> Int {
-        return 0
+        return 3
     }
 }

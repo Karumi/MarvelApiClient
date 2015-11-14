@@ -13,8 +13,7 @@ public class CharactersApiClient : BaseApiClient {
     
     public func getAll() -> Future<[Character],NSError> {
         return sendRequest(.GET, path: "characters").map { response -> [Character] in
-            print(response.statusCode)
-            print(response.body)
+            //TODO: Perform mapping here.
             return [Character]()
         }
     }
