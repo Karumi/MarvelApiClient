@@ -11,9 +11,6 @@ import BrightFutures
 
 public class BaseApiClient {
     
-    private let host = "http://gateway.marvel.com/v1/public/"
-    private let defaultHeaders = ["Accept" : "application/json"]
-    
     let httpClient: HttpClient
     let timeProvider: TimeProvider
     
@@ -25,9 +22,9 @@ public class BaseApiClient {
     func sendRequest(verb: HttpVerb, path: String, params: [String:String]? = [String:String]()) -> Future<HttpResponse,NSError>{
         let parameters = addDefaultParams(params)
         let request = HttpRequest(
-            url: host + path,
+            url: MarvelApiClientConfig.Host + path,
             parameters: parameters,
-            headers: defaultHeaders,
+            headers: MarvelApiClientConfig.DefaultHeaders,
             verb: verb)
         return httpClient.send(request)
     }
@@ -37,7 +34,9 @@ public class BaseApiClient {
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ "ts" : "\(timestamp)", "apikey" : publicKey, "hash" : hash]
+        let authParams = [ MarvelApiClientConfig.TimestampParam : "\(timestamp)",
+            MarvelApiClientConfig.ApiKeyParam : publicKey,
+            MarvelApiClientConfig.HashParam : hash]
         return authParams + (params ?? [String:String]())
     }
 }

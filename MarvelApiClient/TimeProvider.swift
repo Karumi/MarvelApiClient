@@ -11,6 +11,6 @@ import Foundation
 class TimeProvider {
 
     func currentTimeMillis() -> Int {
-        return 3
+        return Int(NSDate().timeIntervalSince1970 * 1000)
     }
 }
