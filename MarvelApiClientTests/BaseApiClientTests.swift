@@ -14,26 +14,22 @@ import BrightFutures
 import Result
 @testable import MarvelApiClient
 
-class BaseApiClientTests : XCTestCase {
+class BaseApiClientTests : NocillaTestCase {
 
     private let anyPath = "path"
     private let anyPublicKey = "1234"
     private let anyPrivateKey = "abcd"
     private var timeProvider: MockTimeProvider!
     private var httpClient: HttpClient!
-    private let nocilla: LSNocilla = LSNocilla.sharedInstance()
     
     override func setUp() {
         super.setUp()
         timeProvider = MockTimeProvider()
         httpClient = AlamofireHttpClient()
-        nocilla.start()
     }
     
     override func tearDown() {
         MarvelApiClient.configureCredentials("", privateKey: "")
-        nocilla.clearStubs()
-        nocilla.stop()
         super.tearDown()
     }
     

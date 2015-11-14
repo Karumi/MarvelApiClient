@@ -23,6 +23,7 @@
 		EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */; };
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
+		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
 		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
 		EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
@@ -67,6 +68,7 @@
 		EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
+		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
 		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				EBAFE1D41BF783EF00591AEA /* Characters */,
 				EBE70EAC1BF4FA5300356CA4 /* Http */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
+				EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */,
 			);
 			path = MarvelApiClientTests;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */,
 				EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */,
 				EBAFE1EB1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift in Sources */,
 				EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */,

@@ -14,25 +14,12 @@ import BrightFutures
 import Result
 @testable import MarvelApiClient
 
-class AlamofireHttpClientTests : XCTestCase {
-
-    private let nocilla: LSNocilla = LSNocilla.sharedInstance()
+class AlamofireHttpClientTests : NocillaTestCase {
 
     private let anyUrl = "http://www.any.com"
     private let anyStatusCode = 201
     private let anyBody = "HttpResponseBody"
     private let anyError = NSError(domain: "DomainError", code: 123, userInfo: nil)
-
-    override func setUp() {
-        super.setUp()
-        nocilla.start()
-    }
-
-    override func tearDown() {
-        nocilla.clearStubs()
-        nocilla.stop()
-        super.tearDown()
-    }
 
     func testSendsGetRequestToAnyPath() {
         stubRequest("GET", anyUrl)
