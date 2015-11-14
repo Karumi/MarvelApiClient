@@ -8,6 +8,6 @@
 
 import Foundation
 
-public struct Character {
+public struct CharacterDTO {
 
 }

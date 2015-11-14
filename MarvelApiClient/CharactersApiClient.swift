@@ -11,10 +11,10 @@ import BrightFutures
 
 public class CharactersApiClient : BaseApiClient {
     
-    public func getAll() -> Future<[Character],NSError> {
-        return sendRequest(.GET, path: "characters").map { response -> [Character] in
+    public func getAll() -> Future<[CharacterDTO],NSError> {
+        return sendRequest(.GET, path: "characters").map { response -> [CharacterDTO] in
             //TODO: Perform mapping here.
-            return [Character]()
+            return [CharacterDTO]()
         }
     }
     
