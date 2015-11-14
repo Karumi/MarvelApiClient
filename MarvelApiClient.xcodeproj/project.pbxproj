@@ -11,6 +11,10 @@
 		7686E5E5EE0B0DE444E1FE0E /* Pods_MarvelApiClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */; };
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
+		EBAFE1CF1BF7812000591AEA /* CharactersApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */; };
+		EBAFE1D11BF7813600591AEA /* MarvelApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */; };
+		EBAFE1D31BF782A600591AEA /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D21BF782A600591AEA /* Character.swift */; };
+		EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */; };
 		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
 		EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
@@ -43,6 +47,10 @@
 		EB52A0CA1BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB52A0CF1BF4EBBA00AE003E /* MarvelApiClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelApiClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0D61BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersApiClient.swift; sourceTree = "<group>"; };
+		EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClient.swift; sourceTree = "<group>"; };
+		EBAFE1D21BF782A600591AEA /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersApiClientTests.swift; sourceTree = "<group>"; };
 		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -122,9 +130,11 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelApiClient */ = {
 			isa = PBXGroup;
 			children = (
+				EBAFE1CD1BF7810600591AEA /* Characters */,
 				EBE70E9A1BF4F4BE00356CA4 /* Http */,
 				EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */,
 				EB52A0CA1BF4EBBA00AE003E /* Info.plist */,
+				EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */,
 			);
 			path = MarvelApiClient;
 			sourceTree = "<group>";
@@ -132,10 +142,28 @@
 		EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBAFE1D41BF783EF00591AEA /* Characters */,
 				EBE70EAC1BF4FA5300356CA4 /* Http */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 			);
 			path = MarvelApiClientTests;
+			sourceTree = "<group>";
+		};
+		EBAFE1CD1BF7810600591AEA /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */,
+				EBAFE1D21BF782A600591AEA /* Character.swift */,
+			);
+			name = Characters;
+			sourceTree = "<group>";
+		};
+		EBAFE1D41BF783EF00591AEA /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */,
+			);
+			name = Characters;
 			sourceTree = "<group>";
 		};
 		EBE70E9A1BF4F4BE00356CA4 /* Http */ = {
@@ -353,8 +381,11 @@
 				EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */,
 				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
 				EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */,
+				EBAFE1D11BF7813600591AEA /* MarvelApiClient.swift in Sources */,
 				EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */,
+				EBAFE1D31BF782A600591AEA /* Character.swift in Sources */,
 				EBE70EAB1BF4FA2D00356CA4 /* AlamofireHttpClient.swift in Sources */,
+				EBAFE1CF1BF7812000591AEA /* CharactersApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */,
+				EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
