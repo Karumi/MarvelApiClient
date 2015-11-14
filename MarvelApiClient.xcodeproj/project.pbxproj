@@ -22,6 +22,7 @@
 		EBAFE1F41BF7B9FF00591AEA /* BaseApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */; };
 		EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */; };
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
+		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
 		EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */; };
@@ -65,6 +66,7 @@
 		EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiClientTests.swift; sourceTree = "<group>"; };
 		EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
+		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBE70E9B1BF4F4D600356CA4 /* HttpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HttpRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpRequest.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */ = {
 			isa = PBXGroup;
 			children = (
+				EBAFE1FB1BF7C26200591AEA /* Matchers */,
 				EBAFE1F81BF7BB3D00591AEA /* Doubles */,
 				EBAFE1F21BF7B9F300591AEA /* Base */,
 				EBAFE1E91BF79E8200591AEA /* Authentication */,
@@ -241,6 +244,14 @@
 				EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */,
 			);
 			name = Doubles;
+			sourceTree = "<group>";
+		};
+		EBAFE1FB1BF7C26200591AEA /* Matchers */ = {
+			isa = PBXGroup;
+			children = (
+				EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */,
+			);
+			name = Matchers;
 			sourceTree = "<group>";
 		};
 		EBE70E9A1BF4F4BE00356CA4 /* Http */ = {
@@ -479,6 +490,7 @@
 				EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */,
 				EBAFE1F41BF7B9FF00591AEA /* BaseApiClientTests.swift in Sources */,
 				EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */,
+				EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

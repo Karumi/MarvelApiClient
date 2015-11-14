@@ -118,26 +118,6 @@ class AlamofireHttpClientTests : XCTestCase {
         return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
-    private func beSuccess<T>() -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "be success"
-            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
-            return future.isSuccess
-        }
-    }
-
-    private func failWithError<T>(expectedError: NSError) -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "has error"
-            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
-            if let error = future.error {
-                return expectedError == error
-            } else {
-                return false
-            }
-        }
-    }
-
     private func containsBody<T>(expectedBody: String) -> MatcherFunc<T?> {
         return MatcherFunc { actualExpression, failureMessage in
             failureMessage.postfixMessage = "contains body"

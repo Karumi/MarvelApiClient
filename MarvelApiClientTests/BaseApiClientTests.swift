@@ -67,12 +67,4 @@ class BaseApiClientTests : XCTestCase {
         timeProvider.time = currentTimeMillis
     }
     
-    private func beSuccess<T>() -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "be success"
-            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
-            return future.isSuccess
-        }
-    }
-
 }
