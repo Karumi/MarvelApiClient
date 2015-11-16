@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		2441E8236472990FFD210D51 /* Pods_MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */; };
 		7686E5E5EE0B0DE444E1FE0E /* Pods_MarvelApiClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */; };
+		EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00C1BF9CD0300170355 /* Parser.swift */; };
+		EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */; };
+		EB29E0121BF9CE4F00170355 /* CharactersParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0111BF9CE4F00170355 /* CharactersParser.swift */; };
+		EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0151BF9DCAF00170355 /* ThumbnailDTO.swift */; };
+		EB29E0181BF9DD6700170355 /* ComicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0171BF9DD6700170355 /* ComicDTO.swift */; };
+		EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0191BF9DE8C00170355 /* SerieDTO.swift */; };
+		EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */; };
+		EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01F1BF9EA7A00170355 /* EventDTO.swift */; };
 		EB49E0C51BF7ED4B00C53347 /* MarvelApiClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E0C41BF7ED4B00C53347 /* MarvelApiClientConfig.swift */; };
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
@@ -52,6 +60,14 @@
 		B1912EE03B21457D3F69B1FF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.debug.xcconfig"; sourceTree = "<group>"; };
 		BB45DCAD9861AFDF4B16FCE1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		EB29E00C1BF9CD0300170355 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharactersDTO.swift; sourceTree = "<group>"; };
+		EB29E0111BF9CE4F00170355 /* CharactersParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersParser.swift; sourceTree = "<group>"; };
+		EB29E0151BF9DCAF00170355 /* ThumbnailDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailDTO.swift; sourceTree = "<group>"; };
+		EB29E0171BF9DD6700170355 /* ComicDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicDTO.swift; sourceTree = "<group>"; };
+		EB29E0191BF9DE8C00170355 /* SerieDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerieDTO.swift; sourceTree = "<group>"; };
+		EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
+		EB29E01F1BF9EA7A00170355 /* EventDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDTO.swift; sourceTree = "<group>"; };
 		EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelApiClientPlayground.playground; sourceTree = "<group>"; };
 		EB49E0C41BF7ED4B00C53347 /* MarvelApiClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClientConfig.swift; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +143,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EB29E00B1BF9CCAE00170355 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EB29E00C1BF9CD0300170355 /* Parser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		EB29E00E1BF9CE1A00170355 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EB29E0111BF9CE4F00170355 /* CharactersParser.swift */,
+			);
+			name = Parser;
+			sourceTree = "<group>";
+		};
+		EB29E01E1BF9DF2200170355 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */,
+				EBAFE1D21BF782A600591AEA /* CharacterDTO.swift */,
+				EB29E0151BF9DCAF00170355 /* ThumbnailDTO.swift */,
+				EB29E0191BF9DE8C00170355 /* SerieDTO.swift */,
+				EB29E0171BF9DD6700170355 /* ComicDTO.swift */,
+				EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */,
+				EB29E01F1BF9EA7A00170355 /* EventDTO.swift */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
 		EB52A0BB1BF4EBBA00AE003E = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +201,7 @@
 				EBAFE1F51BF7BAC900591AEA /* Time */,
 				EBAFE1EC1BF7A0FA00591AEA /* Base */,
 				EBAFE1E61BF79D5300591AEA /* Authentication */,
+				EB29E00B1BF9CCAE00170355 /* Parser */,
 				EBAFE1CD1BF7810600591AEA /* Characters */,
 				EBE70E9A1BF4F4BE00356CA4 /* Http */,
 				EBAFE1EF1BF7B47200591AEA /* Extensions */,
@@ -185,7 +232,8 @@
 			isa = PBXGroup;
 			children = (
 				EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */,
-				EBAFE1D21BF782A600591AEA /* CharacterDTO.swift */,
+				EB29E01E1BF9DF2200170355 /* DTOs */,
+				EB29E00E1BF9CE1A00170355 /* Parser */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -476,16 +524,24 @@
 			files = (
 				EBAFE1EE1BF7B10B00591AEA /* BaseApiClient.swift in Sources */,
 				EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */,
+				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
+				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,
 				EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */,
 				EBE70E9C1BF4F4D600356CA4 /* HttpClient.swift in Sources */,
 				EBAFE1F11BF7B48200591AEA /* Dictionary.swift in Sources */,
+				EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */,
 				EBAFE1D11BF7813600591AEA /* MarvelApiClient.swift in Sources */,
 				EB49E0C51BF7ED4B00C53347 /* MarvelApiClientConfig.swift in Sources */,
 				EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */,
+				EB29E0181BF9DD6700170355 /* ComicDTO.swift in Sources */,
+				EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */,
 				EBE70E9E1BF4F4E500356CA4 /* HttpRequest.swift in Sources */,
+				EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */,
 				EBAFE1D31BF782A600591AEA /* CharacterDTO.swift in Sources */,
 				EBE70EAB1BF4FA2D00356CA4 /* AlamofireHttpClient.swift in Sources */,
+				EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */,
+				EB29E0121BF9CE4F00170355 /* CharactersParser.swift in Sources */,
 				EBAFE1CF1BF7812000591AEA /* CharactersApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

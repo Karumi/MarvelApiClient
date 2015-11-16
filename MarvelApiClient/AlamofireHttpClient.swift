@@ -23,7 +23,7 @@ class AlamofireHttpClient: HttpClient {
             }else if let httpResponse = response.response {
                 let statusCode = httpResponse.statusCode
                 let body = response.result.value
-                let response = HttpResponse(statusCode: statusCode, body: body)
+                let response = HttpResponse(statusCode: statusCode, body: body ?? "")
                 return promise.success(response)
             }
         }

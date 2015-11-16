@@ -10,11 +10,17 @@ import Foundation
 import BrightFutures
 
 public class CharactersApiClient : BaseApiClient {
+
+    private let parser: CharactersParser
+
+    init(timeProvider: TimeProvider, httpClient: HttpClient, parser: CharactersParser) {
+        self.parser = parser
+        super.init(timeProvider: timeProvider, httpClient: httpClient)
+    }
     
-    public func getAll() -> Future<[CharacterDTO],NSError> {
-        return sendRequest(.GET, path: "characters").map { response -> [CharacterDTO] in
-            //TODO: Perform mapping here.
-            return [CharacterDTO]()
+    public func getAll() -> Future<GetCharactersDTO,NSError> {
+        return sendRequest(.GET, path: "characters").map { response in
+            return self.parser.fromString(response.body)
         }
     }
     

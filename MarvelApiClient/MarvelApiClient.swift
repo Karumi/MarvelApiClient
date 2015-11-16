@@ -18,10 +18,12 @@ public class MarvelApiClient {
         MarvelApiClient.privateKey = privateKey
     }
     
-    public static var charactersApiClient = CharactersApiClient(timeProvider: timeProvider,httpClient: httpClient)
+    public static var charactersApiClient = CharactersApiClient(timeProvider: timeProvider,httpClient: httpClient, parser: charactersParser)
     
     private static var timeProvider = TimeProvider()
     
     private static var httpClient = AlamofireHttpClient()
+
+    private static var charactersParser = CharactersParser()
     
 }

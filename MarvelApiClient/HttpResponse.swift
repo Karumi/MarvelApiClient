@@ -11,6 +11,6 @@ import Foundation
 struct HttpResponse {
 
     let statusCode: Int
-    let body: String?
+    let body: String
 
 }
