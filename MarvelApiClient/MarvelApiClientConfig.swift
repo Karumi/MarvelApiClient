@@ -12,8 +12,5 @@ struct MarvelApiClientConfig {
 
     static let Host = "http://gateway.marvel.com/v1/public/"
     static let DefaultHeaders = ["Accept" : "application/json"]
-    static let TimestampParam = "ts"
-    static let ApiKeyParam = "apikey"
-    static let HashParam = "hash"
     
 }

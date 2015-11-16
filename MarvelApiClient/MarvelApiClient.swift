@@ -18,7 +18,11 @@ public class MarvelApiClient {
         MarvelApiClient.privateKey = privateKey
     }
     
-    public static var charactersApiClient = CharactersApiClient(timeProvider: timeProvider,httpClient: httpClient, parser: charactersParser)
+    public static var charactersApiClient = CharactersApiClient(
+        baseEndpoint: MarvelApiClientConfig.Host,
+        timeProvider: timeProvider,
+        httpClient: httpClient,
+        parser: charactersParser)
     
     private static var timeProvider = TimeProvider()
     

@@ -10,11 +10,13 @@ import Foundation
 import BrightFutures
 
 public class BaseApiClient {
-    
+
+    let baseEndpoint: String
     let httpClient: HttpClient
     let timeProvider: TimeProvider
     
-    init(timeProvider: TimeProvider, httpClient: HttpClient) {
+    init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient) {
+        self.baseEndpoint = baseEndpoint
         self.timeProvider = timeProvider
         self.httpClient = httpClient
     }
@@ -22,7 +24,7 @@ public class BaseApiClient {
     func sendRequest(verb: HttpVerb, path: String, params: [String:String]? = [String:String]()) -> Future<HttpResponse,NSError>{
         let parameters = addDefaultParams(params)
         let request = HttpRequest(
-            url: MarvelApiClientConfig.Host + path,
+            url: baseEndpoint + path,
             parameters: parameters,
             headers: MarvelApiClientConfig.DefaultHeaders,
             verb: verb)
@@ -34,9 +36,9 @@ public class BaseApiClient {
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ MarvelApiClientConfig.TimestampParam : "\(timestamp)",
-            MarvelApiClientConfig.ApiKeyParam : publicKey,
-            MarvelApiClientConfig.HashParam : hash]
+        let authParams = [ MarvelApiParams.Timestamp : "\(timestamp)",
+            MarvelApiParams.ApiKey : publicKey,
+            MarvelApiParams.Hash : hash]
         return authParams + (params ?? [String:String]())
     }
 }

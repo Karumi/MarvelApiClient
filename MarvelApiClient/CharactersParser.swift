@@ -14,10 +14,12 @@ class CharactersParser : Parser {
 
     func fromString(string: String) -> GetCharactersDTO {
         let json = JSON(string)
-        return parseCharacterDataContainer(json["data"])
+        print("START")
+        return parseCharactersDTO(json["data"])
     }
 
     func parseCharacterDTO(json: JSON) -> CharacterDTO {
+        print("SHIT _____> \(json)")
         return CharacterDTO(
             id: json["id"].stringValue,
             name: json["name"].stringValue,
@@ -30,12 +32,13 @@ class CharactersParser : Parser {
         )
     }
 
-    private func parseCharacterDataContainer(json: JSON) -> GetCharactersDTO {
+    private func parseCharactersDTO(json: JSON) -> GetCharactersDTO {
+        print("PARSING CHARACTER DTO")
         return GetCharactersDTO(
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,
             count: json["count"].intValue,
-            characters: parseCharacters(json["result"]))
+            characters: parseCharacters(json["results"]))
     }
 
     private func parseCharacters(json: JSON) -> [CharacterDTO] {

@@ -13,13 +13,14 @@ public class CharactersApiClient : BaseApiClient {
 
     private let parser: CharactersParser
 
-    init(timeProvider: TimeProvider, httpClient: HttpClient, parser: CharactersParser) {
+    init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient, parser: CharactersParser) {
         self.parser = parser
-        super.init(timeProvider: timeProvider, httpClient: httpClient)
+        super.init(baseEndpoint: baseEndpoint, timeProvider: timeProvider, httpClient: httpClient)
     }
     
-    public func getAll() -> Future<GetCharactersDTO,NSError> {
-        return sendRequest(.GET, path: "characters").map { response in
+    public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDTO,NSError> {
+        let params = [MarvelApiParams.Offset : "\(offset)", MarvelApiParams.Limit : "\(limit)"]
+        return sendRequest(.GET, path: "characters",params: params).map { response in
             return self.parser.fromString(response.body)
         }
     }

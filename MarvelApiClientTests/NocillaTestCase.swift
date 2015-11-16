@@ -24,5 +24,17 @@ class NocillaTestCase : XCTestCase {
         nocilla.stop()
         super.tearDown()
     }
+
+    func fromJsonFile(fileName: String) -> String {
+        let classBundle = NSBundle(forClass: self.classForCoder)
+        let path = classBundle.pathForResource(fileName, ofType: "json")
+        let absolutePath =  path ?? ""
+        do {
+            return try String(contentsOfFile: absolutePath, encoding: NSUTF8StringEncoding)
+        } catch _ {
+            print("Error trying to read file \(absolutePath). The file does not exist")
+            return ""
+        }
+    }
     
 }

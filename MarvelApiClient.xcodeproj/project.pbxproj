@@ -17,9 +17,12 @@
 		EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0191BF9DE8C00170355 /* SerieDTO.swift */; };
 		EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */; };
 		EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01F1BF9EA7A00170355 /* EventDTO.swift */; };
+		EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */; };
+		EB29E0241BF9ED5A00170355 /* MarvelApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */; };
 		EB49E0C51BF7ED4B00C53347 /* MarvelApiClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E0C41BF7ED4B00C53347 /* MarvelApiClientConfig.swift */; };
 		EB52A0C91BF4EBBA00AE003E /* MarvelApiClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelApiClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */; };
+		EBAEB4BF1BFA16CF00547FC1 /* getCharactersDTO.json in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB4BE1BFA16CF00547FC1 /* getCharactersDTO.json */; };
 		EBAFE1CF1BF7812000591AEA /* CharactersApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */; };
 		EBAFE1D11BF7813600591AEA /* MarvelApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */; };
 		EBAFE1D31BF782A600591AEA /* CharacterDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D21BF782A600591AEA /* CharacterDTO.swift */; };
@@ -68,6 +71,8 @@
 		EB29E0191BF9DE8C00170355 /* SerieDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerieDTO.swift; sourceTree = "<group>"; };
 		EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
 		EB29E01F1BF9EA7A00170355 /* EventDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDTO.swift; sourceTree = "<group>"; };
+		EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiParams.swift; sourceTree = "<group>"; };
+		EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClientTests.swift; sourceTree = "<group>"; };
 		EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelApiClientPlayground.playground; sourceTree = "<group>"; };
 		EB49E0C41BF7ED4B00C53347 /* MarvelApiClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClientConfig.swift; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +80,7 @@
 		EB52A0CA1BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB52A0CF1BF4EBBA00AE003E /* MarvelApiClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MarvelApiClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0D61BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EBAEB4BE1BFA16CF00547FC1 /* getCharactersDTO.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharactersDTO.json; sourceTree = "<group>"; };
 		EBAFE1CE1BF7812000591AEA /* CharactersApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersApiClient.swift; sourceTree = "<group>"; };
 		EBAFE1D01BF7813600591AEA /* MarvelApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClient.swift; sourceTree = "<group>"; };
 		EBAFE1D21BF782A600591AEA /* CharacterDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterDTO.swift; sourceTree = "<group>"; };
@@ -222,10 +228,19 @@
 				EBAFE1E91BF79E8200591AEA /* Authentication */,
 				EBAFE1D41BF783EF00591AEA /* Characters */,
 				EBE70EAC1BF4FA5300356CA4 /* Http */,
+				EBAEB4BD1BFA16B400547FC1 /* Json */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 				EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */,
 			);
 			path = MarvelApiClientTests;
+			sourceTree = "<group>";
+		};
+		EBAEB4BD1BFA16B400547FC1 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				EBAEB4BE1BFA16CF00547FC1 /* getCharactersDTO.json */,
+			);
+			name = Json;
 			sourceTree = "<group>";
 		};
 		EBAFE1CD1BF7810600591AEA /* Characters */ = {
@@ -265,6 +280,7 @@
 		EBAFE1EC1BF7A0FA00591AEA /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */,
 				EBAFE1ED1BF7B10B00591AEA /* BaseApiClient.swift */,
 			);
 			name = Base;
@@ -282,6 +298,7 @@
 			isa = PBXGroup;
 			children = (
 				EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */,
+				EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -434,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBAEB4BF1BFA16CF00547FC1 /* getCharactersDTO.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,6 +541,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBAFE1EE1BF7B10B00591AEA /* BaseApiClient.swift in Sources */,
+				EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */,
 				EBE70EA21BF4F75D00356CA4 /* HttpVerb.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EBE70EA01BF4F73D00356CA4 /* HttpResponse.swift in Sources */,
@@ -550,6 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB29E0241BF9ED5A00170355 /* MarvelApiClientTests.swift in Sources */,
 				EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */,
 				EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */,
 				EBAFE1EB1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift in Sources */,

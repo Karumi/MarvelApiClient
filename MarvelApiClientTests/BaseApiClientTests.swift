@@ -16,15 +16,17 @@ import Result
 
 class BaseApiClientTests : NocillaTestCase {
 
+    private let anyBaseEndpoint = "http://gateway.marvel.com/v1/public/"
     private let anyPath = "path"
     private let anyPublicKey = "1234"
+    private let anyTimestamp = 1
     private let anyPrivateKey = "abcd"
     private var timeProvider: MockTimeProvider!
     private var httpClient: HttpClient!
     
     override func setUp() {
         super.setUp()
-        timeProvider = MockTimeProvider()
+        timeProvider = MockTimeProvider(time: anyTimestamp)
         httpClient = AlamofireHttpClient()
     }
     
@@ -34,7 +36,7 @@ class BaseApiClientTests : NocillaTestCase {
     }
     
     func testSendsAuthParamsByDefault() {
-        let apiClient = BaseApiClient(timeProvider: timeProvider, httpClient: httpClient)
+        let apiClient = givenABaseApiClient()
         givenCredentialsConfigured(anyPublicKey, privateKey: anyPrivateKey)
         givenCurrentTimeIs(1)
         stubRequest("GET", "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&ts=1")
@@ -45,7 +47,7 @@ class BaseApiClientTests : NocillaTestCase {
     }
     
     func testSendsAuthParamsByDefaultPlusTheConfiguredOnes() {
-        let apiClient = BaseApiClient(timeProvider: timeProvider, httpClient: httpClient)
+        let apiClient = givenABaseApiClient()
         givenCredentialsConfigured(anyPublicKey, privateKey: anyPrivateKey)
         givenCurrentTimeIs(1)
         stubRequest("GET", "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&k=v&ts=1")
@@ -61,6 +63,12 @@ class BaseApiClientTests : NocillaTestCase {
     
     private func givenCurrentTimeIs(currentTimeMillis: Int) {
         timeProvider.time = currentTimeMillis
+    }
+
+    private func givenABaseApiClient() -> BaseApiClient {
+        return BaseApiClient(baseEndpoint: anyBaseEndpoint,
+            timeProvider: timeProvider,
+            httpClient: httpClient)
     }
     
 }

@@ -11,8 +11,18 @@ import Foundation
 
 class MockTimeProvider : TimeProvider {
 
-    var time: Int = 0
+    var time: Int
+
+
+    init(time: Int) {
+        self.time = time
+    }
     
+    override convenience init() {
+        self.init(time: 0)
+    }
+
+
     override func currentTimeMillis() -> Int {
         return time
     }
