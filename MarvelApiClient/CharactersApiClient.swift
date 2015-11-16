@@ -19,6 +19,7 @@ public class CharactersApiClient : BaseApiClient {
     }
     
     public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDTO,NSError> {
+        print("Get all with offset plus limit")
         let params = [MarvelApiParams.Offset : "\(offset)", MarvelApiParams.Limit : "\(limit)"]
         return sendRequest(.GET, path: "characters",params: params).map { response in
             return self.parser.fromString(response.body)

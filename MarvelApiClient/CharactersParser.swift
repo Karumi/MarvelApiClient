@@ -13,13 +13,13 @@ class CharactersParser : Parser {
     typealias T = GetCharactersDTO
 
     func fromString(string: String) -> GetCharactersDTO {
-        let json = JSON(string)
-        print("START")
+        let dataFromString = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
+        let json = JSON(data: dataFromString!)
+        //TODO: return nsdata in HttpResponse
         return parseCharactersDTO(json["data"])
     }
 
     func parseCharacterDTO(json: JSON) -> CharacterDTO {
-        print("SHIT _____> \(json)")
         return CharacterDTO(
             id: json["id"].stringValue,
             name: json["name"].stringValue,
@@ -28,12 +28,11 @@ class CharactersParser : Parser {
             comics: parseComics(json["comics"]["items"]),
             series: parseSeries(json["series"]["items"]),
             stories: parseStories(json["stories"]["items"]),
-            events: parseEvents(json["events"]["items]"])
+            events: parseEvents(json["events"]["items"])
         )
     }
 
     private func parseCharactersDTO(json: JSON) -> GetCharactersDTO {
-        print("PARSING CHARACTER DTO")
         return GetCharactersDTO(
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,
