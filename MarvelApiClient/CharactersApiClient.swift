@@ -22,7 +22,7 @@ public class CharactersApiClient : BaseApiClient {
         print("Get all with offset plus limit")
         let params = [MarvelApiParams.Offset : "\(offset)", MarvelApiParams.Limit : "\(limit)"]
         return sendRequest(.GET, path: "characters",params: params).map { response in
-            return self.parser.fromString(response.body)
+            return self.parser.fromData(response.body)
         }
     }
     

@@ -12,10 +12,8 @@ import SwiftyJSON
 class CharactersParser : Parser {
     typealias T = GetCharactersDTO
 
-    func fromString(string: String) -> GetCharactersDTO {
-        let dataFromString = string.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)
-        let json = JSON(data: dataFromString!)
-        //TODO: return nsdata in HttpResponse
+    func fromData(data: NSData) -> GetCharactersDTO {
+        let json = JSON(data: data)
         return parseCharactersDTO(json["data"])
     }
 

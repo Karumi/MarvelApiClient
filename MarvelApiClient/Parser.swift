@@ -11,6 +11,6 @@ import Foundation
 protocol Parser {
     typealias T
 
-    func fromString(string: String) -> T
+    func fromData(data: NSData) -> T
 
 }

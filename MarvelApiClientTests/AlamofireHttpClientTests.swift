@@ -18,7 +18,7 @@ class AlamofireHttpClientTests : NocillaTestCase {
 
     private let anyUrl = "http://www.any.com"
     private let anyStatusCode = 201
-    private let anyBody = "HttpResponseBody"
+    private let anyBody = "{HttpResponseBody = true}"
     private let anyError = NSError(domain: "DomainError", code: 123, userInfo: nil)
 
     func testSendsGetRequestToAnyPath() {
@@ -71,16 +71,6 @@ class AlamofireHttpClientTests : NocillaTestCase {
         expect(result).toEventually(beSuccess())
     }
 
-    func testReceivesResponseBodyInTheHttpResponse() {
-        stubRequest("GET", anyUrl).andReturn(200).withBody(anyBody)
-        let httpClient = AlamofireHttpClient()
-        let request = givenOneHttpRequest(.GET, url: anyUrl)
-
-        let result = httpClient.send(request)
-
-        expect(result).toEventually(containsBody(anyBody))
-    }
-
     func testPropagatesErrorsInTheFuture() {
         stubRequest("GET", anyUrl).andFailWithError(anyError)
         let httpClient = AlamofireHttpClient()
@@ -105,15 +95,4 @@ class AlamofireHttpClientTests : NocillaTestCase {
         return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
-    private func containsBody<T>(expectedBody: String) -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "contains body"
-            let future = try actualExpression.evaluate() as! Future<HttpResponse,NSError>
-            if let result = future.result?.value {
-                return result.body == expectedBody
-            } else {
-                return false
-            }
-        }
-    }
 }
