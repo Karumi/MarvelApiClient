@@ -13,7 +13,6 @@ class MockTimeProvider : TimeProvider {
 
     var time: Int
 
-
     init(time: Int) {
         self.time = time
     }
@@ -21,7 +20,6 @@ class MockTimeProvider : TimeProvider {
     override convenience init() {
         self.init(time: 0)
     }
-
 
     override func currentTimeMillis() -> Int {
         return time

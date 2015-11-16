@@ -1,4 +1,4 @@
-//: Playground - noun: a place where people can play
+//: Marvel Api Client Playground
 
 import UIKit
 import XCPlayground

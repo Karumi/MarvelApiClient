@@ -9,7 +9,6 @@
 import Foundation
 import BrightFutures
 
-
 protocol HttpClient {
 
     func send(httpRequest: HttpRequest) -> Future<HttpResponse, NSError>
