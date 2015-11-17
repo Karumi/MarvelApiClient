@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-public class CharactersApiClient : BaseApiClient {
+public class CharactersApiClient: BaseApiClient {
 
     private let parser: CharactersParser
 
@@ -17,19 +17,19 @@ public class CharactersApiClient : BaseApiClient {
         self.parser = parser
         super.init(baseEndpoint: baseEndpoint, timeProvider: timeProvider, httpClient: httpClient)
     }
-    
-    public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDTO,NSError> {
+
+    public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDTO, NSError> {
         let params = [MarvelApiParams.Offset : "\(offset)", MarvelApiParams.Limit : "\(limit)"]
         return sendRequest(.GET, path: "characters",params: params).map { response in
             return self.parser.fromData(response.body)
         }
     }
 
-    public func getById(id: String) -> Future<CharacterDTO,NSError> {
+    public func getById(id: String) -> Future<CharacterDTO, NSError> {
         return sendRequest(.GET, path: "characters/\(id)").map { response in
             return self.parser.characterDTOFromData(response.body)
         }
 
     }
-    
+
 }

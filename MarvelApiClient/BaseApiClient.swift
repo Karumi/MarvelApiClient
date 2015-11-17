@@ -14,14 +14,15 @@ public class BaseApiClient {
     let baseEndpoint: String
     let httpClient: HttpClient
     let timeProvider: TimeProvider
-    
+
     init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient) {
         self.baseEndpoint = baseEndpoint
         self.timeProvider = timeProvider
         self.httpClient = httpClient
     }
-    
-    func sendRequest(verb: HttpVerb, path: String, params: [String:String]? = [String:String]()) -> Future<HttpResponse,NSError>{
+
+    func sendRequest(verb: HttpVerb, path: String,
+                     params: [String:String]? = [String:String]()) -> Future<HttpResponse, NSError> {
         let parameters = addDefaultParams(params)
         let request = HttpRequest(
             url: baseEndpoint + path,
@@ -30,7 +31,7 @@ public class BaseApiClient {
             verb: verb)
         return httpClient.send(request)
     }
-    
+
     private func addDefaultParams(params: [String:String]?) -> [String:String] {
         let timestamp = timeProvider.currentTimeMillis()
         let privateKey = MarvelApiClient.privateKey

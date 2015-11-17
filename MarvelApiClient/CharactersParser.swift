@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-class CharactersParser : Parser {
+class CharactersParser: Parser {
     typealias T = GetCharactersDTO
 
     func fromData(data: NSData) -> GetCharactersDTO {

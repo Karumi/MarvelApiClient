@@ -10,15 +10,15 @@ import Foundation
 import XCTest
 import Nocilla
 
-class NocillaTestCase : XCTestCase {
+class NocillaTestCase: XCTestCase {
 
     let nocilla: LSNocilla = LSNocilla.sharedInstance()
-    
+
     override func setUp() {
         super.setUp()
         nocilla.start()
     }
-    
+
     override func tearDown() {
         nocilla.clearStubs()
         nocilla.stop()
@@ -36,5 +36,5 @@ class NocillaTestCase : XCTestCase {
             return ""
         }
     }
-    
+
 }

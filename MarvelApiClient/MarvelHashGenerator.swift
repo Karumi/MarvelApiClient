@@ -15,5 +15,5 @@ class MarvelHashGenerator {
         let combinedHash = "\(timestamp)\(privateKey)\(publicKey)"
         return combinedHash.md5()
     }
-    
+
 }
