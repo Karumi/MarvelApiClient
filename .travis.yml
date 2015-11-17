@@ -1,10 +1,15 @@
 language: objective-c
 osx_image: xcode7.1
 
+before_install:
+  - brew update
+  - brew install swiftlint 
+
 install:
-    - gem install xcpretty
-    - gem install cocoapods
-    - pod install
+  - gem install xcpretty
+  - gem install cocoapods
+  - pod install
 
 script:
-   - set -o pipefail && xcodebuild -workspace MarvelApiClient.xcworkspace -scheme 'MarvelApiClient' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
+  - swiftlint
+  - set -o pipefail && xcodebuild -workspace MarvelApiClient.xcworkspace -scheme 'MarvelApiClient' -destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test CODE_SIGN_IDENTITY=- | xcpretty -c
