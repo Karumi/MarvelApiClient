@@ -27,7 +27,7 @@ public class BaseApiClient {
         let request = HttpRequest(
             url: baseEndpoint + path,
             parameters: parameters,
-            headers: MarvelApiClientConfig.DefaultHeaders,
+            headers: MarvelApiClientConfig.defaultHeaders,
             verb: verb)
         return httpClient.send(request)
     }
@@ -37,9 +37,9 @@ public class BaseApiClient {
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ MarvelApiParams.Timestamp : "\(timestamp)",
-            MarvelApiParams.ApiKey : publicKey,
-            MarvelApiParams.Hash : hash]
+        let authParams = [ MarvelApiParams.timestamp : "\(timestamp)",
+            MarvelApiParams.apiKey : publicKey,
+            MarvelApiParams.hash : hash]
         return authParams + (params ?? [String:String]())
     }
 }

@@ -19,7 +19,7 @@ public class MarvelApiClient {
     }
 
     public static var charactersApiClient = CharactersApiClient(
-        baseEndpoint: MarvelApiClientConfig.Host,
+        baseEndpoint: MarvelApiClientConfig.host,
         timeProvider: timeProvider,
         httpClient: httpClient,
         parser: charactersParser)
