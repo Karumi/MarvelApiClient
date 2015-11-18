@@ -11,5 +11,5 @@ import Foundation
 public struct SerieDto {
 
     public let name: String
-    
+
 }

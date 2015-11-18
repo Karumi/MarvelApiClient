@@ -10,10 +10,10 @@ import Foundation
 
 struct MarvelApiParams {
 
-    static let Offset = "offset"
-    static let Limit = "limit"
-    static let Timestamp = "ts"
-    static let ApiKey = "apikey"
-    static let Hash = "hash"
+    static let offset = "offset"
+    static let limit = "limit"
+    static let timestamp = "ts"
+    static let apiKey = "apikey"
+    static let hash = "hash"
 
 }

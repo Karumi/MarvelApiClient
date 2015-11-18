@@ -14,7 +14,7 @@ import BrightFutures
 import Result
 @testable import MarvelApiClient
 
-class BaseApiClientTests : NocillaTestCase {
+class BaseApiClientTests: NocillaTestCase {
 
     private let anyBaseEndpoint = "http://gateway.marvel.com/v1/public/"
     private let anyPath = "path"
@@ -23,44 +23,46 @@ class BaseApiClientTests : NocillaTestCase {
     private let anyPrivateKey = "abcd"
     private var timeProvider: MockTimeProvider!
     private var httpClient: HttpClient!
-    
+
     override func setUp() {
         super.setUp()
         timeProvider = MockTimeProvider(time: anyTimestamp)
         httpClient = AlamofireHttpClient()
     }
-    
+
     override func tearDown() {
         MarvelApiClient.configureCredentials("", privateKey: "")
         super.tearDown()
     }
-    
+
     func testSendsAuthParamsByDefault() {
         let apiClient = givenABaseApiClient()
         givenCredentialsConfigured(anyPublicKey, privateKey: anyPrivateKey)
         givenCurrentTimeIs(1)
-        stubRequest("GET", "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&ts=1")
-        
+        stubRequest("GET",
+                    "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&ts=1")
+
         let result = apiClient.sendRequest(.GET, path: anyPath)
-        
+
         expect(result).toEventually(beSuccess())
     }
-    
+
     func testSendsAuthParamsByDefaultPlusTheConfiguredOnes() {
         let apiClient = givenABaseApiClient()
         givenCredentialsConfigured(anyPublicKey, privateKey: anyPrivateKey)
         givenCurrentTimeIs(1)
-        stubRequest("GET", "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&k=v&ts=1")
-        
-        let result = apiClient.sendRequest(.GET, path: anyPath,params: ["k":"v"])
-        
+        stubRequest("GET",
+            "http://gateway.marvel.com/v1/public/path?apikey=1234&hash=ffd275c5130566a2916217b101f26150&k=v&ts=1")
+
+        let result = apiClient.sendRequest(.GET, path: anyPath, params: ["k":"v"])
+
         expect(result).toEventually(beSuccess())
     }
-    
+
     private func givenCredentialsConfigured(publicKey: String, privateKey: String) {
         MarvelApiClient.configureCredentials(publicKey, privateKey: privateKey)
     }
-    
+
     private func givenCurrentTimeIs(currentTimeMillis: Int) {
         timeProvider.time = currentTimeMillis
     }
@@ -70,5 +72,5 @@ class BaseApiClientTests : NocillaTestCase {
             timeProvider: timeProvider,
             httpClient: httpClient)
     }
-    
+
 }

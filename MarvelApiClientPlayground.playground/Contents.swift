@@ -9,7 +9,7 @@ MarvelApiClient.configureCredentials(
     privateKey: "4ad71e7b61e40311545909af0d6ebbd52bbfeae3")
 
 let charactersApiClient = MarvelApiClient.charactersApiClient
-charactersApiClient.getAll(0,limit: 10).onSuccess { response in
+charactersApiClient.getAll(0, limit: 10).onSuccess { response in
     print("Characters obtained from the Marvel API")
     print(response.characters.count)
 }

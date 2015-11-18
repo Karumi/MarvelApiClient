@@ -11,16 +11,16 @@ import XCTest
 import Nimble
 @testable import MarvelApiClient
 
-class MarvelHashGeneratorTests : XCTestCase {
+class MarvelHashGeneratorTests: XCTestCase {
 
     func testGeneratesTheMd5HashUsingATimestampPlusThePublicKeyPlusThePrivateKey() {
         let timestamp = 1
         let privateKey = "abcd"
         let publicKey = "1234"
-        
+
         let result = MarvelHashGenerator.generateHash(timestamp, privateKey: privateKey, publicKey: publicKey)
-        
+
         expect(result).to(equal("ffd275c5130566a2916217b101f26150"))
     }
-    
+
 }

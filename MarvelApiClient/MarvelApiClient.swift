@@ -12,26 +12,25 @@ public class MarvelApiClient {
 
     static var publicKey: String = ""
     static var privateKey: String = ""
-    
+
     public static func configureCredentials(publicKey: String, privateKey: String) {
         MarvelApiClient.publicKey = publicKey
         MarvelApiClient.privateKey = privateKey
     }
-    
+
     public static var charactersApiClient = CharactersApiClient(
         apiClient: marvelBaseApiClient,
         parser: charactersParser)
 
     private static var marvelBaseApiClient = MarvelBaseApiClient(
-        baseEndpoint: MarvelApiClientConfig.Host,
+        baseEndpoint: MarvelApiClientConfig.host,
         timeProvider: timeProvider,
         httpClient: httpClient)
-    
 
     private static var timeProvider = TimeProvider()
-    
+
     private static var httpClient = AlamofireHttpClient()
 
     private static var charactersParser = CharactersParser()
-    
+
 }

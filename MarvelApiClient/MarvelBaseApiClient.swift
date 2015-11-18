@@ -14,31 +14,32 @@ public class MarvelBaseApiClient {
     let baseEndpoint: String
     let httpClient: HttpClient
     let timeProvider: TimeProvider
-    
+
     init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient) {
         self.baseEndpoint = baseEndpoint
         self.timeProvider = timeProvider
         self.httpClient = httpClient
     }
-    
-    func sendRequest(verb: HttpVerb, path: String, params: [String:String]? = [String:String]()) -> Future<HttpResponse,NSError>{
+
+    func sendRequest(verb: HttpVerb, path: String,
+                     params: [String:String]? = [String:String]()) -> Future<HttpResponse, NSError> {
         let parameters = addDefaultParams(params)
         let request = HttpRequest(
             url: baseEndpoint + path,
             parameters: parameters,
-            headers: MarvelApiClientConfig.DefaultHeaders,
+            headers: MarvelApiClientConfig.defaultHeaders,
             verb: verb)
         return httpClient.send(request)
     }
-    
+
     private func addDefaultParams(params: [String:String]?) -> [String:String] {
         let timestamp = timeProvider.currentTimeMillis()
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ MarvelApiParams.Timestamp : "\(timestamp)",
-            MarvelApiParams.ApiKey : publicKey,
-            MarvelApiParams.Hash : hash]
+        let authParams = [ MarvelApiParams.timestamp : "\(timestamp)",
+            MarvelApiParams.apiKey : publicKey,
+            MarvelApiParams.hash : hash]
         return authParams + (params ?? [String:String]())
     }
 }

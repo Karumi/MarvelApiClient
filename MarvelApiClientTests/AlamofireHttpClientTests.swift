@@ -14,7 +14,7 @@ import BrightFutures
 import Result
 @testable import MarvelApiClient
 
-class AlamofireHttpClientTests : NocillaTestCase {
+class AlamofireHttpClientTests: NocillaTestCase {
 
     private let anyUrl = "http://www.any.com"
     private let anyStatusCode = 201
@@ -91,7 +91,9 @@ class AlamofireHttpClientTests : NocillaTestCase {
         expect(result).toEventually(beSuccess())
     }
 
-    private func givenOneHttpRequest(httpVerb: HttpVerb, url: String, params: [String:String]? = nil, headers: [String:String]? = nil) -> HttpRequest {
+    private func givenOneHttpRequest(httpVerb: HttpVerb,
+                                     url: String, params: [String:String]? = nil,
+                                     headers: [String:String]? = nil) -> HttpRequest {
         return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
