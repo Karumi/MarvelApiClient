@@ -9,7 +9,7 @@
 import Foundation
 import BrightFutures
 
-public class BaseApiClient {
+public class MarvelBaseApiClient {
 
     let baseEndpoint: String
     let httpClient: HttpClient

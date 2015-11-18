@@ -1,5 +1,5 @@
 //
-//  EventDTO.swift
+//  SerieDTO.swift
 //  MarvelApiClient
 //
 //  Created by Pedro Vicente Gomez on 16/11/15.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-public struct EventDTO {
+public struct SerieDto {
 
     public let name: String
-
+    
 }

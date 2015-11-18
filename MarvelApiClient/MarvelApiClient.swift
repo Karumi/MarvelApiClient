@@ -19,11 +19,15 @@ public class MarvelApiClient {
     }
     
     public static var charactersApiClient = CharactersApiClient(
+        apiClient: marvelBaseApiClient,
+        parser: charactersParser)
+
+    private static var marvelBaseApiClient = MarvelBaseApiClient(
         baseEndpoint: MarvelApiClientConfig.Host,
         timeProvider: timeProvider,
-        httpClient: httpClient,
-        parser: charactersParser)
+        httpClient: httpClient)
     
+
     private static var timeProvider = TimeProvider()
     
     private static var httpClient = AlamofireHttpClient()

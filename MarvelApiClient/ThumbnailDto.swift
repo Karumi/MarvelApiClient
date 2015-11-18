@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct ThumbnailDTO {
+public struct ThumbnailDto {
 
     public let path: String
     public let format: String

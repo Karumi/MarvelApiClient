@@ -8,15 +8,15 @@
 
 import Foundation
 
-public struct CharacterDTO {
+public struct CharacterDto {
 
     public let id: String
     public let name: String
     public let description: String
-    public let thumbnail: ThumbnailDTO
-    public let comics: [ComicDTO]
-    public let series: [SerieDTO]
-    public let stories: [StoryDTO]
-    public let events: [EventDTO]
+    public let thumbnail: ThumbnailDto
+    public let comics: [ComicDto]
+    public let series: [SerieDto]
+    public let stories: [StoryDto]
+    public let events: [EventDto]
 
 }
