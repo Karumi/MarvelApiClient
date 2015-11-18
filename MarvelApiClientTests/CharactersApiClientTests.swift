@@ -46,12 +46,13 @@ class CharactersApiClientTests: MarvelApiClientTests {
     }
 
     private func givenACharactersApiClient() -> CharactersApiClient {
-        return CharactersApiClient(baseEndpoint: marvelBaseEndpoint,
+        let baseApiClient = MarvelBaseApiClient(baseEndpoint: marvelBaseEndpoint,
             timeProvider: timeProvider,
-            httpClient: httpClient, parser: CharactersParser())
+            httpClient: httpClient)
+        return CharactersApiClient(apiClient: baseApiClient, parser: CharactersParser())
     }
 
-    private func assertContainsExpectedGetCharactersDTO(getCharactersDTO: GetCharactersDTO) {
+    private func assertContainsExpectedGetCharactersDTO(getCharactersDTO: GetCharactersDto) {
         expect(getCharactersDTO.count).to(equal(1))
         expect(getCharactersDTO.offset).to(equal(0))
         expect(getCharactersDTO.limit).to(equal(1))
@@ -77,7 +78,7 @@ class CharactersApiClientTests: MarvelApiClientTests {
     private func beGetCharactersDTOSuccess<T>() -> MatcherFunc<T?> {
         return MatcherFunc { actualExpression, failureMessage in
             failureMessage.postfixMessage = "be success"
-            let future = try actualExpression.evaluate() as! Future<GetCharactersDTO, NSError>
+            let future = try actualExpression.evaluate() as! Future<GetCharactersDto, NSError>
             return future.isSuccess
         }
     }
@@ -85,12 +86,12 @@ class CharactersApiClientTests: MarvelApiClientTests {
     private func beGetCharacterByIdSuccess<T>() -> MatcherFunc<T?> {
         return MatcherFunc { actualExpression, failureMessage in
             failureMessage.postfixMessage = "be success"
-            let future = try actualExpression.evaluate() as! Future<CharacterDTO, NSError>
+            let future = try actualExpression.evaluate() as! Future<CharacterDto, NSError>
             return future.isSuccess
         }
     }
 
-    private func assertContainsExpectedCharacterDTO(characterDTO: CharacterDTO) {
+    private func assertContainsExpectedCharacterDTO(characterDTO: CharacterDto) {
         expect(characterDTO.id).to(equal("1011334"))
         expect(characterDTO.name).to(equal("3-D Man"))
         expect(characterDTO.description).to(equal("Tridimensional Hero"))

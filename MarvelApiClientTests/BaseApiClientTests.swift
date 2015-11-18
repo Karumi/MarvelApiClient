@@ -67,8 +67,8 @@ class BaseApiClientTests: NocillaTestCase {
         timeProvider.time = currentTimeMillis
     }
 
-    private func givenABaseApiClient() -> BaseApiClient {
-        return BaseApiClient(baseEndpoint: anyBaseEndpoint,
+    private func givenABaseApiClient() -> MarvelBaseApiClient {
+        return MarvelBaseApiClient(baseEndpoint: anyBaseEndpoint,
             timeProvider: timeProvider,
             httpClient: httpClient)
     }

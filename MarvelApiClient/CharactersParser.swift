@@ -10,36 +10,36 @@ import Foundation
 import SwiftyJSON
 
 class CharactersParser: Parser {
-    typealias T = GetCharactersDTO
+    typealias T = GetCharactersDto
 
-    func fromData(data: NSData) -> GetCharactersDTO {
+    func fromData(data: NSData) -> GetCharactersDto {
         let json = JSON(data: data)
-        return parseCharactersDTO(json["data"])
+        return parseCharactersDto(json["data"])
     }
 
-    func characterDTOFromData(data: NSData) -> CharacterDTO {
+    func characterDTOFromData(data: NSData) -> CharacterDto {
         let json = JSON(data: data)
-        return parseCharacterDTO(json["data"]["results"][0])
+        return parseCharacterDto(json["data"]["results"][0])
     }
 
-    private func parseCharactersDTO(json: JSON) -> GetCharactersDTO {
-        return GetCharactersDTO(
+    private func parseCharactersDto(json: JSON) -> GetCharactersDto {
+        return GetCharactersDto(
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,
             count: json["count"].intValue,
             characters: parseCharacters(json["results"]))
     }
 
-    private func parseCharacters(json: JSON) -> [CharacterDTO] {
-        return json.arrayValue.map { parseCharacterDTO($0) }
+    private func parseCharacters(json: JSON) -> [CharacterDto] {
+        return json.arrayValue.map { parseCharacterDto($0) }
     }
 
-    private func parseCharacterDTO(json: JSON) -> CharacterDTO {
-        return CharacterDTO(
+    private func parseCharacterDto(json: JSON) -> CharacterDto {
+        return CharacterDto(
             id: json["id"].stringValue,
             name: json["name"].stringValue,
             description: json["description"].stringValue,
-            thumbnail: parseThumbnailDTO(json["thumbnail"]),
+            thumbnail: parseThumbnailDto(json["thumbnail"]),
             comics: parseComics(json["comics"]["items"]),
             series: parseSeries(json["series"]["items"]),
             stories: parseStories(json["stories"]["items"]),
@@ -47,30 +47,30 @@ class CharactersParser: Parser {
         )
     }
 
-    private func parseThumbnailDTO(json: JSON) -> ThumbnailDTO {
-        return ThumbnailDTO(
+    private func parseThumbnailDto(json: JSON) -> ThumbnailDto {
+        return ThumbnailDto(
             path: json["path"].stringValue,
             format: json["extension"].stringValue)
 
     }
 
-    private func parseComics(json: JSON) -> [ComicDTO] {
-        return json.arrayValue.map { ComicDTO(name: $0["name"].stringValue) }
+    private func parseComics(json: JSON) -> [ComicDto] {
+        return json.arrayValue.map { ComicDto(name: $0["name"].stringValue) }
     }
 
-    private func parseSeries(json: JSON) -> [SerieDTO] {
-        return json.arrayValue.map { SerieDTO(name: $0["name"].stringValue) }
+    private func parseSeries(json: JSON) -> [SerieDto] {
+        return json.arrayValue.map { SerieDto(name: $0["name"].stringValue) }
     }
 
-    private func parseStories(json: JSON) -> [StoryDTO] {
+    private func parseStories(json: JSON) -> [StoryDto] {
         return json.arrayValue.map {
-            StoryDTO(name: $0["name"].stringValue, type: $0["type"].stringValue)
+            StoryDto(name: $0["name"].stringValue, type: $0["type"].stringValue)
         }
     }
 
-    private func parseEvents(json: JSON) -> [EventDTO] {
+    private func parseEvents(json: JSON) -> [EventDto] {
         return json.arrayValue.map {
-            EventDTO(name: $0["name"].stringValue)
+            EventDto(name: $0["name"].stringValue)
         }
     }
 }

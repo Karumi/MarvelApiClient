@@ -9,24 +9,25 @@
 import Foundation
 import BrightFutures
 
-public class CharactersApiClient: BaseApiClient {
+public class CharactersApiClient {
 
+    private let apiClient: MarvelBaseApiClient
     private let parser: CharactersParser
 
-    init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient, parser: CharactersParser) {
+    init(apiClient: MarvelBaseApiClient, parser: CharactersParser) {
         self.parser = parser
-        super.init(baseEndpoint: baseEndpoint, timeProvider: timeProvider, httpClient: httpClient)
+        self.apiClient = apiClient
     }
 
-    public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDTO, NSError> {
+    public func getAll(offset: Int, limit: Int) -> Future<GetCharactersDto,NSError> {
         let params = [MarvelApiParams.offset : "\(offset)", MarvelApiParams.limit : "\(limit)"]
-        return sendRequest(.GET, path: "characters",params: params).map { response in
+        return apiClient.sendRequest(.GET, path: "characters",params: params).map { response in
             return self.parser.fromData(response.body)
         }
     }
 
-    public func getById(id: String) -> Future<CharacterDTO, NSError> {
-        return sendRequest(.GET, path: "characters/\(id)").map { response in
+    public func getById(id: String) -> Future<CharacterDto,NSError> {
+        return apiClient.sendRequest(.GET, path: "characters/\(id)").map { response in
             return self.parser.characterDTOFromData(response.body)
         }
 
