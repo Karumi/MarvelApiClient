@@ -1,5 +1,5 @@
 //
-//  HttpClient.swift
+//  HttpVerb.swift
 //  MarvelApiClient
 //
 //  Created by Pedro Vicente Gomez on 12/11/15.
@@ -7,10 +7,9 @@
 //
 
 import Foundation
-import BrightFutures
 
-protocol HttpClient {
+enum HTTPVerb {
 
-    func send(httpRequest: HttpRequest) -> Future<HttpResponse, NSError>
+    case GET, POST, PUT, DELETE
 
 }

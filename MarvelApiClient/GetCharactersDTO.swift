@@ -8,11 +8,11 @@
 
 import Foundation
 
-public struct GetCharactersDto {
+public struct GetCharactersDTO {
 
     public let offset: Int
     public let limit: Int
     public let count: Int
-    public let characters: [CharacterDto]
+    public let characters: [CharacterDTO]
 
 }

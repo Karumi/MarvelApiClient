@@ -10,11 +10,11 @@ import Foundation
 import Alamofire_Result
 import BrightFutures
 
-class AlamofireHttpClient: HttpClient {
+class AlamofireHTTPClient: HTTPClient {
 
-    func send(httpRequest: HttpRequest) -> Future<HttpResponse, NSError> {
+    func send(httpRequest: HTTPRequest) -> Future<HTTPResponse, NSError> {
         let manager = Manager.sharedInstance
-        let promise = Promise<HttpResponse, NSError>()
+        let promise = Promise<HTTPResponse, NSError>()
         let verb = httpRequest.verb.toAlamofireVerb()
         manager.request(verb, httpRequest.url, parameters: httpRequest.parameters).responseData { response in
             if let error = response.result.error {
@@ -22,7 +22,7 @@ class AlamofireHttpClient: HttpClient {
             } else if let httpResponse = response.response {
                 let statusCode = httpResponse.statusCode
                 let body = response.result.value
-                let response = HttpResponse(statusCode: statusCode, body: body ?? NSData())
+                let response = HTTPResponse(statusCode: statusCode, body: body ?? NSData())
                 return promise.success(response)
             }
         }
@@ -30,7 +30,7 @@ class AlamofireHttpClient: HttpClient {
     }
 }
 
-private extension HttpVerb {
+private extension HTTPVerb {
 
     private func toAlamofireVerb() -> Alamofire_Result.Method {
         switch self {

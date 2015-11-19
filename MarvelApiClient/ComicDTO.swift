@@ -1,5 +1,5 @@
 //
-//  StoriesDTO.swift
+//  ComicDTO.swift
 //  MarvelApiClient
 //
 //  Created by Pedro Vicente Gomez on 16/11/15.
@@ -8,9 +8,8 @@
 
 import Foundation
 
-public struct StoryDto {
+public struct ComicDTO {
 
     public let name: String
-    public let type: String
 
 }

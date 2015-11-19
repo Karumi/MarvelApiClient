@@ -12,19 +12,19 @@ import BrightFutures
 public class MarvelBaseApiClient {
 
     let baseEndpoint: String
-    let httpClient: HttpClient
+    let httpClient: HTTPClient
     let timeProvider: TimeProvider
 
-    init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HttpClient) {
+    init(baseEndpoint: String, timeProvider: TimeProvider, httpClient: HTTPClient) {
         self.baseEndpoint = baseEndpoint
         self.timeProvider = timeProvider
         self.httpClient = httpClient
     }
 
-    func sendRequest(verb: HttpVerb, path: String,
-                     params: [String:String]? = [String:String]()) -> Future<HttpResponse, NSError> {
+    func sendRequest(verb: HTTPVerb, path: String,
+                     params: [String:String]? = [String:String]()) -> Future<HTTPResponse, NSError> {
         let parameters = addDefaultParams(params)
-        let request = HttpRequest(
+        let request = HTTPRequest(
             url: baseEndpoint + path,
             parameters: parameters,
             headers: MarvelApiClientConfig.defaultHeaders,

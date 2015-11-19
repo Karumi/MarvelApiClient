@@ -22,12 +22,12 @@ class BaseApiClientTests: NocillaTestCase {
     private let anyTimestamp = 1
     private let anyPrivateKey = "abcd"
     private var timeProvider: MockTimeProvider!
-    private var httpClient: HttpClient!
+    private var httpClient: HTTPClient!
 
     override func setUp() {
         super.setUp()
         timeProvider = MockTimeProvider(time: anyTimestamp)
-        httpClient = AlamofireHttpClient()
+        httpClient = AlamofireHTTPClient()
     }
 
     override func tearDown() {

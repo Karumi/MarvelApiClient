@@ -29,7 +29,7 @@ public class MarvelApiClient {
 
     private static var timeProvider = TimeProvider()
 
-    private static var httpClient = AlamofireHttpClient()
+    private static var httpClient = AlamofireHTTPClient()
 
     private static var charactersParser = CharactersParser()
 

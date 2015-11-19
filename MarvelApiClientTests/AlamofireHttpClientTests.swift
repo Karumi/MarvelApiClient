@@ -23,7 +23,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testSendsGetRequestToAnyPath() {
         stubRequest("GET", anyUrl)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.GET, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -33,7 +33,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testSendsPostRequestToAnyPath() {
         stubRequest("POST", anyUrl)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.POST, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -43,7 +43,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testSendsPutRequestToAnyPath() {
         stubRequest("PUT", anyUrl)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.PUT, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -53,7 +53,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testSendsDeleteRequestToAnyPath() {
         stubRequest("DELETE", anyUrl)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.DELETE, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -63,7 +63,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testReceivesHttpStatusCodeInTheHttpResponse() {
         stubRequest("GET", anyUrl).andReturn(anyStatusCode)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.GET, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -73,7 +73,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testPropagatesErrorsInTheFuture() {
         stubRequest("GET", anyUrl).andFailWithError(anyError)
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.GET, url: anyUrl)
 
         let result = httpClient.send(request)
@@ -83,7 +83,7 @@ class AlamofireHttpClientTests: NocillaTestCase {
 
     func testSendsParamsConfiguredInTheHttpRequest() {
         stubRequest("GET", "http://www.any.com/?key=value")
-        let httpClient = AlamofireHttpClient()
+        let httpClient = AlamofireHTTPClient()
         let request = givenOneHttpRequest(.GET, url: "http://www.any.com/", params: ["key" : "value"])
 
         let result = httpClient.send(request)
@@ -91,10 +91,10 @@ class AlamofireHttpClientTests: NocillaTestCase {
         expect(result).toEventually(beSuccess())
     }
 
-    private func givenOneHttpRequest(httpVerb: HttpVerb,
+    private func givenOneHttpRequest(httpVerb: HTTPVerb,
                                      url: String, params: [String:String]? = nil,
-                                     headers: [String:String]? = nil) -> HttpRequest {
-        return HttpRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
+                                     headers: [String:String]? = nil) -> HTTPRequest {
+        return HTTPRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
     }
 
 }

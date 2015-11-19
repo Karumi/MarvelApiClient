@@ -1,5 +1,5 @@
 //
-//  HttpResponse.swift
+//  HttpClient.swift
 //  MarvelApiClient
 //
 //  Created by Pedro Vicente Gomez on 12/11/15.
@@ -7,10 +7,10 @@
 //
 
 import Foundation
+import BrightFutures
 
-struct HttpResponse {
+protocol HTTPClient {
 
-    let statusCode: Int
-    let body: NSData
+    func send(httpRequest: HTTPRequest) -> Future<HTTPResponse, NSError>
 
 }

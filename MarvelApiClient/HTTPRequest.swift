@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct HttpRequest {
+struct HTTPRequest {
 
     let url: String
     let parameters: [String : String]?
     let headers: [String : String]?
-    let verb: HttpVerb
+    let verb: HTTPVerb
 
 }

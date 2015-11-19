@@ -1,5 +1,5 @@
 //
-//  HttpVerb.swift
+//  HttpResponse.swift
 //  MarvelApiClient
 //
 //  Created by Pedro Vicente Gomez on 12/11/15.
@@ -8,8 +8,9 @@
 
 import Foundation
 
-enum HttpVerb {
+struct HTTPResponse {
 
-    case GET, POST, PUT, DELETE
+    let statusCode: Int
+    let body: NSData
 
 }

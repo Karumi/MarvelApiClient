@@ -17,13 +17,13 @@ class MarvelApiClientTests: NocillaTestCase {
     private let anyTimestamp = 1
 
     var timeProvider: MockTimeProvider!
-    var httpClient: HttpClient!
+    var httpClient: HTTPClient!
 
     override func setUp() {
         super.setUp()
         MarvelApiClient.configureCredentials(anyPublicKey, privateKey: anyPrivateKey)
         timeProvider = MockTimeProvider(time: anyTimestamp)
-        httpClient = AlamofireHttpClient()
+        httpClient = AlamofireHTTPClient()
     }
 
     override func tearDown() {
