@@ -15,8 +15,8 @@ class AlamofireHTTPClient: HTTPClient {
     func send(httpRequest: HTTPRequest) -> Future<HTTPResponse, NSError> {
         let manager = Manager.sharedInstance
         let promise = Promise<HTTPResponse, NSError>()
-        let verb = httpRequest.httpMethod.toAlamofireVerb()
-        manager.request(verb, httpRequest.url, parameters: httpRequest.parameters).responseData { response in
+        let httpMethod = Alamofire_Result.Method(rawValue: httpRequest.httpMethod.rawValue) ?? .GET
+        manager.request(httpMethod, httpRequest.url, parameters: httpRequest.parameters).responseData { response in
             if let error = response.result.error {
                 promise.failure(error)
             } else if let httpResponse = response.response {
@@ -28,30 +28,4 @@ class AlamofireHTTPClient: HTTPClient {
         }
         return promise.future
     }
-}
-
-private extension HTTPMethod {
-
-    private func toAlamofireVerb() -> Alamofire_Result.Method {
-        switch self {
-            case .GET:
-                return .GET
-            case .POST:
-                return .POST
-            case .PUT:
-                return .PUT
-            case .DELETE:
-                return .DELETE
-            case .OPTIONS:
-                return .OPTIONS
-            case .HEAD:
-                return .HEAD
-            case .TRACE:
-                return .TRACE
-            case .CONNECT:
-                return .CONNECT
-
-        }
-    }
-
 }
