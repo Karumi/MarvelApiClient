@@ -91,10 +91,10 @@ class AlamofireHttpClientTests: NocillaTestCase {
         expect(result).toEventually(beSuccess())
     }
 
-    private func givenOneHttpRequest(httpVerb: HTTPVerb,
+    private func givenOneHttpRequest(httpMethod: HTTPMethod,
                                      url: String, params: [String:String]? = nil,
                                      headers: [String:String]? = nil) -> HTTPRequest {
-        return HTTPRequest(url: url, parameters: params, headers: headers, verb: httpVerb)
+        return HTTPRequest(url: url, parameters: params, headers: headers, httpMethod: httpMethod)
     }
 
 }

@@ -21,14 +21,14 @@ public class MarvelBaseApiClient {
         self.httpClient = httpClient
     }
 
-    func sendRequest(verb: HTTPVerb, path: String,
+    func sendRequest(httpMethod: HTTPMethod, path: String,
                      params: [String:String]? = [String:String]()) -> Future<HTTPResponse, NSError> {
         let parameters = addDefaultParams(params)
         let request = HTTPRequest(
             url: baseEndpoint + path,
             parameters: parameters,
             headers: MarvelApiClientConfig.defaultHeaders,
-            verb: verb)
+            httpMethod: httpMethod)
         return httpClient.send(request)
     }
 

@@ -8,8 +8,8 @@
 
 import Foundation
 
-enum HTTPVerb {
+enum HTTPMethod {
 
-    case GET, POST, PUT, DELETE
+    case GET, POST, PUT, DELETE, OPTIONS, HEAD, TRACE, CONNECT
 
 }

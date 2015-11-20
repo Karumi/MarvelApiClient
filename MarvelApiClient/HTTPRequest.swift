@@ -13,6 +13,6 @@ struct HTTPRequest {
     let url: String
     let parameters: [String : String]?
     let headers: [String : String]?
-    let verb: HTTPVerb
+    let httpMethod: HTTPMethod
 
 }

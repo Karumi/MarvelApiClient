@@ -15,7 +15,7 @@ class AlamofireHTTPClient: HTTPClient {
     func send(httpRequest: HTTPRequest) -> Future<HTTPResponse, NSError> {
         let manager = Manager.sharedInstance
         let promise = Promise<HTTPResponse, NSError>()
-        let verb = httpRequest.verb.toAlamofireVerb()
+        let verb = httpRequest.httpMethod.toAlamofireVerb()
         manager.request(verb, httpRequest.url, parameters: httpRequest.parameters).responseData { response in
             if let error = response.result.error {
                 promise.failure(error)
@@ -30,7 +30,7 @@ class AlamofireHTTPClient: HTTPClient {
     }
 }
 
-private extension HTTPVerb {
+private extension HTTPMethod {
 
     private func toAlamofireVerb() -> Alamofire_Result.Method {
         switch self {
@@ -42,6 +42,15 @@ private extension HTTPVerb {
                 return .PUT
             case .DELETE:
                 return .DELETE
+            case .OPTIONS:
+                return .OPTIONS
+            case .HEAD:
+                return .HEAD
+            case .TRACE:
+                return .TRACE
+            case .CONNECT:
+                return .CONNECT
+
         }
     }
 

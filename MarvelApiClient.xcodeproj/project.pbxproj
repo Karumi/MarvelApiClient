@@ -40,7 +40,7 @@
 		EBE70E9C1BF4F4D600356CA4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HTTPClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HTTPRequest.swift */; };
 		EBE70EA01BF4F73D00356CA4 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9F1BF4F73D00356CA4 /* HTTPResponse.swift */; };
-		EBE70EA21BF4F75D00356CA4 /* HTTPVerb.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EA11BF4F75D00356CA4 /* HTTPVerb.swift */; };
+		EBE70EA21BF4F75D00356CA4 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EA11BF4F75D00356CA4 /* HTTPMethod.swift */; };
 		EBE70EAB1BF4FA2D00356CA4 /* AlamofireHTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EAA1BF4FA2D00356CA4 /* AlamofireHTTPClient.swift */; };
 		EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
@@ -99,7 +99,7 @@
 		EBE70E9B1BF4F4D600356CA4 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		EBE70E9F1BF4F73D00356CA4 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
-		EBE70EA11BF4F75D00356CA4 /* HTTPVerb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPVerb.swift; sourceTree = "<group>"; };
+		EBE70EA11BF4F75D00356CA4 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		EBE70EAA1BF4FA2D00356CA4 /* AlamofireHTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHTTPClient.swift; sourceTree = "<group>"; };
 		EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClientTests.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
@@ -336,7 +336,7 @@
 				EBE70E9B1BF4F4D600356CA4 /* HTTPClient.swift */,
 				EBE70E9D1BF4F4E500356CA4 /* HTTPRequest.swift */,
 				EBE70E9F1BF4F73D00356CA4 /* HTTPResponse.swift */,
-				EBE70EA11BF4F75D00356CA4 /* HTTPVerb.swift */,
+				EBE70EA11BF4F75D00356CA4 /* HTTPMethod.swift */,
 				EBE70EAA1BF4FA2D00356CA4 /* AlamofireHTTPClient.swift */,
 			);
 			name = Http;
@@ -546,7 +546,7 @@
 			files = (
 				EBAFE1EE1BF7B10B00591AEA /* MarvelBaseApiClient.swift in Sources */,
 				EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */,
-				EBE70EA21BF4F75D00356CA4 /* HTTPVerb.swift in Sources */,
+				EBE70EA21BF4F75D00356CA4 /* HTTPMethod.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EBE70EA01BF4F73D00356CA4 /* HTTPResponse.swift in Sources */,
 				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,
