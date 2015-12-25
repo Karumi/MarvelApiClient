@@ -1,4 +1,4 @@
-Marvel API Client [![Build Status](https://travis-ci.org/Karumi/MarvelApiClient.svg?branch=master)](https://travis-ci.org/Karumi/MarvelApiClient)
+![Karumi logo][karumilogo] Marvel API Client [![Build Status](https://travis-ci.org/Karumi/MarvelApiClient.svg?branch=master)](https://travis-ci.org/Karumi/MarvelApiClient)
 =================
 
 Marve API Client written in Swift.
@@ -21,3 +21,5 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+
+[karumilogo]: https://cloud.githubusercontent.com/assets/858090/11626547/e5a1dc66-9ce3-11e5-908d-537e07e82090.png
