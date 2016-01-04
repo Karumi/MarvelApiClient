@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import BothamNetworking
 
 public class MarvelApiClient {
 
@@ -16,20 +17,17 @@ public class MarvelApiClient {
     public static func configureCredentials(publicKey: String, privateKey: String) {
         MarvelApiClient.publicKey = publicKey
         MarvelApiClient.privateKey = privateKey
+        //CONFIGURE AUTHENTICATION
     }
 
     public static var charactersApiClient = CharactersApiClient(
-        apiClient: marvelBaseApiClient,
+        apiClient: bothamAPIClient,
         parser: charactersParser)
 
-    private static var marvelBaseApiClient = MarvelBaseApiClient(
-        baseEndpoint: MarvelApiClientConfig.host,
-        timeProvider: timeProvider,
-        httpClient: httpClient)
+    private static var bothamAPIClient = BothamAPIClient(
+        baseEndpoint: MarvelApiClientConfig.host)
 
     private static var timeProvider = TimeProvider()
-
-    private static var httpClient = AlamofireHTTPClient()
 
     private static var charactersParser = CharactersParser()
 
