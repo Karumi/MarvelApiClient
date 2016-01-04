@@ -1,32 +1,29 @@
 PODS:
   - BothamNetworking (0.0.1):
-    - BrightFutures
     - Result
-  - BrightFutures (3.2.2):
-    - Result (~> 1.0)
   - Nimble (3.0.0)
   - Nocilla (0.10.0)
   - Result (1.0.1)
   - SwiftyJSON (2.3.1)
 
 DEPENDENCIES:
-  - BothamNetworking (from `git@github.com:Karumi/BothamNetworking.git`)
+  - BothamNetworking (from `git@github.com:Karumi/BothamNetworking.git`, branch `replace-bright-futures-with-result`)
   - Nimble
   - Nocilla
   - SwiftyJSON
 
 EXTERNAL SOURCES:
   BothamNetworking:
+    :branch: replace-bright-futures-with-result
     :git: git@github.com:Karumi/BothamNetworking.git
 
 CHECKOUT OPTIONS:
   BothamNetworking:
-    :commit: 36b8131106f6c034d24b7150354da987decf57f4
+    :commit: 35bf46d0bba6705c337fa5818a934023fb43ef1b
     :git: git@github.com:Karumi/BothamNetworking.git
 
 SPEC CHECKSUMS:
-  BothamNetworking: 7591ee32ec41a32bf91520a582d9cf1e4736c5f9
-  BrightFutures: 1722a83fa8415aef78d66319a6c6add6685a7a87
+  BothamNetworking: 590e6c0d6839c0c209f02cd7e719b39498819b08
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Nocilla: ae0a2b05f3087b473624ac2b25903695df51246a
   Result: caef80340451e1f07492fa1e89117f83613bce24
