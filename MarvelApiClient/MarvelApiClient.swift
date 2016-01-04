@@ -17,7 +17,8 @@ public class MarvelApiClient {
     public static func configureCredentials(publicKey: String, privateKey: String) {
         MarvelApiClient.publicKey = publicKey
         MarvelApiClient.privateKey = privateKey
-        //CONFIGURE AUTHENTICATION
+        initDefaultHeaders()
+        initAuthentication()
     }
 
     public static var charactersApiClient = CharactersApiClient(
@@ -26,6 +27,15 @@ public class MarvelApiClient {
 
     private static var bothamAPIClient = BothamAPIClient(
         baseEndpoint: MarvelApiClientConfig.host)
+
+    private static func initDefaultHeaders() {
+        BothamAPIClient.globalRequestInterceptors.append(DefaultHeadersRequestInterceptor())
+    }
+
+    private static func initAuthentication() {
+        BothamAPIClient.globalRequestInterceptors.append(
+            MarvelAPIAuthentication(timeProvider: TimeProvider()))
+    }
 
     private static var timeProvider = TimeProvider()
 
