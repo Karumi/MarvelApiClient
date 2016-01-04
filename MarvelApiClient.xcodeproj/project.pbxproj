@@ -19,7 +19,6 @@
 		EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */; };
 		EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01F1BF9EA7A00170355 /* EventDTO.swift */; };
 		EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */; };
-		EB29E0241BF9ED5A00170355 /* MarvelApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */; };
 		EB39731D1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */; };
 		EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */; };
 		EB49E0C51BF7ED4B00C53347 /* MarvelApiClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E0C41BF7ED4B00C53347 /* MarvelApiClientConfig.swift */; };
@@ -32,12 +31,10 @@
 		EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */; };
 		EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1E71BF79D9400591AEA /* MarvelHashGenerator.swift */; };
 		EBAFE1EB1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1EA1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift */; };
-		EBAFE1F41BF7B9FF00591AEA /* BaseApiClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */; };
 		EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */; };
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
-		EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
 /* End PBXBuildFile section */
 
@@ -68,7 +65,6 @@
 		EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
 		EB29E01F1BF9EA7A00170355 /* EventDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDTO.swift; sourceTree = "<group>"; };
 		EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiParams.swift; sourceTree = "<group>"; };
-		EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiClientTests.swift; sourceTree = "<group>"; };
 		EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptor.swift; sourceTree = "<group>"; };
 		EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIAuthentication.swift; sourceTree = "<group>"; };
 		EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelApiClientPlayground.playground; sourceTree = "<group>"; };
@@ -85,12 +81,10 @@
 		EBAFE1D51BF783FD00591AEA /* CharactersApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersApiClientTests.swift; sourceTree = "<group>"; };
 		EBAFE1E71BF79D9400591AEA /* MarvelHashGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelHashGenerator.swift; sourceTree = "<group>"; };
 		EBAFE1EA1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelHashGeneratorTests.swift; sourceTree = "<group>"; };
-		EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseApiClientTests.swift; sourceTree = "<group>"; };
 		EBAFE1F61BF7BAD400591AEA /* TimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
-		EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClientTests.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -222,10 +216,8 @@
 			children = (
 				EBAFE1FB1BF7C26200591AEA /* Matchers */,
 				EBAFE1F81BF7BB3D00591AEA /* Doubles */,
-				EBAFE1F21BF7B9F300591AEA /* Base */,
 				EBAFE1E91BF79E8200591AEA /* Authentication */,
 				EBAFE1D41BF783EF00591AEA /* Characters */,
-				EBE70EAC1BF4FA5300356CA4 /* Http */,
 				EBAEB4BD1BFA16B400547FC1 /* Json */,
 				EB52A0D61BF4EBBA00AE003E /* Info.plist */,
 				EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */,
@@ -285,15 +277,6 @@
 			name = Base;
 			sourceTree = "<group>";
 		};
-		EBAFE1F21BF7B9F300591AEA /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				EBAFE1F31BF7B9FF00591AEA /* BaseApiClientTests.swift */,
-				EB29E0231BF9ED5A00170355 /* MarvelApiClientTests.swift */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
 		EBAFE1F51BF7BAC900591AEA /* Time */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,14 +299,6 @@
 				EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */,
 			);
 			name = Matchers;
-			sourceTree = "<group>";
-		};
-		EBE70EAC1BF4FA5300356CA4 /* Http */ = {
-			isa = PBXGroup;
-			children = (
-				EBE70EAD1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift */,
-			);
-			name = Http;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -543,12 +518,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB29E0241BF9ED5A00170355 /* MarvelApiClientTests.swift in Sources */,
 				EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */,
 				EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */,
 				EBAFE1EB1BF79E8E00591AEA /* MarvelHashGeneratorTests.swift in Sources */,
-				EBE70EAE1BF4FA6100356CA4 /* AlamofireHttpClientTests.swift in Sources */,
-				EBAFE1F41BF7B9FF00591AEA /* BaseApiClientTests.swift in Sources */,
 				EBAFE1D61BF783FD00591AEA /* CharactersApiClientTests.swift in Sources */,
 				EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */,
 			);

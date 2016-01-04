@@ -1,6 +1,7 @@
 PODS:
   - BothamNetworking (0.0.1):
     - Result
+  - CryptoSwift (0.2.2)
   - Nimble (3.0.0)
   - Nocilla (0.10.0)
   - Result (1.0.1)
@@ -8,6 +9,7 @@ PODS:
 
 DEPENDENCIES:
   - BothamNetworking (from `git@github.com:Karumi/BothamNetworking.git`, branch `replace-bright-futures-with-result`)
+  - CryptoSwift
   - Nimble
   - Nocilla
   - SwiftyJSON
@@ -24,6 +26,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   BothamNetworking: 590e6c0d6839c0c209f02cd7e719b39498819b08
+  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Nocilla: ae0a2b05f3087b473624ac2b25903695df51246a
   Result: caef80340451e1f07492fa1e89117f83613bce24
