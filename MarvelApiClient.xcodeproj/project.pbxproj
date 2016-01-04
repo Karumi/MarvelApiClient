@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2441E8236472990FFD210D51 /* Pods_MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */; };
+		3313B3DAB2D4EEFE036F5403 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1912EE03B21457D3F69B1FF /* Pods.framework */; };
 		7686E5E5EE0B0DE444E1FE0E /* Pods_MarvelApiClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */; };
 		EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00C1BF9CD0300170355 /* Parser.swift */; };
 		EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */; };
@@ -36,7 +37,6 @@
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
-		EBE70E991BF4F11700356CA4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EBE70E981BF4F11700356CA4 /* Podfile */; };
 		EBE70E9C1BF4F4D600356CA4 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9B1BF4F4D600356CA4 /* HTTPClient.swift */; };
 		EBE70E9E1BF4F4E500356CA4 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9D1BF4F4E500356CA4 /* HTTPRequest.swift */; };
 		EBE70EA01BF4F73D00356CA4 /* HTTPResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE70E9F1BF4F73D00356CA4 /* HTTPResponse.swift */; };
@@ -95,7 +95,6 @@
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
-		EBE70E981BF4F11700356CA4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EBE70E9B1BF4F4D600356CA4 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		EBE70E9D1BF4F4E500356CA4 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		EBE70E9F1BF4F73D00356CA4 /* HTTPResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponse.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2441E8236472990FFD210D51 /* Pods_MarvelApiClient.framework in Frameworks */,
+				3313B3DAB2D4EEFE036F5403 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				EB49E0C31BF7E81F00C53347 /* MarvelApiClientPlayground.playground */,
-				EBE70E981BF4F11700356CA4 /* Podfile */,
 				EB52A0C71BF4EBBA00AE003E /* MarvelApiClient */,
 				EB52A0D31BF4EBBA00AE003E /* MarvelApiClientTests */,
 				EB52A0C61BF4EBBA00AE003E /* Products */,
@@ -446,7 +445,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EBE70E991BF4F11700356CA4 /* Podfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,7 +487,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B7D34AEACD866D445C34B075 /* Copy Pods Resources */ = {
