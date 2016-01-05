@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "4B4D90B88D1EC4BA4B54B628674FE67CE3ACEAF4",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "4B4D90B88D1EC4BA4B54B628674FE67CE3ACEAF4" : 0,
+    "2C5B1EBE020B18AA2C9CA5AA8E9AC89C8012AFF8" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6E88BFD6-194D-4993-AF5C-BD580D55B176",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "4B4D90B88D1EC4BA4B54B628674FE67CE3ACEAF4" : "MarvelApiClient\/",
+    "2C5B1EBE020B18AA2C9CA5AA8E9AC89C8012AFF8" : "BothamNetworking\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "MarvelApiClient",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "MarvelApiClient.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/Karumi\/BothamNetworking.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2C5B1EBE020B18AA2C9CA5AA8E9AC89C8012AFF8"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Karumi\/MarvelApiClient.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "4B4D90B88D1EC4BA4B54B628674FE67CE3ACEAF4"
+    }
+  ]
+}

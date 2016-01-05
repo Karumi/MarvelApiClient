@@ -9,13 +9,12 @@ MarvelAPIClient.configureCredentials(
     privateKey: "4ad71e7b61e40311545909af0d6ebbd52bbfeae3")
 
 let charactersAPIClient = MarvelAPIClient.charactersAPIClient
-print("Get Chars By offset and limit: ")
+
 charactersAPIClient.getAll(offset: 0, limit: 10) { response in
     print("Characters obtained from the Marvel API")
+    print("----> Response -> \(response)")
     let characters = response.value?.characters
-    characters?.forEach { character in
-        print(character.name)
-    }
+    print(characters?[0].name)
 
 }
 
