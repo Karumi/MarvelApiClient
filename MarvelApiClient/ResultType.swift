@@ -29,7 +29,6 @@ extension ResultType where Value == HTTPResponse, Error == BothamAPIClientError 
             let parsingError = error as NSError
             return Result.Failure(BothamAPIClientError.ParsingError(error: parsingError))
         }
-
     }
 
 }
