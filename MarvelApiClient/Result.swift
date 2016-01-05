@@ -11,11 +11,11 @@ import BothamNetworking
 import Result
 import SwiftyJSON
 
-extension Result {
+extension ResultType where Value == HTTPResponse {
 
     func mapJSON<U>(@noescape transform: JSON -> U) -> Result<U, Error> {
         return flatMap { result in
-            let data = (value as? HTTPResponse)?.body
+            let data = self.value?.body
             return dataToJSONResult(data).map { transform($0) }
         }
     }
