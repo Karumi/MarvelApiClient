@@ -18,7 +18,7 @@
 		EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0191BF9DE8C00170355 /* SerieDTO.swift */; };
 		EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */; };
 		EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E01F1BF9EA7A00170355 /* EventDTO.swift */; };
-		EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */; };
+		EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0211BF9EC1800170355 /* MarvelAPIParams.swift */; };
 		EB39731D1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */; };
 		EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */; };
 		EB49E0C51BF7ED4B00C53347 /* MarvelAPIClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E0C41BF7ED4B00C53347 /* MarvelAPIClientConfig.swift */; };
@@ -67,7 +67,7 @@
 		EB29E0191BF9DE8C00170355 /* SerieDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerieDTO.swift; sourceTree = "<group>"; };
 		EB29E01C1BF9DEDE00170355 /* StoryDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryDTO.swift; sourceTree = "<group>"; };
 		EB29E01F1BF9EA7A00170355 /* EventDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDTO.swift; sourceTree = "<group>"; };
-		EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiParams.swift; sourceTree = "<group>"; };
+		EB29E0211BF9EC1800170355 /* MarvelAPIParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIParams.swift; sourceTree = "<group>"; };
 		EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptor.swift; sourceTree = "<group>"; };
 		EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIAuthentication.swift; sourceTree = "<group>"; };
 		EB49E0C41BF7ED4B00C53347 /* MarvelAPIClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientConfig.swift; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 		EBAFE1EC1BF7A0FA00591AEA /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */,
+				EB29E0211BF9EC1800170355 /* MarvelAPIParams.swift */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -502,7 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB29E0221BF9EC1800170355 /* MarvelApiParams.swift in Sources */,
+				EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
 				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,

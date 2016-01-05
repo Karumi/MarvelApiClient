@@ -1,6 +1,6 @@
 //
-//  MarvelApiParams.swift
-//  MarvelApiClient
+//  MarvelAPIParams.swift
+//  MarvelAPIClient
 //
 //  Created by Pedro Vicente Gomez on 16/11/15.
 //  Copyright © 2015 GoKarumi S.L. All rights reserved.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct MarvelApiParams {
+struct MarvelAPIParams {
 
     static let offset = "offset"
     static let limit = "limit"

@@ -1,6 +1,6 @@
 //
-//  CharactersApiClient.swift
-//  MarvelApiClient
+//  CharactersAPIClient.swift
+//  MarvelAPIClient
 //
 //  Created by Pedro Vicente on 14/11/15.
 //  Copyright © 2015 GoKarumi S.L. All rights reserved.
@@ -22,7 +22,7 @@ public class CharactersAPIClient {
 
     public func getAll(offset offset: Int, limit: Int, completition: (Result<GetCharactersDTO, BothamAPIClientError>) -> ()) {
         assert(offset >= 0 && limit >= offset)
-        let params: [String:String?] =  [MarvelApiParams.offset : "\(offset)", MarvelApiParams.limit : "\(limit)"]
+        let params: [String:String?] =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
         return apiClient.GET("characters", parameters: params) { response in
             if let response = response.value {
                 completition(Result.Success(self.parser.fromData(response.body)))

@@ -1,6 +1,6 @@
 //
 //  DefaultHeadersRequestInterceptor.swift
-//  MarvelApiClient
+//  MarvelAPIClient
 //
 //  Created by Pedro Vicente Gomez on 04/01/16.
 //  Copyright © 2016 GoKarumi S.L. All rights reserved.

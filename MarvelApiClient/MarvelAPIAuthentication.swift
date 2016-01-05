@@ -1,6 +1,6 @@
 //
 //  MarvelAPIAuthentication.swift
-//  MarvelApiClient
+//  MarvelAPIClient
 //
 //  Created by Pedro Vicente Gomez on 04/01/16.
 //  Copyright © 2016 GoKarumi S.L. All rights reserved.
@@ -22,9 +22,9 @@ class MarvelAPIAuthentication: BothamRequestInterceptor {
         let privateKey = MarvelAPIClient.privateKey
         let publicKey = MarvelAPIClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams: [String:String?] = [ MarvelApiParams.timestamp : "\(timestamp)",
-            MarvelApiParams.apiKey : publicKey,
-            MarvelApiParams.hash : hash]
+        let authParams: [String:String?] = [ MarvelAPIParams.timestamp : "\(timestamp)",
+            MarvelAPIParams.apiKey : publicKey,
+            MarvelAPIParams.hash : hash]
         return request.appendingParameters(authParams)
     }
 
