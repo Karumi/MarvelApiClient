@@ -37,6 +37,8 @@
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
 		EBB480FA1C3BCFD40087CC62 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB480F91C3BCFD40087CC62 /* ResultType.swift */; };
 		EBC2F5591C3C08AE007E53D1 /* ResultTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2F5571C3C06E7007E53D1 /* ResultTypeTests.swift */; };
+		EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */; };
+		EBC31B291C3C2BF800E00E38 /* DefaultHeadersRequestInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +94,8 @@
 		EBB480F91C3BCFD40087CC62 /* ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		EBC2F5551C3BDCFC007E53D1 /* MarvelAPIClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelAPIClientPlayground.playground; sourceTree = "<group>"; };
 		EBC2F5571C3C06E7007E53D1 /* ResultTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTypeTests.swift; sourceTree = "<group>"; };
+		EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
+		EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptorTests.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				EBC2F5561C3C06D6007E53D1 /* Extensions */,
+				EBC31B261C3C2BDF00E00E38 /* Interceptors */,
 				EBAFE1FB1BF7C26200591AEA /* Matchers */,
 				EBAFE1F81BF7BB3D00591AEA /* Doubles */,
 				EBAFE1E91BF79E8200591AEA /* Authentication */,
@@ -321,6 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				EBB480F91C3BCFD40087CC62 /* ResultType.swift */,
+				EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +337,14 @@
 				EBC2F5571C3C06E7007E53D1 /* ResultTypeTests.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EBC31B261C3C2BDF00E00E38 /* Interceptors */ = {
+			isa = PBXGroup;
+			children = (
+				EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */,
+			);
+			name = Interceptors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,7 +420,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */;
+			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -528,6 +542,7 @@
 			files = (
 				EBB480FA1C3BCFD40087CC62 /* ResultType.swift in Sources */,
 				EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */,
+				EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
 				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,
@@ -551,6 +566,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBC31B291C3C2BF800E00E38 /* DefaultHeadersRequestInterceptorTests.swift in Sources */,
 				EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */,
 				EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */,
 				EBC2F5591C3C08AE007E53D1 /* ResultTypeTests.swift in Sources */,
@@ -725,7 +741,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */ = {
+		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB52A0D71BF4EBBA00AE003E /* Debug */,
