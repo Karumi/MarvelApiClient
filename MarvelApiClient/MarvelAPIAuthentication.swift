@@ -9,7 +9,7 @@
 import Foundation
 import BothamNetworking
 
-class MarvelAPIAuthentication : BothamRequestInterceptor {
+class MarvelAPIAuthentication: BothamRequestInterceptor {
 
     private let timeProvider: TimeProvider
 
