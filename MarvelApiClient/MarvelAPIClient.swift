@@ -21,11 +21,11 @@ public class MarvelAPIClient {
         initAuthentication()
     }
 
-    public static var charactersAPIClient = CharactersAPIClient(
+    public static let charactersAPIClient = CharactersAPIClient(
         apiClient: bothamAPIClient,
         parser: charactersParser)
 
-    private static var bothamAPIClient = BothamAPIClient(
+    private static let bothamAPIClient = BothamAPIClient(
         baseEndpoint: MarvelAPIClientConfig.host)
 
     private static func initDefaultHeaders() {
@@ -37,8 +37,8 @@ public class MarvelAPIClient {
             MarvelAPIAuthentication(timeProvider: TimeProvider()))
     }
 
-    private static var timeProvider = TimeProvider()
+    private static let timeProvider = TimeProvider()
 
-    private static var charactersParser = CharactersParser()
+    private static let charactersParser = CharactersParser()
 
 }
