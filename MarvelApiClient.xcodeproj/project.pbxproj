@@ -50,12 +50,15 @@
 
 /* Begin PBXFileReference section */
 		06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.release.xcconfig"; sourceTree = "<group>"; };
+		2A576FEB08D26D15BED827CD /* Pods-MarvelAPIClient.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClient.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClient/Pods-MarvelAPIClient.release.xcconfig"; sourceTree = "<group>"; };
 		2CD5ABCECE6CB6FB7339C827 /* Pods-MarvelApiClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClientTests/Pods-MarvelApiClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		827E536869034E792DC9B92D /* Pods_MarvelAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA6BA9D2827C99812A39F70 /* Pods-MarvelApiClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClientTests/Pods-MarvelApiClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		B1912EE03B21457D3F69B1FF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelApiClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelApiClient/Pods-MarvelApiClient.debug.xcconfig"; sourceTree = "<group>"; };
+		B3630A1DE8BB3591AC305876 /* Pods-MarvelAPIClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C09A337B50DFD784E018EC19 /* Pods_MarvelAPIClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelAPIClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9D8CCDFEA7B4602F9BA9B91 /* Pods-MarvelAPIClient.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClient.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClient/Pods-MarvelAPIClient.debug.xcconfig"; sourceTree = "<group>"; };
 		EB29E00C1BF9CD0300170355 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharactersDTO.swift; sourceTree = "<group>"; };
 		EB29E0111BF9CE4F00170355 /* CharactersParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersParser.swift; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
+		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -119,6 +123,10 @@
 				9BA6BA9D2827C99812A39F70 /* Pods-MarvelApiClientTests.release.xcconfig */,
 				B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */,
 				06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */,
+				C9D8CCDFEA7B4602F9BA9B91 /* Pods-MarvelAPIClient.debug.xcconfig */,
+				2A576FEB08D26D15BED827CD /* Pods-MarvelAPIClient.release.xcconfig */,
+				B3630A1DE8BB3591AC305876 /* Pods-MarvelAPIClientTests.debug.xcconfig */,
+				EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -541,7 +549,6 @@
 /* Begin XCBuildConfiguration section */
 		EB52A0D71BF4EBBA00AE003E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -590,7 +597,6 @@
 		};
 		EB52A0D81BF4EBBA00AE003E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -632,7 +638,7 @@
 		};
 		EB52A0DA1BF4EBBA00AE003E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B35C281BBF330C2EFE5C40CC /* Pods-MarvelApiClient.debug.xcconfig */;
+			baseConfigurationReference = C9D8CCDFEA7B4602F9BA9B91 /* Pods-MarvelAPIClient.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -651,7 +657,7 @@
 		};
 		EB52A0DB1BF4EBBA00AE003E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 06C2AD017DB628797A034AD0 /* Pods-MarvelApiClient.release.xcconfig */;
+			baseConfigurationReference = 2A576FEB08D26D15BED827CD /* Pods-MarvelAPIClient.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
@@ -669,7 +675,7 @@
 		};
 		EB52A0DD1BF4EBBA00AE003E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CD5ABCECE6CB6FB7339C827 /* Pods-MarvelApiClientTests.debug.xcconfig */;
+			baseConfigurationReference = B3630A1DE8BB3591AC305876 /* Pods-MarvelAPIClientTests.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarvelApiClientTests/Info.plist;
@@ -682,7 +688,7 @@
 		};
 		EB52A0DE1BF4EBBA00AE003E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BA6BA9D2827C99812A39F70 /* Pods-MarvelApiClientTests.release.xcconfig */;
+			baseConfigurationReference = EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MarvelApiClientTests/Info.plist;
