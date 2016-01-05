@@ -23,34 +23,36 @@ class CharactersApiClientTests: NocillaTestCase {
     func testReturnsGetCharactersResponse() {
         let charactersApiClient = givenACharactersApiClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/characters?" +
-            "apikey=1234&hash=ffd275c5130566a2916217b101f26150&limit=1&offset=0&ts=1")
+            "http://gateway.marvel.com/v1/public/characters?"
+                + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
         .andReturn(200)
         .withBody(fromJsonFile("getAllCharacters"))
+        .withHeader("Content-Type","application/json")
 
         var response: Result<GetCharactersDTO, BothamAPIClientError>?
         charactersApiClient.getAll(0, limit: 1) { result in
             response = result
         }
 
-        expect(response).toEventually(beGetCharactersDTOSuccess())
+        expect(response).toEventuallyNot(beNil())
         assertContainsExpectedGetCharactersDTO(response?.value)
     }
 
     func testReturnsGetCharacterById() {
         let charactersApiClient = givenACharactersApiClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/characters/1?" +
-            "apikey=1234&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            "http://gateway.marvel.com/v1/public/characters/1?"
+             + "apikey=1234&ts=1&hash=ffd275c5130566a2916217b101f26150")
             .andReturn(200)
             .withBody(fromJsonFile("getCharacterById"))
+            .withHeader("Content-Type","application/json")
 
         var response: Result<CharacterDTO, BothamAPIClientError>?
         charactersApiClient.getById("1") { result in
             response = result
         }
 
-        expect(response).toEventually(beGetCharacterByIdSuccess())
+        expect(response).toEventuallyNot(beNil())
         assertContainsExpectedCharacterDTO(response?.value)
     }
 
@@ -86,22 +88,6 @@ class CharactersApiClientTests: NocillaTestCase {
         expect(getCharactersDTO?.characters[0].stories[0].type).to(equal("cover"))
         expect(getCharactersDTO?.characters[0].events.count).to(equal(1))
         expect(getCharactersDTO?.characters[0].events[0].name).to(equal("Secret Invasion"))
-    }
-
-    private func beGetCharactersDTOSuccess<T>() -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "be success"
-            let result = try actualExpression.evaluate() as? Result<GetCharactersDTO, NSError>
-            return result?.value != nil
-        }
-    }
-
-    private func beGetCharacterByIdSuccess<T>() -> MatcherFunc<T?> {
-        return MatcherFunc { actualExpression, failureMessage in
-            failureMessage.postfixMessage = "be success"
-            let result = try actualExpression.evaluate() as? Result<CharacterDTO, NSError>
-            return result?.value != nil
-        }
     }
 
     private func assertContainsExpectedCharacterDTO(characterDTO: CharacterDTO?) {

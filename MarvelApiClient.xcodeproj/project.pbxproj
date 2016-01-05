@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7444DD2239590FD77A83ABCF /* Pods_MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */; };
 		7686E5E5EE0B0DE444E1FE0E /* Pods_MarvelApiClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE062B5B43A3A7DF7C4327F7 /* Pods_MarvelApiClientTests.framework */; };
 		EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00C1BF9CD0300170355 /* Parser.swift */; };
 		EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */; };
@@ -35,6 +34,7 @@
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
+		F7CC98F4BE20DD38516407A9 /* Pods_MarvelApiClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7444DD2239590FD77A83ABCF /* Pods_MarvelApiClient.framework in Frameworks */,
+				F7CC98F4BE20DD38516407A9 /* Pods_MarvelApiClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

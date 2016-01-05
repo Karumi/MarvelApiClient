@@ -22,7 +22,7 @@ class MarvelAPIAuthentication : BothamRequestInterceptor {
         let privateKey = MarvelApiClient.privateKey
         let publicKey = MarvelApiClient.publicKey
         let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ MarvelApiParams.timestamp : "\(timestamp)",
+        let authParams: [String:String?] = [ MarvelApiParams.timestamp : "\(timestamp)",
             MarvelApiParams.apiKey : publicKey,
             MarvelApiParams.hash : hash]
         return request.appendingParameters(authParams)
