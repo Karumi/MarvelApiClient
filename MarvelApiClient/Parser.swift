@@ -7,10 +7,11 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 protocol Parser {
     typealias T
 
-    func fromData(data: NSData) -> T
+    func fromJSON(json: JSON) -> T
 
 }

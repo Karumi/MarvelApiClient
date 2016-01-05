@@ -23,22 +23,22 @@ public class CharactersAPIClient {
     public func getAll(offset offset: Int, limit: Int, completition: (Result<GetCharactersDTO, BothamAPIClientError>) -> ()) {
         assert(offset >= 0 && limit >= offset)
         let params: [String:String?] =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
-        return apiClient.GET("characters", parameters: params) { response in
-            if let response = response.value {
-                completition(Result.Success(self.parser.fromData(response.body)))
-            } else if let error = response.error {
-                completition(Result.Failure(error))
-            }
+        apiClient.GET("characters", parameters: params) { response in
+            completition(
+                response.mapJSON {
+                    return self.parser.fromJSON($0)
+                }
+            )
         }
     }
 
     public func getById(id: String, completition: (Result<CharacterDTO, BothamAPIClientError>) -> ()) {
-        return apiClient.GET("characters/\(id)") { response in
-            if let response = response.value {
-                completition(Result.Success(self.parser.characterDTOFromData(response.body)))
-            } else if let error = response.error {
-                completition(Result.Failure(error))
-            }
+        apiClient.GET("characters/\(id)") { response in
+            completition(
+                response.mapJSON {
+                    return self.parser.characterDTOFromJSON($0)
+                }
+            )
         }
 
     }

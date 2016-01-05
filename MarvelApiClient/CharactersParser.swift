@@ -12,17 +12,15 @@ import SwiftyJSON
 class CharactersParser: Parser {
     typealias T = GetCharactersDTO
 
-    func fromData(data: NSData) -> GetCharactersDTO {
-        let json = JSON(data: data)
-        return parseCharactersDto(json["data"])
+    func fromJSON(json: JSON) -> GetCharactersDTO {
+        return parseCharactersDTO(json["data"])
     }
 
-    func characterDTOFromData(data: NSData) -> CharacterDTO {
-        let json = JSON(data: data)
+    func characterDTOFromJSON(json: JSON) -> CharacterDTO {
         return parseCharacterDto(json["data"]["results"][0])
     }
 
-    private func parseCharactersDto(json: JSON) -> GetCharactersDTO {
+    private func parseCharactersDTO(json: JSON) -> GetCharactersDTO {
         return GetCharactersDTO(
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,

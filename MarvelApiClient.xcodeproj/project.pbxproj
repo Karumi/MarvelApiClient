@@ -35,6 +35,7 @@
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
+		EBB480FA1C3BCFD40087CC62 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB480F91C3BCFD40087CC62 /* Result.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
+		EBB480F91C3BCFD40087CC62 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +205,7 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				EBB480F81C3BCFC30087CC62 /* Extensions */,
 				EBAFE1F51BF7BAC900591AEA /* Time */,
 				EBAFE1EC1BF7A0FA00591AEA /* Base */,
 				EB39731A1C3ACB8300AF37CD /* Interceptors */,
@@ -307,6 +310,14 @@
 				EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */,
 			);
 			name = Matchers;
+			sourceTree = "<group>";
+		};
+		EBB480F81C3BCFC30087CC62 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EBB480F91C3BCFD40087CC62 /* Result.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -502,6 +513,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBB480FA1C3BCFD40087CC62 /* Result.swift in Sources */,
 				EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
