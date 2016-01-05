@@ -9,24 +9,24 @@
 import Foundation
 import BothamNetworking
 
-public class MarvelApiClient {
+public class MarvelAPIClient {
 
     static var publicKey: String = ""
     static var privateKey: String = ""
 
     public static func configureCredentials(publicKey: String, privateKey: String) {
-        MarvelApiClient.publicKey = publicKey
-        MarvelApiClient.privateKey = privateKey
+        MarvelAPIClient.publicKey = publicKey
+        MarvelAPIClient.privateKey = privateKey
         initDefaultHeaders()
         initAuthentication()
     }
 
-    public static var charactersApiClient = CharactersApiClient(
+    public static var charactersAPIClient = CharactersAPIClient(
         apiClient: bothamAPIClient,
         parser: charactersParser)
 
     private static var bothamAPIClient = BothamAPIClient(
-        baseEndpoint: MarvelApiClientConfig.host)
+        baseEndpoint: MarvelAPIClientConfig.host)
 
     private static func initDefaultHeaders() {
         BothamAPIClient.globalRequestInterceptors.append(DefaultHeadersRequestInterceptor())

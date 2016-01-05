@@ -7,7 +7,7 @@
 //
 
 import Foundation
-@testable import MarvelApiClient
+@testable import MarvelAPIClient
 
 class MockTimeProvider: TimeProvider {
 

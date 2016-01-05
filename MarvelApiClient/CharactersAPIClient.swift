@@ -10,7 +10,7 @@ import Foundation
 import BothamNetworking
 import Result
 
-public class CharactersApiClient {
+public class CharactersAPIClient {
 
     private let apiClient: BothamAPIClient
     private let parser: CharactersParser

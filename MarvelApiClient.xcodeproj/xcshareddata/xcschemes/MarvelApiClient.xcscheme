@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB52A0C41BF4EBBA00AE003E"
-               BuildableName = "MarvelApiClient.framework"
-               BlueprintName = "MarvelApiClient"
-               ReferencedContainer = "container:MarvelApiClient.xcodeproj">
+               BuildableName = "MarvelAPIClient.framework"
+               BlueprintName = "MarvelAPIClient"
+               ReferencedContainer = "container:MarvelAPIClient.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB52A0CE1BF4EBBA00AE003E"
-               BuildableName = "MarvelApiClientTests.xctest"
-               BlueprintName = "MarvelApiClientTests"
-               ReferencedContainer = "container:MarvelApiClient.xcodeproj">
+               BuildableName = "MarvelAPIClient.temp_caseinsensitive_renameTests.xctest"
+               BlueprintName = "MarvelAPIClientTests"
+               ReferencedContainer = "container:MarvelAPIClient.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB52A0C41BF4EBBA00AE003E"
-            BuildableName = "MarvelApiClient.framework"
-            BlueprintName = "MarvelApiClient"
-            ReferencedContainer = "container:MarvelApiClient.xcodeproj">
+            BuildableName = "MarvelAPIClient.framework"
+            BlueprintName = "MarvelAPIClient"
+            ReferencedContainer = "container:MarvelAPIClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB52A0C41BF4EBBA00AE003E"
-            BuildableName = "MarvelApiClient.framework"
-            BlueprintName = "MarvelApiClient"
-            ReferencedContainer = "container:MarvelApiClient.xcodeproj">
+            BuildableName = "MarvelAPIClient.framework"
+            BlueprintName = "MarvelAPIClient"
+            ReferencedContainer = "container:MarvelAPIClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -83,9 +83,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB52A0C41BF4EBBA00AE003E"
-            BuildableName = "MarvelApiClient.framework"
-            BlueprintName = "MarvelApiClient"
-            ReferencedContainer = "container:MarvelApiClient.xcodeproj">
+            BuildableName = "MarvelAPIClient.framework"
+            BlueprintName = "MarvelAPIClient"
+            ReferencedContainer = "container:MarvelAPIClient.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>

@@ -10,7 +10,7 @@ import Foundation
 import Nimble
 import Result
 import BothamNetworking
-@testable import MarvelApiClient
+@testable import MarvelAPIClient
 
 func beSuccess<T>() -> MatcherFunc<T?> {
     return MatcherFunc { actualExpression, failureMessage in

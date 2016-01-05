@@ -12,7 +12,7 @@ import Nocilla
 import Nimble
 import BothamNetworking
 import Result
-@testable import MarvelApiClient
+@testable import MarvelAPIClient
 
 class CharactersApiClientTests: NocillaTestCase {
 
@@ -56,14 +56,14 @@ class CharactersApiClientTests: NocillaTestCase {
         assertContainsExpectedCharacterDTO(response?.value)
     }
 
-    private func givenACharactersApiClient() -> CharactersApiClient {
+    private func givenACharactersApiClient() -> CharactersAPIClient {
         let apiClient = BothamAPIClient(baseEndpoint: marvelBaseEndpoint)
         apiClient.requestInterceptors.append(DefaultHeadersRequestInterceptor())
         let timeProvider = MockTimeProvider(time: 1)
         apiClient.requestInterceptors.append(MarvelAPIAuthentication(timeProvider: timeProvider))
-        MarvelApiClient.publicKey = anyPublicKey
-        MarvelApiClient.privateKey = anyPrivateKey
-        return CharactersApiClient(apiClient: apiClient, parser: CharactersParser())
+        MarvelAPIClient.publicKey = anyPublicKey
+        MarvelAPIClient.privateKey = anyPrivateKey
+        return CharactersAPIClient(apiClient: apiClient, parser: CharactersParser())
     }
 
     private func assertContainsExpectedGetCharactersDTO(getCharactersDTO: GetCharactersDTO?) {
