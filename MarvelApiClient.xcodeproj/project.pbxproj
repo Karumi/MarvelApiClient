@@ -70,7 +70,6 @@
 		EB29E0211BF9EC1800170355 /* MarvelApiParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelApiParams.swift; sourceTree = "<group>"; };
 		EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptor.swift; sourceTree = "<group>"; };
 		EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIAuthentication.swift; sourceTree = "<group>"; };
-		EB49E0C31BF7E81F00C53347 /* MarvelAPIClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelAPIClientPlayground.playground; sourceTree = "<group>"; };
 		EB49E0C41BF7ED4B00C53347 /* MarvelAPIClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientConfig.swift; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0C81BF4EBBA00AE003E /* MarvelAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelAPIClient.h; sourceTree = "<group>"; };
@@ -184,7 +183,6 @@
 		EB52A0BB1BF4EBBA00AE003E = {
 			isa = PBXGroup;
 			children = (
-				EB49E0C31BF7E81F00C53347 /* MarvelAPIClientPlayground.playground */,
 				EB52A0C71BF4EBBA00AE003E /* MarvelAPIClient */,
 				EB52A0D31BF4EBBA00AE003E /* MarvelAPIClientTests */,
 				EB52A0C61BF4EBBA00AE003E /* Products */,

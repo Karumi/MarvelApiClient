@@ -14,7 +14,7 @@ public class MarvelAPIClient {
     static var publicKey: String = ""
     static var privateKey: String = ""
 
-    public static func configureCredentials(publicKey: String, privateKey: String) {
+    public static func configureCredentials(publicKey publicKey: String, privateKey: String) {
         MarvelAPIClient.publicKey = publicKey
         MarvelAPIClient.privateKey = privateKey
         initDefaultHeaders()

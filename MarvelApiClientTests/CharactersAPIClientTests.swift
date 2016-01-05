@@ -30,7 +30,7 @@ class CharactersApiClientTests: NocillaTestCase {
         .withHeader("Content-Type","application/json")
 
         var response: Result<GetCharactersDTO, BothamAPIClientError>?
-        charactersApiClient.getAll(0, limit: 1) { result in
+        charactersApiClient.getAll(offset: 0, limit: 1) { result in
             response = result
         }
 
