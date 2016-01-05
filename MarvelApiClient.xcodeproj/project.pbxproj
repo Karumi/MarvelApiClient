@@ -89,6 +89,7 @@
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
 		EBB480F91C3BCFD40087CC62 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		EBC2F5551C3BDCFC007E53D1 /* MarvelAPIClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelAPIClientPlayground.playground; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +186,7 @@
 		EB52A0BB1BF4EBBA00AE003E = {
 			isa = PBXGroup;
 			children = (
+				EBC2F5551C3BDCFC007E53D1 /* MarvelAPIClientPlayground.playground */,
 				EB52A0C71BF4EBBA00AE003E /* MarvelAPIClient */,
 				EB52A0D31BF4EBBA00AE003E /* MarvelAPIClientTests */,
 				EB52A0C61BF4EBBA00AE003E /* Products */,
