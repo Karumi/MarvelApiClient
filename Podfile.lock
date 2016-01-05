@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BothamNetworking:
-    :commit: 34feaa97c2815c60d4b4d5035c9a9b860558f9a0
+    :commit: 140693835d8acb3ae74c7a5c1f282c5b197dd184
     :git: git@github.com:Karumi/BothamNetworking.git
 
 SPEC CHECKSUMS:
