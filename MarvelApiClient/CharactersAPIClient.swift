@@ -20,7 +20,8 @@ public class CharactersAPIClient {
         self.apiClient = apiClient
     }
 
-    public func getAll(offset offset: Int, limit: Int, completition: (Result<GetCharactersDTO, BothamAPIClientError>) -> ()) {
+    public func getAll(offset offset: Int, limit: Int,
+        completion: (Result<GetCharactersDTO, BothamAPIClientError>) -> ()) {
         assert(offset >= 0 && limit >= 0)
         let params: [String:String?] =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
         apiClient.GET("characters", parameters: params) { response in
@@ -32,7 +33,7 @@ public class CharactersAPIClient {
         }
     }
 
-    public func getById(id: String, completition: (Result<CharacterDTO, BothamAPIClientError>) -> ()) {
+    public func getById(id: String, completion: (Result<CharacterDTO, BothamAPIClientError>) -> ()) {
         apiClient.GET("characters/\(id)") { response in
             completition(
                 response.mapJSON {

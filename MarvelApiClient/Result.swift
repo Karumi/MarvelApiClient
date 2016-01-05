@@ -22,7 +22,8 @@ extension Result {
 
     private func dataToJSONResult(data: NSData?) -> Result<JSON, Error> {
         return Result<JSON, Error> {
-            let object: AnyObject = try NSJSONSerialization.JSONObjectWithData(data ?? NSData(), options: .AllowFragments)
+            let object: AnyObject = try NSJSONSerialization.JSONObjectWithData(data ?? NSData(),
+                options: .AllowFragments)
             return JSON(object)
         }
     }
