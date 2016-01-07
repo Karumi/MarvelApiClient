@@ -40,7 +40,7 @@ class SeriesParser: Parser {
             endYear: json["endYear"].intValue,
             rating: json["rating"].stringValue,
             thumbnail: parseThumbnailDTO(json["thumbnail"]),
-            comics: parseComics(json["comics"])
+            comics: parseComics(json["comics"]["items"])
         )
     }
 

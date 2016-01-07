@@ -14,20 +14,15 @@ import BothamNetworking
 import Result
 @testable import MarvelAPIClient
 
-class CharactersAPIClientTests: NocillaTestCase {
-
-    private let marvelBaseEndpoint = "http://gateway.marvel.com/v1/public/"
-    private let anyPublicKey = "1234"
-    private let anyPrivateKey = "abcd"
+class CharactersAPIClientTests: MarvelAPIClientTests {
 
     func testReturnsGetCharactersResponse() {
-        let charactersApiClient = givenACharactersApiClient()
+        let charactersApiClient = givenACharactersAPIClient()
         stubRequest("GET",
             "http://gateway.marvel.com/v1/public/characters?"
                 + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
         .andReturn(200)
         .withBody(fromJsonFile("getAllCharacters"))
-        .withHeader("Content-Type","application/json")
 
         var response: Result<GetCharactersDTO, BothamAPIClientError>?
         charactersApiClient.getAll(offset: 0, limit: 1) { result in
@@ -39,13 +34,12 @@ class CharactersAPIClientTests: NocillaTestCase {
     }
 
     func testReturnsGetCharacterById() {
-        let charactersApiClient = givenACharactersApiClient()
+        let charactersApiClient = givenACharactersAPIClient()
         stubRequest("GET",
             "http://gateway.marvel.com/v1/public/characters/1?"
              + "apikey=1234&ts=1&hash=ffd275c5130566a2916217b101f26150")
             .andReturn(200)
             .withBody(fromJsonFile("getCharacterById"))
-            .withHeader("Content-Type","application/json")
 
         var response: Result<CharacterDTO, BothamAPIClientError>?
         charactersApiClient.getById("1") { result in
@@ -56,13 +50,8 @@ class CharactersAPIClientTests: NocillaTestCase {
         assertContainsExpectedCharacterDTO(response?.value)
     }
 
-    private func givenACharactersApiClient() -> CharactersAPIClient {
-        let apiClient = BothamAPIClient(baseEndpoint: marvelBaseEndpoint)
-        apiClient.requestInterceptors.append(DefaultHeadersRequestInterceptor())
-        let timeProvider = MockTimeProvider(time: 1)
-        apiClient.requestInterceptors.append(MarvelAPIAuthentication(timeProvider: timeProvider))
-        MarvelAPIClient.publicKey = anyPublicKey
-        MarvelAPIClient.privateKey = anyPrivateKey
+    private func givenACharactersAPIClient() -> CharactersAPIClient {
+        let apiClient = givenABothamAPIClient()
         return CharactersAPIClient(apiClient: apiClient, parser: CharactersParser())
     }
 
