@@ -33,6 +33,22 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         assertContainsExpectedGetSeriesDTO(response?.value)
     }
 
+    func testRetungsGetComicsBySeriesIdResponse() {
+        let seriesAPIClient = givenASeriesAPIClient()
+        stubRequest("GET",
+            "http://gateway.marvel.com/v1/public/series/18454/comics?"
+                + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            .andReturn(200)
+            .withBody(fromJsonFile("getComicsBySeriesId"))
+
+        var response: Result<GetComicsDTO, BothamAPIClientError>?
+        seriesAPIClient.getComics(seriesId: "18454", offset: 0, limit: 1) { result in
+            response = result
+        }
+
+        expect(response).toEventuallyNot(beNil())
+    }
+
     private func assertContainsExpectedGetSeriesDTO(seriesDTO: GetSeriesDTO?) {
         expect(seriesDTO).toNot(beNil())
         expect(seriesDTO?.count).to(equal(1))

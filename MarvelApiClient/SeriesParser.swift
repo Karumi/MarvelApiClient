@@ -20,6 +20,14 @@ class SeriesParser: Parser {
         return parseSeriesDTO(json["data"]["results"][0])
     }
 
+    func getComicsDTOFromJSON(json: JSON) -> GetComicsDTO {
+        return GetComicsDTO(
+            offset: json["offset"].intValue,
+            limit: json["limit"].intValue,
+            count: json["count"].intValue,
+            comics: parseComicsDetail(json["results"]))
+    }
+
     private func parseGetSeriesDTO(json: JSON) -> GetSeriesDTO {
         return GetSeriesDTO(
             offset: json["offset"].intValue,
@@ -35,7 +43,7 @@ class SeriesParser: Parser {
     private func parseSeriesDTO(json: JSON) -> SeriesDTO {
         return SeriesDTO(id: json["id"].stringValue,
             title: json["title"].stringValue,
-            description: json["description"].stringValue,
+            description: json["description"].string,
             startYear: json["startYear"].intValue,
             endYear: json["endYear"].intValue,
             rating: json["rating"].stringValue,
@@ -53,6 +61,20 @@ class SeriesParser: Parser {
 
     private func parseComics(json: JSON) -> [ComicDTO] {
         return json.arrayValue.map { ComicDTO(name: $0["name"].stringValue) }
+    }
+
+    private func parseComicsDetail(json: JSON) -> [ComicDetailDTO] {
+        return json.arrayValue.map { parseComicDetail($0) }
+    }
+
+    private func parseComicDetail(json: JSON) -> ComicDetailDTO {
+        return ComicDetailDTO(title: json["title"].stringValue,
+            description: json["description"].string,
+            images: parseComicImages(json["images"]))
+    }
+
+    private func parseComicImages(json: JSON) -> [ThumbnailDTO] {
+        return json.arrayValue.map { parseThumbnailDTO($0) }
     }
 
 }

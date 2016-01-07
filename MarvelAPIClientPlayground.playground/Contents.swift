@@ -24,4 +24,10 @@ seriesAPIClient.getAll(offset: 0, limit: 1) { response in
     print(series?[0].title)
 }
 
+seriesAPIClient.getComics(seriesId: "18454", offset: 0, limit: 1) { response in
+    print("Get comics by series id:")
+    let comics = response.value?.comics
+    print(comics?[0].title)
+}
+
 XCPlaygroundPage.currentPage.needsIndefiniteExecution = true

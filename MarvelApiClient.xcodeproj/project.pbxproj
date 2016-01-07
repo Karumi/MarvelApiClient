@@ -23,6 +23,8 @@
 		EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */; };
 		EB49E0C51BF7ED4B00C53347 /* MarvelAPIClientConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB49E0C41BF7ED4B00C53347 /* MarvelAPIClientConfig.swift */; };
 		EB5123871C3E927E001EC70B /* getAllSeries.json in Resources */ = {isa = PBXBuildFile; fileRef = EBD0EEFC1C3E8CD500609A25 /* getAllSeries.json */; };
+		EB5123931C3E96F2001EC70B /* GetComicsDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5123921C3E96F2001EC70B /* GetComicsDTO.swift */; };
+		EB5123951C3E9770001EC70B /* ComicDetailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB5123941C3E9770001EC70B /* ComicDetailDTO.swift */; };
 		EB52A0C91BF4EBBA00AE003E /* MarvelAPIClient.h in Headers */ = {isa = PBXBuildFile; fileRef = EB52A0C81BF4EBBA00AE003E /* MarvelAPIClient.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EB52A0D01BF4EBBA00AE003E /* MarvelAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB52A0C51BF4EBBA00AE003E /* MarvelAPIClient.framework */; };
 		EBAEB4BF1BFA16CF00547FC1 /* getAllCharacters.json in Resources */ = {isa = PBXBuildFile; fileRef = EBAEB4BE1BFA16CF00547FC1 /* getAllCharacters.json */; };
@@ -47,6 +49,7 @@
 		EBD0EEFB1C3E869900609A25 /* SeriesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */; };
 		EBD0EF031C3E8E2000609A25 /* MarvelAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EF011C3E8DB500609A25 /* MarvelAPIClientTests.swift */; };
 		EBD0EF041C3E8E5700609A25 /* SeriesAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEFF1C3E8D8E00609A25 /* SeriesAPIClientTests.swift */; };
+		EBE2C3B41C3E9A970096A24C /* getComicsBySeriesId.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE2C3B31C3E9A970096A24C /* getComicsBySeriesId.json */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,8 @@
 		EB39731C1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptor.swift; sourceTree = "<group>"; };
 		EB39731E1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIAuthentication.swift; sourceTree = "<group>"; };
 		EB49E0C41BF7ED4B00C53347 /* MarvelAPIClientConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientConfig.swift; sourceTree = "<group>"; };
+		EB5123921C3E96F2001EC70B /* GetComicsDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetComicsDTO.swift; sourceTree = "<group>"; };
+		EB5123941C3E9770001EC70B /* ComicDetailDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicDetailDTO.swift; sourceTree = "<group>"; };
 		EB52A0C51BF4EBBA00AE003E /* MarvelAPIClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MarvelAPIClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB52A0C81BF4EBBA00AE003E /* MarvelAPIClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MarvelAPIClient.h; sourceTree = "<group>"; };
 		EB52A0CA1BF4EBBA00AE003E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -112,6 +117,7 @@
 		EBD0EEFC1C3E8CD500609A25 /* getAllSeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getAllSeries.json; sourceTree = "<group>"; };
 		EBD0EEFF1C3E8D8E00609A25 /* SeriesAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesAPIClientTests.swift; sourceTree = "<group>"; };
 		EBD0EF011C3E8DB500609A25 /* MarvelAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientTests.swift; sourceTree = "<group>"; };
+		EBE2C3B31C3E9A970096A24C /* getComicsBySeriesId.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getComicsBySeriesId.json; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -272,6 +278,7 @@
 				EBAEB4BE1BFA16CF00547FC1 /* getAllCharacters.json */,
 				EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */,
 				EBD0EEFC1C3E8CD500609A25 /* getAllSeries.json */,
+				EBE2C3B31C3E9A970096A24C /* getComicsBySeriesId.json */,
 			);
 			name = Json;
 			sourceTree = "<group>";
@@ -399,6 +406,8 @@
 			children = (
 				EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */,
 				EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */,
+				EB5123921C3E96F2001EC70B /* GetComicsDTO.swift */,
+				EB5123941C3E9770001EC70B /* ComicDetailDTO.swift */,
 			);
 			name = DTOs;
 			sourceTree = "<group>";
@@ -523,6 +532,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */,
+				EBE2C3B41C3E9A970096A24C /* getComicsBySeriesId.json in Resources */,
 				EBAEB4BF1BFA16CF00547FC1 /* getAllCharacters.json in Resources */,
 				EB5123871C3E927E001EC70B /* getAllSeries.json in Resources */,
 			);
@@ -623,9 +633,11 @@
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
 				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,
 				EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */,
+				EB5123931C3E96F2001EC70B /* GetComicsDTO.swift in Sources */,
 				EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */,
 				EBAFE1D11BF7813600591AEA /* MarvelAPIClient.swift in Sources */,
 				EB49E0C51BF7ED4B00C53347 /* MarvelAPIClientConfig.swift in Sources */,
+				EB5123951C3E9770001EC70B /* ComicDetailDTO.swift in Sources */,
 				EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */,
 				EB29E0181BF9DD6700170355 /* ComicDTO.swift in Sources */,
 				EBD0EEF71C3E866700609A25 /* GetSeriesDTO.swift in Sources */,

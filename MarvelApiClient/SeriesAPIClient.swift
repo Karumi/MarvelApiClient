@@ -33,4 +33,18 @@ public class SeriesAPIClient {
             }
     }
 
+    public func getComics(seriesId seriesId: String, offset: Int, limit: Int,
+        completion: (Result<GetComicsDTO, BothamAPIClientError>) -> ()) {
+            assert(offset >= 0 && limit >= 0)
+            let params =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
+            apiClient.GET("series/\(seriesId)/comics", parameters: params) { response in
+                completion(
+                    response.mapJSON {
+                        return self.parser.getComicsDTOFromJSON($0)
+                    }
+                )
+            }
+
+    }
+
 }
