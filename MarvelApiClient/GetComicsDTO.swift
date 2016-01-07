@@ -13,6 +13,6 @@ public struct GetComicsDTO {
     public let offset: Int
     public let limit: Int
     public let count: Int
-    public let comics: [ComicDetailDTO]
+    public let comics: [ComicDetailDTO]?
 
 }

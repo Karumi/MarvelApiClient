@@ -55,16 +55,17 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         expect(seriesDTO?.count).to(equal(1))
         expect(seriesDTO?.offset).to(equal(0))
         expect(seriesDTO?.limit).to(equal(1))
-        expect(seriesDTO?.series[0].id).to(equal("18454"))
-        expect(seriesDTO?.series[0].title).to(equal("100th Anniversary Special (2014 - Present)"))
-        expect(seriesDTO?.series[0].description).to(equal("100th Anniversary"))
-        expect(seriesDTO?.series[0].startYear).to(equal(2014))
-        expect(seriesDTO?.series[0].endYear).to(equal(2099))
-        expect(seriesDTO?.series[0].rating).to(equal("Rated T"))
-        expect(seriesDTO?.series[0].thumbnail.path).to(equal("http://i.annihil.us/u/prod/marvel/i/mg/b/40/23124af34as"))
-        expect(seriesDTO?.series[0].thumbnail.format).to(equal("jpg"))
-        expect(seriesDTO?.series[0].comics?.count).to(equal(1))
-        expect(seriesDTO?.series[0].comics?[0].name).to(equal("100th Anniversary Special (2014) #1"))
+        expect(seriesDTO?.series?[0].id).to(equal("18454"))
+        expect(seriesDTO?.series?[0].title).to(equal("100th Anniversary Special (2014 - Present)"))
+        expect(seriesDTO?.series?[0].description).to(equal("100th Anniversary"))
+        expect(seriesDTO?.series?[0].startYear).to(equal(2014))
+        expect(seriesDTO?.series?[0].endYear).to(equal(2099))
+        expect(seriesDTO?.series?[0].rating).to(equal("Rated T"))
+        expect(seriesDTO?.series?[0].thumbnail?.path).to(equal("http://i.annihil.us/u/prod/"
+            + "marvel/i/mg/b/40/23124af34as"))
+        expect(seriesDTO?.series?[0].thumbnail?.format).to(equal("jpg"))
+        expect(seriesDTO?.series?[0].comics?.count).to(equal(1))
+        expect(seriesDTO?.series?[0].comics?[0].name).to(equal("100th Anniversary Special (2014) #1"))
 
     }
 
@@ -73,12 +74,12 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         expect(comicsDTO?.count).to(equal(1))
         expect(comicsDTO?.offset).to(equal(0))
         expect(comicsDTO?.limit).to(equal(1))
-        expect(comicsDTO?.comics[0].title).to(equal("100th Anniversary Special (2014) #1"))
-        expect(comicsDTO?.comics[0].description).to(equal("Just in time for the release"
+        expect(comicsDTO?.comics?[0].title).to(equal("100th Anniversary Special (2014) #1"))
+        expect(comicsDTO?.comics?[0].description).to(equal("Just in time for the release"
             + " of their SEVENTH epic motion picture."))
-        expect(comicsDTO?.comics[0].images[0].path).to(equal("http://i.annihil.us/u/prod/marvel/"
+        expect(comicsDTO?.comics?[0].images?[0].path).to(equal("http://i.annihil.us/u/prod/marvel/"
             + "i/mg/9/10/53cd2c7612d2f"))
-        expect(comicsDTO?.comics[0].images[0].format).to(equal("jpg"))
+        expect(comicsDTO?.comics?[0].images?[0].format).to(equal("jpg"))
     }
 
     private func givenASeriesAPIClient() -> SeriesAPIClient {

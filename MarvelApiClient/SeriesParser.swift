@@ -42,11 +42,11 @@ class SeriesParser: Parser {
 
     private func parseSeriesDTO(json: JSON) -> SeriesDTO {
         return SeriesDTO(id: json["id"].stringValue,
-            title: json["title"].stringValue,
+            title: json["title"].string,
             description: json["description"].string,
-            startYear: json["startYear"].intValue,
-            endYear: json["endYear"].intValue,
-            rating: json["rating"].stringValue,
+            startYear: json["startYear"].int,
+            endYear: json["endYear"].int,
+            rating: json["rating"].string,
             thumbnail: parseThumbnailDTO(json["thumbnail"]),
             comics: parseComics(json["comics"]["items"])
         )
@@ -60,7 +60,7 @@ class SeriesParser: Parser {
     }
 
     private func parseComics(json: JSON) -> [ComicDTO] {
-        return json.arrayValue.map { ComicDTO(name: $0["name"].stringValue) }
+        return json.arrayValue.map { ComicDTO(name: $0["name"].string) }
     }
 
     private func parseComicsDetail(json: JSON) -> [ComicDetailDTO] {
@@ -68,7 +68,8 @@ class SeriesParser: Parser {
     }
 
     private func parseComicDetail(json: JSON) -> ComicDetailDTO {
-        return ComicDetailDTO(title: json["title"].stringValue,
+        return ComicDetailDTO(id: json["id"].stringValue,
+            title: json["title"].string,
             description: json["description"].string,
             images: parseComicImages(json["images"]))
     }

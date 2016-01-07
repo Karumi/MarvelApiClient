@@ -10,8 +10,9 @@ import Foundation
 
 public struct ComicDetailDTO {
 
-    public let title: String
+    public let id: String
+    public let title: String?
     public let description: String?
-    public let images: [ThumbnailDTO]
+    public let images: [ThumbnailDTO]?
 
 }
