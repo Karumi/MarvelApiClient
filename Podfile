@@ -2,18 +2,16 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '8.0'
 use_frameworks!
 
-target :MarvelApiClient do
-    pod 'Alamofire-Result', '~> 3.1.1-karumi'
-    pod 'SwiftyJSON'
-    pod 'BrightFutures'
-    pod 'CryptoSwift'
+target :MarvelAPIClient do
+    pod 'BothamNetworking', :git => 'https://github.com/Karumi/BothamNetworking.git'
+	pod 'CryptoSwift'
+	pod 'SwiftyJSON'
 end
 
-target :MarvelApiClientTests do
-    pod 'Alamofire-Result', '~> 3.1.1-karumi'
-    pod 'SwiftyJSON'
-    pod 'BrightFutures'
-    pod 'CryptoSwift'
+target :MarvelAPIClientTests do
+    pod 'BothamNetworking', :git => 'https://github.com/Karumi/BothamNetworking.git'
+	pod 'CryptoSwift'
+	pod 'SwiftyJSON'
     pod 'Nocilla'
     pod 'Nimble'
 end

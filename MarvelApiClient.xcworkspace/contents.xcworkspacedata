@@ -2,9 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:MarvelApiClient.xcodeproj">
+      location = "group:MarvelAPIClient.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:MarvelApiClient.xcodeproj">
    </FileRef>
 </Workspace>

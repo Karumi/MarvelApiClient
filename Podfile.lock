@@ -1,32 +1,34 @@
 PODS:
-  - Alamofire-Result (3.1.1-karumi):
-    - Result (~> 0.6.0-beta.4)
-  - BrightFutures (3.1.2):
-    - Result (= 0.6.0-beta.6)
-  - CryptoSwift (0.1.1)
+  - BothamNetworking (0.0.1):
+    - Result
+  - CryptoSwift (0.2.2)
   - Nimble (3.0.0)
   - Nocilla (0.10.0)
-  - PathKit (0.5.0)
-  - Result (0.6.0-beta.6)
-  - SwiftyJSON (2.3.1)
+  - Result (1.0.1)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
-  - Alamofire-Result (~> 3.1.1-karumi)
-  - BrightFutures
+  - BothamNetworking (from `https://github.com/Karumi/BothamNetworking.git`)
   - CryptoSwift
   - Nimble
   - Nocilla
-  - PathKit
   - SwiftyJSON
 
+EXTERNAL SOURCES:
+  BothamNetworking:
+    :git: https://github.com/Karumi/BothamNetworking.git
+
+CHECKOUT OPTIONS:
+  BothamNetworking:
+    :commit: e98705f5f365ca642c439c0eec443480102cdce0
+    :git: https://github.com/Karumi/BothamNetworking.git
+
 SPEC CHECKSUMS:
-  Alamofire-Result: 29d9be3871a669dfadd2694b5a094218bc3b80e7
-  BrightFutures: 6b4b299decee4c3775a9e7188d1ecec55262e09c
-  CryptoSwift: c11640d3d66107efc8333e4131a5173f072b1d61
+  BothamNetworking: 590e6c0d6839c0c209f02cd7e719b39498819b08
+  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
   Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
   Nocilla: ae0a2b05f3087b473624ac2b25903695df51246a
-  PathKit: 64e70cb924d6faed9251049f5f28662855524baf
-  Result: dc390d0b58f9ec43fcd536f1ebdd130803cc6cbc
-  SwiftyJSON: 592b53bee5ef3dd9b3bebc6b9cb7ee35426ae8c3
+  Result: caef80340451e1f07492fa1e89117f83613bce24
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

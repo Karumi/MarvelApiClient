@@ -1,20 +1,18 @@
 //
 //  Dictionary.swift
-//  MarvelApiClient
+//  MarvelAPIClient
 //
-//  Created by Pedro Vicente on 14/11/15.
-//  Copyright © 2015 GoKarumi S.L. All rights reserved.
+//  Created by Pedro Vicente Gomez on 05/01/16.
+//  Copyright © 2016 GoKarumi S.L. All rights reserved.
 //
 
 import Foundation
 
-func + <K, V> (left: Dictionary<K, V>, right: Dictionary<K, V>) -> Dictionary<K, V> {
-    var result = Dictionary<K, V>()
-    for (k, v) in left {
-        result.updateValue(v, forKey: k)
+extension Dictionary {
+    init(_ pairs: [Element]) {
+        self.init()
+        for (k, v) in pairs {
+            self[k] = v
+        }
     }
-    for (k, v) in right {
-        result.updateValue( v, forKey: k)
-    }
-    return result
 }
