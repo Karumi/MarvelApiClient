@@ -234,6 +234,7 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelAPIClient */ = {
 			isa = PBXGroup;
 			children = (
+				EBE2C3B51C3EA5D60096A24C /* Error */,
 				EBB480F81C3BCFC30087CC62 /* Extensions */,
 				EBAFE1F51BF7BAC900591AEA /* Time */,
 				EBAFE1EC1BF7A0FA00591AEA /* Base */,
@@ -426,6 +427,13 @@
 				EBD0EEFF1C3E8D8E00609A25 /* SeriesAPIClientTests.swift */,
 			);
 			name = Series;
+			sourceTree = "<group>";
+		};
+		EBE2C3B51C3EA5D60096A24C /* Error */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Error;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

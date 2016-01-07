@@ -77,7 +77,7 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         expect(comicsDTO?.comics[0].description).to(equal("Just in time for the release"
             + " of their SEVENTH epic motion picture."))
         expect(comicsDTO?.comics[0].images[0].path).to(equal("http://i.annihil.us/u/prod/marvel/"
-            +"i/mg/9/10/53cd2c7612d2f"))
+            + "i/mg/9/10/53cd2c7612d2f"))
         expect(comicsDTO?.comics[0].images[0].format).to(equal("jpg"))
     }
 
