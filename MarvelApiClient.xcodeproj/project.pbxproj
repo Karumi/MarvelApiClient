@@ -40,6 +40,10 @@
 		EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */; };
 		EBC31B291C3C2BF800E00E38 /* DefaultHeadersRequestInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */; };
 		EBD0EEF01C3E7F9300609A25 /* ThumbnailDTOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEEE1C3E7E8900609A25 /* ThumbnailDTOTests.swift */; };
+		EBD0EEF31C3E844100609A25 /* SeriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */; };
+		EBD0EEF71C3E866700609A25 /* GetSeriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */; };
+		EBD0EEF91C3E868600609A25 /* SeriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */; };
+		EBD0EEFB1C3E869900609A25 /* SeriesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */; };
 		EBE9B35D1BFA38AA00A63A90 /* getCharacterById.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +102,10 @@
 		EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
 		EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultHeadersRequestInterceptorTests.swift; sourceTree = "<group>"; };
 		EBD0EEEE1C3E7E8900609A25 /* ThumbnailDTOTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailDTOTests.swift; sourceTree = "<group>"; };
+		EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesAPIClient.swift; sourceTree = "<group>"; };
+		EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSeriesDTO.swift; sourceTree = "<group>"; };
+		EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesDTO.swift; sourceTree = "<group>"; };
+		EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesParser.swift; sourceTree = "<group>"; };
 		EBE9B35C1BFA38AA00A63A90 /* getCharacterById.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getCharacterById.json; sourceTree = "<group>"; };
 		EDE849FC6D561600FE0F4FED /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		FAE625C94EB1B24C2E91E751 /* Pods_MarvelApiClient.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelApiClient.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -221,6 +229,7 @@
 				EBAFE1E61BF79D5300591AEA /* Authentication */,
 				EB29E00B1BF9CCAE00170355 /* Parser */,
 				EBAFE1CD1BF7810600591AEA /* Characters */,
+				EBD0EEF11C3E842D00609A25 /* Series */,
 				EBD0EEEC1C3E7D5700609A25 /* Images */,
 				EB52A0C81BF4EBBA00AE003E /* MarvelAPIClient.h */,
 				EB52A0CA1BF4EBBA00AE003E /* Info.plist */,
@@ -364,6 +373,33 @@
 				EBD0EEEE1C3E7E8900609A25 /* ThumbnailDTOTests.swift */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		EBD0EEF11C3E842D00609A25 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */,
+				EBD0EEF41C3E844600609A25 /* DTOs */,
+				EBD0EEF51C3E844E00609A25 /* Parser */,
+			);
+			name = Series;
+			sourceTree = "<group>";
+		};
+		EBD0EEF41C3E844600609A25 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */,
+				EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */,
+			);
+			name = DTOs;
+			sourceTree = "<group>";
+		};
+		EBD0EEF51C3E844E00609A25 /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */,
+			);
+			name = Parser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -559,8 +595,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EBD0EEF31C3E844100609A25 /* SeriesAPIClient.swift in Sources */,
 				EBB480FA1C3BCFD40087CC62 /* ResultType.swift in Sources */,
+				EBD0EEF91C3E868600609A25 /* SeriesDTO.swift in Sources */,
 				EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */,
+				EBD0EEFB1C3E869900609A25 /* SeriesParser.swift in Sources */,
 				EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
@@ -571,6 +610,7 @@
 				EB49E0C51BF7ED4B00C53347 /* MarvelAPIClientConfig.swift in Sources */,
 				EBAFE1E81BF79D9400591AEA /* MarvelHashGenerator.swift in Sources */,
 				EB29E0181BF9DD6700170355 /* ComicDTO.swift in Sources */,
+				EBD0EEF71C3E866700609A25 /* GetSeriesDTO.swift in Sources */,
 				EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */,
 				EB39731D1C3ACBA300AF37CD /* DefaultHeadersRequestInterceptor.swift in Sources */,
 				EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */,
