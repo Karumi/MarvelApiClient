@@ -234,7 +234,6 @@
 		EB52A0C71BF4EBBA00AE003E /* MarvelAPIClient */ = {
 			isa = PBXGroup;
 			children = (
-				EBE2C3B51C3EA5D60096A24C /* Error */,
 				EBB480F81C3BCFC30087CC62 /* Extensions */,
 				EBAFE1F51BF7BAC900591AEA /* Time */,
 				EBAFE1EC1BF7A0FA00591AEA /* Base */,
@@ -429,13 +428,6 @@
 			name = Series;
 			sourceTree = "<group>";
 		};
-		EBE2C3B51C3EA5D60096A24C /* Error */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Error;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -509,7 +501,7 @@
 					};
 				};
 			};
-			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */;
+			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -841,7 +833,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */ = {
+		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB52A0D71BF4EBBA00AE003E /* Debug */,
