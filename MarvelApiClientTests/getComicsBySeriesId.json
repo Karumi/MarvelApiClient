@@ -16,7 +16,7 @@
                     "title": "100th Anniversary Special (2014) #1",
                     "issueNumber": 1,
                     "variantDescription": "",
-                    "description": "Just in time for the release of their SEVENTH epic motion picture, the Guardians of the Galaxy are celebrating their 100th Anniversary...by taking on the THE SILVER GALACTUS!",
+                    "description": "Just in time for the release of their SEVENTH epic motion picture.",
                     "modified": "2014-07-21T11:39:24-0400",
                     "isbn": "",
                     "upc": "75960608000700511",
@@ -89,9 +89,6 @@
                     },
                     "images": [{
                                "path": "http://i.annihil.us/u/prod/marvel/i/mg/9/10/53cd2c7612d2f",
-                               "extension": "jpg"
-                               }, {
-                               "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/b0/536d00217d190",
                                "extension": "jpg"
                                }],
                     "creators": {

@@ -47,6 +47,7 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         }
 
         expect(response).toEventuallyNot(beNil())
+        assertContainsExpectedGetComicsDTO(response?.value)
     }
 
     private func assertContainsExpectedGetSeriesDTO(seriesDTO: GetSeriesDTO?) {
@@ -65,6 +66,17 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         expect(seriesDTO?.series[0].comics?.count).to(equal(1))
         expect(seriesDTO?.series[0].comics?[0].name).to(equal("100th Anniversary Special (2014) #1"))
 
+    }
+
+    private func assertContainsExpectedGetComicsDTO(comicsDTO: GetComicsDTO?) {
+        expect(comicsDTO).toNot(beNil())
+        expect(comicsDTO?.count).to(equal(1))
+        expect(comicsDTO?.offset).to(equal(0))
+        expect(comicsDTO?.limit).to(equal(1))
+        expect(comicsDTO?.comics[0].title).to(equal("100th Anniversary Special (2014) #1"))
+        expect(comicsDTO?.comics[0].description).to(equal("Just in time for the release of their SEVENTH epic motion picture."))
+        expect(comicsDTO?.comics[0].images[0].path).to(equal("http://i.annihil.us/u/prod/marvel/i/mg/9/10/53cd2c7612d2f"))
+        expect(comicsDTO?.comics[0].images[0].format).to(equal("jpg"))
     }
 
     private func givenASeriesAPIClient() -> SeriesAPIClient {

@@ -22,10 +22,10 @@ class SeriesParser: Parser {
 
     func getComicsDTOFromJSON(json: JSON) -> GetComicsDTO {
         return GetComicsDTO(
-            offset: json["offset"].intValue,
-            limit: json["limit"].intValue,
-            count: json["count"].intValue,
-            comics: parseComicsDetail(json["results"]))
+            offset: json["data"]["offset"].intValue,
+            limit: json["data"]["limit"].intValue,
+            count: json["data"]["count"].intValue,
+            comics: parseComicsDetail(json["data"]["results"]))
     }
 
     private func parseGetSeriesDTO(json: JSON) -> GetSeriesDTO {

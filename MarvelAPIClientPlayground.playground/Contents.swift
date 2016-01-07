@@ -5,8 +5,8 @@ import XCPlayground
 import MarvelAPIClient
 
 MarvelAPIClient.configureCredentials(
-    publicKey: "54355f684e1983a183d7bfec96a4bf81",
-    privateKey: "4ad71e7b61e40311545909af0d6ebbd52bbfeae3")
+    publicKey: "PUT_YOUR_PUBLIC_KEY_HERE",
+    privateKey: "PUT_YOUR_PRIVATE_KEY_HERE")
 
 let charactersAPIClient = MarvelAPIClient.charactersAPIClient
 
