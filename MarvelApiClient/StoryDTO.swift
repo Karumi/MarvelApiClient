@@ -10,7 +10,7 @@ import Foundation
 
 public struct StoryDTO {
 
-    public let name: String
-    public let type: String
+    public let name: String?
+    public let type: String?
 
 }

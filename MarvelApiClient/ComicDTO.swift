@@ -10,6 +10,6 @@ import Foundation
 
 public struct ComicDTO {
 
-    public let name: String
+    public let name: String?
 
 }

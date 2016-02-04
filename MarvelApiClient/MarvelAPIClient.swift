@@ -23,7 +23,11 @@ public class MarvelAPIClient {
 
     public static let charactersAPIClient = CharactersAPIClient(
         apiClient: bothamAPIClient,
-        parser: charactersParser)
+        parser: CharactersParser())
+
+    public static let seriesAPIClient = SeriesAPIClient(
+        apiClient: bothamAPIClient,
+        parser: SeriesParser())
 
     private static let bothamAPIClient = BothamAPIClient(
         baseEndpoint: MarvelAPIClientConfig.host)
@@ -36,9 +40,5 @@ public class MarvelAPIClient {
         BothamAPIClient.globalRequestInterceptors.append(
             MarvelAPIAuthentication(timeProvider: TimeProvider()))
     }
-
-    private static let timeProvider = TimeProvider()
-
-    private static let charactersParser = CharactersParser()
 
 }
