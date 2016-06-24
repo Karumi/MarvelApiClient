@@ -1,10 +1,11 @@
 PODS:
-  - BothamNetworking (0.0.1):
+  - BothamNetworking (1.1.0):
     - Result
-  - CryptoSwift (0.2.2)
-  - Nimble (3.0.0)
+    - SwiftyJSON
+  - CryptoSwift (0.5.1)
+  - Nimble (4.1.0)
   - Nocilla (0.10.0)
-  - Result (1.0.1)
+  - Result (2.1.1)
   - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
@@ -20,15 +21,15 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   BothamNetworking:
-    :commit: e98705f5f365ca642c439c0eec443480102cdce0
+    :commit: b84b8d31b7eb61298b95438b21579c8d9a0c8270
     :git: https://github.com/Karumi/BothamNetworking.git
 
 SPEC CHECKSUMS:
-  BothamNetworking: 590e6c0d6839c0c209f02cd7e719b39498819b08
-  CryptoSwift: d382228d6301c09474132417878a741c2a2e68cd
-  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  BothamNetworking: 3396c9b18938ddaa47c44a8c3abf47db1fc7e42e
+  CryptoSwift: df42dda18baf6c76347a94e227dbcc0a341304bd
+  Nimble: 97a0a4cae5124c117115634b2d055d8c97d0af19
   Nocilla: ae0a2b05f3087b473624ac2b25903695df51246a
-  Result: caef80340451e1f07492fa1e89117f83613bce24
+  Result: 822c879f145943320cc80a9a8372378e3d699fe4
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
 COCOAPODS: 0.39.0

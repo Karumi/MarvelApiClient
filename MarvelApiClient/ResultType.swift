@@ -13,13 +13,6 @@ import SwiftyJSON
 
 extension ResultType where Value == HTTPResponse, Error == BothamAPIClientError {
 
-    func mapJSON<U>(transform: JSON -> U) -> Result<U, BothamAPIClientError> {
-        return flatMap { result in
-                let data = self.value?.body
-                return dataToJSONResult(data).map { transform($0) }
-            }
-    }
-
     private func dataToJSONResult(data: NSData?) -> Result<JSON, BothamAPIClientError> {
         do {
             let object: AnyObject = try NSJSONSerialization.JSONObjectWithData(data ?? NSData(),

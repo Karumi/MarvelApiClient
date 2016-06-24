@@ -10,7 +10,7 @@ import Foundation
 import SwiftyJSON
 
 protocol Parser {
-    typealias T
+    associatedtype T
 
     func fromJSON(json: JSON) -> T
 
