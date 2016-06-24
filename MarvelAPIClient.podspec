@@ -15,4 +15,7 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "BothamNetworking"
+  s.dependency "CryptoSwift"
+  s.dependency "SwiftyJSON"
+
 end
