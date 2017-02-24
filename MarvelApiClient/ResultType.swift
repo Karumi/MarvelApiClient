@@ -13,9 +13,9 @@ import SwiftyJSON
 
 extension ResultProtocol where Value == HTTPResponse, Error == BothamAPIClientError {
 
-    private func dataToJSONResult(data: NSData?) -> Result<JSON, BothamAPIClientError> {
+    private func dataToJSONResult(data: Data?) -> Result<JSON, BothamAPIClientError> {
         do {
-            let object: Any = try JSONSerialization.jsonObject(with: (data ?? NSData()) as Data,
+            let object: Any = try JSONSerialization.jsonObject(with: data ?? Data(),
                 options: .allowFragments)
             return Result.success(JSON(object))
         } catch {
