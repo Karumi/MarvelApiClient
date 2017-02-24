@@ -19,7 +19,8 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
     func testReturnsGetSeriesResponse() {
         let seriesAPIClient = givenASeriesAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/series?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            "http://gateway.marvel.com/v1/public/series?"
+            + "offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
             .andReturn(200)?
             .withBody(fromJsonFile("getAllSeries"))
 
@@ -35,7 +36,8 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
     func testRetungsGetComicsBySeriesIdResponse() {
         let seriesAPIClient = givenASeriesAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/series/18454/comics?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            "http://gateway.marvel.com/v1/public/series/18454/comics?"
+                + "offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
             .andReturn(200)?
             .withBody(fromJsonFile("getComicsBySeriesId"))
 

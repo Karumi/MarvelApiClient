@@ -27,7 +27,7 @@ class DefaultHeadersRequestInterceptorTests: XCTestCase {
 
     func testShouldNotOverrideHTTPRequestHeaders() {
         let interceptor = DefaultHeadersRequestInterceptor()
-        let request = givenAHTTPRequest(withHeaders: ["Content-Type":"application/x-www-form-urlencoded"])
+        let request = givenAHTTPRequest(withHeaders: ["Content-Type": "application/x-www-form-urlencoded"])
 
         let interceptedRequest = interceptor.intercept(request)
 

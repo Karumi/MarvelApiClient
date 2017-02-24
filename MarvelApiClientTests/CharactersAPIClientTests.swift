@@ -19,7 +19,8 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
     func testReturnsGetCharactersResponse() {
         let charactersApiClient = givenACharactersAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/characters?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            "http://gateway.marvel.com/v1/public/characters?"
+            + "offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
         .andReturn(200)?
         .withBody(fromJsonFile("getAllCharacters"))
 
