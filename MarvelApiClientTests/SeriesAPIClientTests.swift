@@ -19,9 +19,8 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
     func testReturnsGetSeriesResponse() {
         let seriesAPIClient = givenASeriesAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/series?"
-                + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
-            .andReturn(200)
+            "http://gateway.marvel.com/v1/public/series?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            .andReturn(200)?
             .withBody(fromJsonFile("getAllSeries"))
 
         var response: Result<GetSeriesDTO, BothamAPIClientError>?
@@ -30,15 +29,14 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         }
 
         expect(response).toEventuallyNot(beNil())
-        assertContainsExpectedGetSeriesDTO(response?.value)
+        assertContainsExpected(seriesDTO: response?.value)
     }
 
     func testRetungsGetComicsBySeriesIdResponse() {
         let seriesAPIClient = givenASeriesAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/series/18454/comics?"
-                + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
-            .andReturn(200)
+            "http://gateway.marvel.com/v1/public/series/18454/comics?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+            .andReturn(200)?
             .withBody(fromJsonFile("getComicsBySeriesId"))
 
         var response: Result<GetComicsDTO, BothamAPIClientError>?
@@ -47,10 +45,10 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
         }
 
         expect(response).toEventuallyNot(beNil())
-        assertContainsExpectedGetComicsDTO(response?.value)
+        assertContainsExpected(comicsDTO: response?.value)
     }
 
-    private func assertContainsExpectedGetSeriesDTO(seriesDTO: GetSeriesDTO?) {
+    private func assertContainsExpected(seriesDTO: GetSeriesDTO?) {
         expect(seriesDTO).toNot(beNil())
         expect(seriesDTO?.count).to(equal(1))
         expect(seriesDTO?.offset).to(equal(0))
@@ -69,7 +67,7 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
 
     }
 
-    private func assertContainsExpectedGetComicsDTO(comicsDTO: GetComicsDTO?) {
+    private func assertContainsExpected(comicsDTO: GetComicsDTO?) {
         expect(comicsDTO).toNot(beNil())
         expect(comicsDTO?.count).to(equal(1))
         expect(comicsDTO?.offset).to(equal(0))

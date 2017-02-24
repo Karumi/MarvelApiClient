@@ -19,7 +19,7 @@ class ThumbnailDTOTests: XCTestCase {
     func testGeneratesFullSizeThumbnailURLProperly() {
         let thumbnail = givenAThumbnailDTO(anyPath, anyFormat)
 
-        let thumbnailURL = thumbnail.URL(.FullSize)
+        let thumbnailURL = thumbnail.URL(variant: .FullSize)
 
         expect(thumbnailURL).to(equal(NSURL(string: anyPath + "." + anyFormat)))
     }
@@ -47,13 +47,13 @@ class ThumbnailDTOTests: XCTestCase {
             .Detail]
 
         variants.forEach { variant in
-            let thumbnailURL = thumbnail.URL(variant)
+            let thumbnailURL = thumbnail.URL(variant: variant)
 
             expect(thumbnailURL).to(equal(NSURL(string: anyPath + "/" + variant.rawValue + "." + anyFormat)))
         }
     }
 
-    private func givenAThumbnailDTO(path: String, _ format: String) -> ThumbnailDTO {
+    private func givenAThumbnailDTO(_ path: String, _ format: String) -> ThumbnailDTO {
         return ThumbnailDTO(path: path, format: format)
     }
 

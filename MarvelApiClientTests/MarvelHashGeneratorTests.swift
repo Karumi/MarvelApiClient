@@ -18,7 +18,7 @@ class MarvelHashGeneratorTests: XCTestCase {
         let privateKey = "abcd"
         let publicKey = "1234"
 
-        let result = MarvelHashGenerator.generateHash(timestamp, privateKey: privateKey, publicKey: publicKey)
+        let result = MarvelHashGenerator.generateHash(timestamp: timestamp, privateKey: privateKey, publicKey: publicKey)
 
         expect(result).to(equal("ffd275c5130566a2916217b101f26150"))
     }

@@ -11,16 +11,16 @@ import BothamNetworking
 import Result
 import SwiftyJSON
 
-extension ResultType where Value == HTTPResponse, Error == BothamAPIClientError {
+extension ResultProtocol where Value == HTTPResponse, Error == BothamAPIClientError {
 
     private func dataToJSONResult(data: NSData?) -> Result<JSON, BothamAPIClientError> {
         do {
-            let object: AnyObject = try NSJSONSerialization.JSONObjectWithData(data ?? NSData(),
-                options: .AllowFragments)
-            return Result.Success(JSON(object))
+            let object: Any = try JSONSerialization.jsonObject(with: (data ?? NSData()) as Data,
+                options: .allowFragments)
+            return Result.success(JSON(object))
         } catch {
             let parsingError = error as NSError
-            return Result.Failure(BothamAPIClientError.ParsingError(error: parsingError))
+            return Result.failure(BothamAPIClientError.parsingError(error: parsingError))
         }
     }
 

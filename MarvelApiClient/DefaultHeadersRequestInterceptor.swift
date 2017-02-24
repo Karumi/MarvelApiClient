@@ -11,7 +11,7 @@ import BothamNetworking
 
 class DefaultHeadersRequestInterceptor: BothamRequestInterceptor {
 
-    func intercept(request: HTTPRequest) -> HTTPRequest {
+    func intercept(_ request: HTTPRequest) -> HTTPRequest {
         let defaultHeaders = MarvelAPIClientConfig.defaultHeaders.filter {
             return request.headers?[$0.0] == nil
         }

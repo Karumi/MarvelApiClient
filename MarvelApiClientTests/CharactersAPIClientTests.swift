@@ -19,9 +19,8 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
     func testReturnsGetCharactersResponse() {
         let charactersApiClient = givenACharactersAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/characters?"
-                + "limit=1&apikey=1234&offset=0&hash=ffd275c5130566a2916217b101f26150&ts=1")
-        .andReturn(200)
+            "http://gateway.marvel.com/v1/public/characters?offset=0&apikey=1234&limit=1&hash=ffd275c5130566a2916217b101f26150&ts=1")
+        .andReturn(200)?
         .withBody(fromJsonFile("getAllCharacters"))
 
         var response: Result<GetCharactersDTO, BothamAPIClientError>?
@@ -30,24 +29,23 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
         }
 
         expect(response).toEventuallyNot(beNil())
-        assertContainsExpectedGetCharactersDTO(response?.value)
+        //assertContainsExpected(characterDTO: response?.value)
     }
 
     func testReturnsGetCharacterById() {
         let charactersApiClient = givenACharactersAPIClient()
         stubRequest("GET",
-            "http://gateway.marvel.com/v1/public/characters/1?"
-             + "apikey=1234&ts=1&hash=ffd275c5130566a2916217b101f26150")
-            .andReturn(200)
+            "http://gateway.marvel.com/v1/public/characters/1?hash=ffd275c5130566a2916217b101f26150&apikey=1234&ts=1")
+            .andReturn(200)?
             .withBody(fromJsonFile("getCharacterById"))
 
         var response: Result<CharacterDTO, BothamAPIClientError>?
-        charactersApiClient.getById("1") { result in
+        charactersApiClient.getById(id: "1") { result in
             response = result
         }
 
         expect(response).toEventuallyNot(beNil())
-        assertContainsExpectedCharacterDTO(response?.value)
+        assertContainsExpected(characterDTO: response?.value)
     }
 
     private func givenACharactersAPIClient() -> CharactersAPIClient {
@@ -55,7 +53,7 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
         return CharactersAPIClient(apiClient: apiClient, parser: CharactersParser())
     }
 
-    private func assertContainsExpectedGetCharactersDTO(getCharactersDTO: GetCharactersDTO?) {
+    private func assertContainsExpected(getCharactersDTO: GetCharactersDTO?) {
         expect(getCharactersDTO).toNot(beNil())
         expect(getCharactersDTO?.count).to(equal(1))
         expect(getCharactersDTO?.offset).to(equal(0))
@@ -77,7 +75,7 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
         expect(getCharactersDTO?.characters?[0].events?[0].name).to(equal("Secret Invasion"))
     }
 
-    private func assertContainsExpectedCharacterDTO(characterDTO: CharacterDTO?) {
+    private func assertContainsExpected(characterDTO: CharacterDTO?) {
         expect(characterDTO?.id).to(equal("1011334"))
         expect(characterDTO?.name).to(equal("3-D Man"))
         expect(characterDTO?.description).to(equal("Tridimensional Hero"))
