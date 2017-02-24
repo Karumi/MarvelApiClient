@@ -29,7 +29,7 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
         }
 
         expect(response).toEventuallyNot(beNil())
-        //assertContainsExpected(characterDTO: response?.value)
+        assertContainsExpected(getCharactersDTO: response?.value)
     }
 
     func testReturnsGetCharacterById() {

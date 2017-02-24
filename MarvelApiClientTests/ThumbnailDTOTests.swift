@@ -19,32 +19,32 @@ class ThumbnailDTOTests: XCTestCase {
     func testGeneratesFullSizeThumbnailURLProperly() {
         let thumbnail = givenAThumbnailDTO(anyPath, anyFormat)
 
-        let thumbnailURL = thumbnail.URL(variant: .FullSize)
+        let thumbnailURL = thumbnail.URL(variant: .fullSize)
 
         expect(thumbnailURL).to(equal(NSURL(string: anyPath + "." + anyFormat)))
     }
 
     func testGeneratesThumbnailURLBasedOnVariant() {
         let thumbnail = givenAThumbnailDTO(anyPath, anyFormat)
-        let variants: [ThumbnailDTOVariant] = [.PortraitSmall,
-            .PortraitMedium,
-            .PortraitExtraLarge,
-            .PortraitFantastic,
-            .PortraitUncanny,
-            .PortratiIncredible,
-            .StandardSmall,
-            .StandardMedium,
-            .StandardLarge,
-            .StandardExtraLarge,
-            .StandardFantastic,
-            .StandardAmazing,
-            .LandspaceSmall,
-            .LandscapeMedium,
-            .LandscapeLarge,
-            .LandscapeExtraLarge,
-            .LandscapeAmazing,
-            .LandscapeIncredible,
-            .Detail]
+        let variants: [ThumbnailDTOVariant] = [.portraitSmall,
+            .portraitMedium,
+            .portraitExtraLarge,
+            .portraitFantastic,
+            .portraitUncanny,
+            .portratiIncredible,
+            .standardSmall,
+            .standardMedium,
+            .standardLarge,
+            .standardExtraLarge,
+            .standardFantastic,
+            .standardAmazing,
+            .landspaceSmall,
+            .landscapeMedium,
+            .landscapeLarge,
+            .landscapeExtraLarge,
+            .landscapeAmazing,
+            .landscapeIncredible,
+            .detail]
 
         variants.forEach { variant in
             let thumbnailURL = thumbnail.URL(variant: variant)
