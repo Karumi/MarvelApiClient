@@ -13,11 +13,11 @@ class CharactersParser: Parser {
     typealias T = GetCharactersDTO
 
     func fromJSON(json: JSON) -> GetCharactersDTO {
-        return parseCharactersDTO(json["data"])
+        return parseCharactersDTO(json: json["data"])
     }
 
     func characterDTOFromJSON(json: JSON) -> CharacterDTO {
-        return parseCharacterDto(json["data"]["results"][0])
+        return parseCharacterDto(json: json["data"]["results"][0])
     }
 
     private func parseCharactersDTO(json: JSON) -> GetCharactersDTO {
@@ -25,11 +25,11 @@ class CharactersParser: Parser {
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,
             count: json["count"].intValue,
-            characters: parseCharacters(json["results"]))
+            characters: parseCharacters(json: json["results"]))
     }
 
     private func parseCharacters(json: JSON) -> [CharacterDTO] {
-        return json.arrayValue.map { parseCharacterDto($0) }
+        return json.arrayValue.map { parseCharacterDto(json: $0) }
     }
 
     private func parseCharacterDto(json: JSON) -> CharacterDTO {
@@ -37,11 +37,11 @@ class CharactersParser: Parser {
             id: json["id"].stringValue,
             name: json["name"].string,
             description: json["description"].string,
-            thumbnail: parseThumbnailDto(json["thumbnail"]),
-            comics: parseComics(json["comics"]["items"]),
-            series: parseSeries(json["series"]["items"]),
-            stories: parseStories(json["stories"]["items"]),
-            events: parseEvents(json["events"]["items"])
+            thumbnail: parseThumbnailDto(json: json["thumbnail"]),
+            comics: parseComics(json: json["comics"]["items"]),
+            series: parseSeries(json: json["series"]["items"]),
+            stories: parseStories(json: json["stories"]["items"]),
+            events: parseEvents(json: json["events"]["items"])
         )
     }
 

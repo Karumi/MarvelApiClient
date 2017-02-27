@@ -17,14 +17,16 @@ class MarvelAPIAuthentication: BothamRequestInterceptor {
         self.timeProvider = timeProvider
     }
 
-    func intercept(request: HTTPRequest) -> HTTPRequest {
+    func intercept(_ request: HTTPRequest) -> HTTPRequest {
         let timestamp = timeProvider.currentTimeMillis()
         let privateKey = MarvelAPIClient.privateKey
         let publicKey = MarvelAPIClient.publicKey
-        let hash = MarvelHashGenerator.generateHash(Int(timestamp), privateKey: privateKey, publicKey: publicKey)
-        let authParams = [ MarvelAPIParams.timestamp : "\(timestamp)",
-            MarvelAPIParams.apiKey : publicKey,
-            MarvelAPIParams.hash : hash]
+        let hash = MarvelHashGenerator.generateHash(timestamp: Int(timestamp),
+                                                    privateKey: privateKey,
+                                                    publicKey: publicKey)
+        let authParams = [MarvelAPIParams.timestamp: "\(timestamp)",
+            MarvelAPIParams.apiKey: publicKey,
+            MarvelAPIParams.hash: hash]
         return request.appendingParameters(authParams)
     }
 

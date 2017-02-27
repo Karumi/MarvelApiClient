@@ -15,7 +15,7 @@ public struct ThumbnailDTO {
 
     public func URL(variant: ThumbnailDTOVariant) -> NSURL? {
         switch variant {
-        case .FullSize:
+        case .fullSize:
             return NSURL(string: "\(path).\(format)")
         default:
             return NSURL(string: "\(path)/\(variant.rawValue).\(format)")
@@ -26,28 +26,28 @@ public struct ThumbnailDTO {
 
 public enum ThumbnailDTOVariant: String {
 
-    case PortraitSmall = "portrait_small"
-    case PortraitMedium = "portrait_medium"
-    case PortraitExtraLarge = "portrait_xlarge"
-    case PortraitFantastic = "portrait_fantastic"
-    case PortraitUncanny = "portrait_uncanny"
-    case PortratiIncredible = "portrait_incredible"
+    case portraitSmall = "portrait_small"
+    case portraitMedium = "portrait_medium"
+    case portraitExtraLarge = "portrait_xlarge"
+    case portraitFantastic = "portrait_fantastic"
+    case portraitUncanny = "portrait_uncanny"
+    case portratiIncredible = "portrait_incredible"
 
-    case StandardSmall = "standard_small"
-    case StandardMedium = "standard_medium"
-    case StandardLarge = "standard_large"
-    case StandardExtraLarge = "standard_xlarge"
-    case StandardFantastic = "standard_fantastic"
-    case StandardAmazing = "standard_amazing"
+    case standardSmall = "standard_small"
+    case standardMedium = "standard_medium"
+    case standardLarge = "standard_large"
+    case standardExtraLarge = "standard_xlarge"
+    case standardFantastic = "standard_fantastic"
+    case standardAmazing = "standard_amazing"
 
-    case LandspaceSmall = "landscape_small"
-    case LandscapeMedium = "landscape_medium"
-    case LandscapeLarge = "landscape_large"
-    case LandscapeExtraLarge = "landscape_xlarge"
-    case LandscapeAmazing = "landscape_amazing"
-    case LandscapeIncredible = "landscape_incredible"
+    case landspaceSmall = "landscape_small"
+    case landscapeMedium = "landscape_medium"
+    case landscapeLarge = "landscape_large"
+    case landscapeExtraLarge = "landscape_xlarge"
+    case landscapeAmazing = "landscape_amazing"
+    case landscapeIncredible = "landscape_incredible"
 
-    case Detail = "detail"
+    case detail = "detail"
 
-    case FullSize
+    case fullSize
 }

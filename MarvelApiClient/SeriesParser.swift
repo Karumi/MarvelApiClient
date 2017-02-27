@@ -13,11 +13,11 @@ class SeriesParser: Parser {
     typealias T = GetSeriesDTO
 
     func fromJSON(json: JSON) -> T {
-        return parseGetSeriesDTO(json["data"])
+        return parseGetSeriesDTO(json: json["data"])
     }
 
     func seriesDTOFromJSON(json: JSON) -> SeriesDTO {
-        return parseSeriesDTO(json["data"]["results"][0])
+        return parseSeriesDTO(json: json["data"]["results"][0])
     }
 
     func getComicsDTOFromJSON(json: JSON) -> GetComicsDTO {
@@ -25,7 +25,7 @@ class SeriesParser: Parser {
             offset: json["data"]["offset"].intValue,
             limit: json["data"]["limit"].intValue,
             count: json["data"]["count"].intValue,
-            comics: parseComicsDetail(json["data"]["results"]))
+            comics: parseComicsDetail(json: json["data"]["results"]))
     }
 
     private func parseGetSeriesDTO(json: JSON) -> GetSeriesDTO {
@@ -33,11 +33,11 @@ class SeriesParser: Parser {
             offset: json["offset"].intValue,
             limit: json["limit"].intValue,
             count: json["count"].intValue,
-            series: parseSeries(json["results"]))
+            series: parseSeries(json: json["results"]))
     }
 
     private func parseSeries(json: JSON) -> [SeriesDTO] {
-        return json.arrayValue.map { parseSeriesDTO($0) }
+        return json.arrayValue.map { parseSeriesDTO(json: $0) }
     }
 
     private func parseSeriesDTO(json: JSON) -> SeriesDTO {
@@ -47,8 +47,8 @@ class SeriesParser: Parser {
             startYear: json["startYear"].int,
             endYear: json["endYear"].int,
             rating: json["rating"].string,
-            thumbnail: parseThumbnailDTO(json["thumbnail"]),
-            comics: parseComics(json["comics"]["items"])
+            thumbnail: parseThumbnailDTO(json: json["thumbnail"]),
+            comics: parseComics(json: json["comics"]["items"])
         )
     }
 
@@ -64,18 +64,18 @@ class SeriesParser: Parser {
     }
 
     private func parseComicsDetail(json: JSON) -> [ComicDetailDTO] {
-        return json.arrayValue.map { parseComicDetail($0) }
+        return json.arrayValue.map { parseComicDetail(json: $0) }
     }
 
     private func parseComicDetail(json: JSON) -> ComicDetailDTO {
         return ComicDetailDTO(id: json["id"].stringValue,
             title: json["title"].string,
             description: json["description"].string,
-            images: parseComicImages(json["images"]))
+            images: parseComicImages(json: json["images"]))
     }
 
     private func parseComicImages(json: JSON) -> [ThumbnailDTO] {
-        return json.arrayValue.map { parseThumbnailDTO($0) }
+        return json.arrayValue.map { parseThumbnailDTO(json: $0) }
     }
 
 }

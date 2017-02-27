@@ -11,6 +11,6 @@ import Foundation
 struct MarvelAPIClientConfig {
 
     static let host = "https://gateway.marvel.com/v1/public/"
-    static let defaultHeaders = ["Accept" : "application/json", "Content-Type" : "application/json"]
+    static let defaultHeaders = ["Accept": "application/json", "Content-Type": "application/json"]
 
 }

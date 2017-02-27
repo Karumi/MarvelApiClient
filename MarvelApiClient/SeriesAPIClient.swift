@@ -20,27 +20,27 @@ public class SeriesAPIClient {
         self.parser = parser
     }
 
-    public func getAll(offset offset: Int, limit: Int,
-        completion: (Result<GetSeriesDTO, BothamAPIClientError>) -> ()) {
+    public func getAll(offset: Int, limit: Int,
+                       completion: @escaping (Result<GetSeriesDTO, BothamAPIClientError>) -> Void) {
             assert(offset >= 0 && limit >= 0)
-            let params =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
+            let params =  [MarvelAPIParams.offset: "\(offset)", MarvelAPIParams.limit: "\(limit)"]
             apiClient.GET("series", parameters: params) { response in
                 completion(
                     response.mapJSON {
-                        return self.parser.fromJSON($0)
+                        return self.parser.fromJSON(json: $0)
                     }
                 )
             }
     }
 
-    public func getComics(seriesId seriesId: String, offset: Int, limit: Int,
-        completion: (Result<GetComicsDTO, BothamAPIClientError>) -> ()) {
+    public func getComics(seriesId: String, offset: Int, limit: Int,
+                          completion: @escaping (Result<GetComicsDTO, BothamAPIClientError>) -> Void) {
             assert(offset >= 0 && limit >= 0)
-            let params =  [MarvelAPIParams.offset : "\(offset)", MarvelAPIParams.limit : "\(limit)"]
+            let params =  [MarvelAPIParams.offset: "\(offset)", MarvelAPIParams.limit: "\(limit)"]
             apiClient.GET("series/\(seriesId)/comics", parameters: params) { response in
                 completion(
                     response.mapJSON {
-                        return self.parser.getComicsDTOFromJSON($0)
+                        return self.parser.getComicsDTOFromJSON(json: $0)
                     }
                 )
             }

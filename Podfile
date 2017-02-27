@@ -3,13 +3,13 @@ platform :ios, '8.0'
 use_frameworks!
 
 target :MarvelAPIClient do
-    pod 'BothamNetworking', :git => 'https://github.com/Karumi/BothamNetworking.git'
+    pod 'BothamNetworking'
 	pod 'CryptoSwift'
 	pod 'SwiftyJSON'
 end
 
 target :MarvelAPIClientTests do
-    pod 'BothamNetworking', :git => 'https://github.com/Karumi/BothamNetworking.git'
+    pod 'BothamNetworking'
 	pod 'CryptoSwift'
 	pod 'SwiftyJSON'
     pod 'Nocilla'

@@ -8,6 +8,7 @@
 
 import Foundation
 import BothamNetworking
+import Nocilla
 @testable import MarvelAPIClient
 
 class MarvelAPIClientTests: NocillaTestCase {
@@ -25,5 +26,4 @@ class MarvelAPIClientTests: NocillaTestCase {
         MarvelAPIClient.privateKey = anyPrivateKey
         return apiClient
     }
-
 }
