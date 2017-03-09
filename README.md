@@ -1,4 +1,4 @@
-![Karumi logo][karumilogo] Marvel API Client [![Build Status](https://travis-ci.org/Karumi/MarvelApiClient.svg?branch=master)](https://travis-ci.org/Karumi/MarvelApiClient)
+![Karumi logo][karumilogo] Marvel API Client
 =================
 
 Marve API Client written in Swift.
