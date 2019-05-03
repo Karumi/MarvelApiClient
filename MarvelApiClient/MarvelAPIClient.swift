@@ -22,12 +22,10 @@ public class MarvelAPIClient {
     }
 
     public static let charactersAPIClient = CharactersAPIClient(
-        apiClient: bothamAPIClient,
-        parser: CharactersParser())
+        apiClient: bothamAPIClient)
 
     public static let seriesAPIClient = SeriesAPIClient(
-        apiClient: bothamAPIClient,
-        parser: SeriesParser())
+        apiClient: bothamAPIClient)
 
     private static let bothamAPIClient = BothamAPIClient(
         baseEndpoint: MarvelAPIClientConfig.host)

@@ -13,10 +13,8 @@ import Result
 public class CharactersAPIClient {
 
     private let apiClient: BothamAPIClient
-    private let parser: CharactersParser
 
-    init(apiClient: BothamAPIClient, parser: CharactersParser) {
-        self.parser = parser
+    init(apiClient: BothamAPIClient) {
         self.apiClient = apiClient
     }
 
@@ -26,9 +24,7 @@ public class CharactersAPIClient {
         let params =  [MarvelAPIParams.offset: "\(offset)", MarvelAPIParams.limit: "\(limit)"]
         apiClient.GET("characters", parameters: params) { response in
             completion(
-                response.mapJSON {
-                    return self.parser.fromJSON(json: $0)
-                }
+                response.mapJSON()
             )
         }
     }
@@ -36,9 +32,7 @@ public class CharactersAPIClient {
     public func getById(id: String, completion: @escaping (Result<CharacterDTO, BothamAPIClientError>) -> Void) {
         apiClient.GET("characters/\(id)") { response in
             completion(
-                response.mapJSON {
-                    return self.parser.characterDTOFromJSON(json: $0)
-                }
+                response.mapJSON()
             )
         }
 

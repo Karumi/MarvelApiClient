@@ -10,9 +10,10 @@ import Foundation
 import XCTest
 import Nimble
 import Result
-import SwiftyJSON
 import BothamNetworking
 @testable import MarvelAPIClient
+
+private struct Empty: Decodable{}
 
 class ResultTypeTests: XCTestCase {
 
@@ -21,7 +22,7 @@ class ResultTypeTests: XCTestCase {
         let response = HTTPResponse(statusCode: 200, headers: nil, body: malformedJSON!)
         let result = Result<HTTPResponse, BothamAPIClientError>.success(response)
 
-        let jsonMappingError = result.mapJSON { return $0 }
+        let jsonMappingError: Result<Empty, BothamAPIClientError> = result.mapJSON()
 
         expect(jsonMappingError.error).to(equal(BothamAPIClientError.parsingError(error: NSError.anyError())))
     }

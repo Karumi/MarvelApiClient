@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct EventDTO {
+public struct EventDTO: Decodable {
 
     public let name: String?
 

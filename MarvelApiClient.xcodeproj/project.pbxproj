@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		6BBA77FA3B7561792D22F7A6 /* Pods_MarvelAPIClientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9776E54634DB16570497ABC3 /* Pods_MarvelAPIClientTests.framework */; };
 		D7FD9DE320847476E11FCFB5 /* Pods_MarvelAPIClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77E1DF174667DB8843E0A89E /* Pods_MarvelAPIClient.framework */; };
-		EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00C1BF9CD0300170355 /* Parser.swift */; };
 		EB29E0101BF9CE3000170355 /* GetCharactersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */; };
-		EB29E0121BF9CE4F00170355 /* CharactersParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0111BF9CE4F00170355 /* CharactersParser.swift */; };
 		EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0151BF9DCAF00170355 /* ThumbnailDTO.swift */; };
 		EB29E0181BF9DD6700170355 /* ComicDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0171BF9DD6700170355 /* ComicDTO.swift */; };
 		EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB29E0191BF9DE8C00170355 /* SerieDTO.swift */; };
@@ -37,7 +35,6 @@
 		EBAFE1FA1BF7BC6000591AEA /* MockTimeProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */; };
 		EBAFE1FD1BF7C26F00591AEA /* FutureMatchers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */; };
 		EBAFE1FF1BF7C30000591AEA /* NocillaTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */; };
-		EBB480FA1C3BCFD40087CC62 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBB480F91C3BCFD40087CC62 /* ResultType.swift */; };
 		EBC2F5591C3C08AE007E53D1 /* ResultTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC2F5571C3C06E7007E53D1 /* ResultTypeTests.swift */; };
 		EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */; };
 		EBC31B291C3C2BF800E00E38 /* DefaultHeadersRequestInterceptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBC31B271C3C2BED00E00E38 /* DefaultHeadersRequestInterceptorTests.swift */; };
@@ -45,7 +42,6 @@
 		EBD0EEF31C3E844100609A25 /* SeriesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */; };
 		EBD0EEF71C3E866700609A25 /* GetSeriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */; };
 		EBD0EEF91C3E868600609A25 /* SeriesDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */; };
-		EBD0EEFB1C3E869900609A25 /* SeriesParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */; };
 		EBD0EF031C3E8E2000609A25 /* MarvelAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EF011C3E8DB500609A25 /* MarvelAPIClientTests.swift */; };
 		EBD0EF041C3E8E5700609A25 /* SeriesAPIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBD0EEFF1C3E8D8E00609A25 /* SeriesAPIClientTests.swift */; };
 		EBE2C3B41C3E9A970096A24C /* getComicsBySeriesId.json in Resources */ = {isa = PBXBuildFile; fileRef = EBE2C3B31C3E9A970096A24C /* getComicsBySeriesId.json */; };
@@ -70,9 +66,7 @@
 		9E69741FA12CB9150140349E /* Pods-MarvelAPIClientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.release.xcconfig"; sourceTree = "<group>"; };
 		A8A15C6DFC4ADE047B53F274 /* Pods-MarvelAPIClientTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelAPIClientTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MarvelAPIClientTests/Pods-MarvelAPIClientTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B1912EE03B21457D3F69B1FF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EB29E00C1BF9CD0300170355 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		EB29E00F1BF9CE3000170355 /* GetCharactersDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCharactersDTO.swift; sourceTree = "<group>"; };
-		EB29E0111BF9CE4F00170355 /* CharactersParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharactersParser.swift; sourceTree = "<group>"; };
 		EB29E0151BF9DCAF00170355 /* ThumbnailDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThumbnailDTO.swift; sourceTree = "<group>"; };
 		EB29E0171BF9DD6700170355 /* ComicDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicDTO.swift; sourceTree = "<group>"; };
 		EB29E0191BF9DE8C00170355 /* SerieDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SerieDTO.swift; sourceTree = "<group>"; };
@@ -100,7 +94,6 @@
 		EBAFE1F91BF7BC6000591AEA /* MockTimeProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockTimeProvider.swift; sourceTree = "<group>"; };
 		EBAFE1FC1BF7C26F00591AEA /* FutureMatchers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FutureMatchers.swift; sourceTree = "<group>"; };
 		EBAFE1FE1BF7C30000591AEA /* NocillaTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NocillaTestCase.swift; sourceTree = "<group>"; };
-		EBB480F91C3BCFD40087CC62 /* ResultType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		EBC2F5551C3BDCFC007E53D1 /* MarvelAPIClientPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MarvelAPIClientPlayground.playground; sourceTree = "<group>"; };
 		EBC2F5571C3C06E7007E53D1 /* ResultTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTypeTests.swift; sourceTree = "<group>"; };
 		EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dictionary.swift; sourceTree = "<group>"; };
@@ -109,7 +102,6 @@
 		EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesAPIClient.swift; sourceTree = "<group>"; };
 		EBD0EEF61C3E866700609A25 /* GetSeriesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSeriesDTO.swift; sourceTree = "<group>"; };
 		EBD0EEF81C3E868600609A25 /* SeriesDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesDTO.swift; sourceTree = "<group>"; };
-		EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesParser.swift; sourceTree = "<group>"; };
 		EBD0EEFC1C3E8CD500609A25 /* getAllSeries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getAllSeries.json; sourceTree = "<group>"; };
 		EBD0EEFF1C3E8D8E00609A25 /* SeriesAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SeriesAPIClientTests.swift; sourceTree = "<group>"; };
 		EBD0EF011C3E8DB500609A25 /* MarvelAPIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarvelAPIClientTests.swift; sourceTree = "<group>"; };
@@ -157,22 +149,6 @@
 				9776E54634DB16570497ABC3 /* Pods_MarvelAPIClientTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EB29E00B1BF9CCAE00170355 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				EB29E00C1BF9CD0300170355 /* Parser.swift */,
-			);
-			name = Parser;
-			sourceTree = "<group>";
-		};
-		EB29E00E1BF9CE1A00170355 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				EB29E0111BF9CE4F00170355 /* CharactersParser.swift */,
-			);
-			name = Parser;
 			sourceTree = "<group>";
 		};
 		EB29E01E1BF9DF2200170355 /* DTOs */ = {
@@ -225,7 +201,6 @@
 				EBAFE1EC1BF7A0FA00591AEA /* Base */,
 				EB39731A1C3ACB8300AF37CD /* Interceptors */,
 				EBAFE1E61BF79D5300591AEA /* Authentication */,
-				EB29E00B1BF9CCAE00170355 /* Parser */,
 				EBAFE1CD1BF7810600591AEA /* Characters */,
 				EBD0EEF11C3E842D00609A25 /* Series */,
 				EBD0EEEC1C3E7D5700609A25 /* Images */,
@@ -274,7 +249,6 @@
 			children = (
 				EBAFE1CE1BF7812000591AEA /* CharactersAPIClient.swift */,
 				EB29E01E1BF9DF2200170355 /* DTOs */,
-				EB29E00E1BF9CE1A00170355 /* Parser */,
 			);
 			name = Characters;
 			sourceTree = "<group>";
@@ -339,7 +313,6 @@
 		EBB480F81C3BCFC30087CC62 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				EBB480F91C3BCFD40087CC62 /* ResultType.swift */,
 				EBC31B241C3C2BAC00E00E38 /* Dictionary.swift */,
 			);
 			name = Extensions;
@@ -382,7 +355,6 @@
 			children = (
 				EBD0EEF21C3E844100609A25 /* SeriesAPIClient.swift */,
 				EBD0EEF41C3E844600609A25 /* DTOs */,
-				EBD0EEF51C3E844E00609A25 /* Parser */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -396,14 +368,6 @@
 				EB5123941C3E9770001EC70B /* ComicDetailDTO.swift */,
 			);
 			name = DTOs;
-			sourceTree = "<group>";
-		};
-		EBD0EEF51C3E844E00609A25 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				EBD0EEFA1C3E869900609A25 /* SeriesParser.swift */,
-			);
-			name = Parser;
 			sourceTree = "<group>";
 		};
 		EBD0EEFE1C3E8D7C00609A25 /* Series */ = {
@@ -474,7 +438,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0710;
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "GoKarumi S.L.";
 				TargetAttributes = {
 					EB52A0C41BF4EBBA00AE003E = {
@@ -485,13 +449,13 @@
 					};
 				};
 			};
-			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */;
+			buildConfigurationList = EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
+				Base,
 			);
 			mainGroup = EB52A0BB1BF4EBBA00AE003E;
 			productRefGroup = EB52A0C61BF4EBBA00AE003E /* Products */;
@@ -596,17 +560,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EBD0EEF31C3E844100609A25 /* SeriesAPIClient.swift in Sources */,
-				EBB480FA1C3BCFD40087CC62 /* ResultType.swift in Sources */,
 				EBD0EEF91C3E868600609A25 /* SeriesDTO.swift in Sources */,
 				EB29E0221BF9EC1800170355 /* MarvelAPIParams.swift in Sources */,
-				EBD0EEFB1C3E869900609A25 /* SeriesParser.swift in Sources */,
 				EBC31B251C3C2BAC00E00E38 /* Dictionary.swift in Sources */,
 				EB29E01A1BF9DE8C00170355 /* SerieDTO.swift in Sources */,
 				EB39731F1C3ACBF400AF37CD /* MarvelAPIAuthentication.swift in Sources */,
 				EB29E0161BF9DCAF00170355 /* ThumbnailDTO.swift in Sources */,
 				EBAFE1F71BF7BAD400591AEA /* TimeProvider.swift in Sources */,
 				EB5123931C3E96F2001EC70B /* GetComicsDTO.swift in Sources */,
-				EB29E00D1BF9CD0300170355 /* Parser.swift in Sources */,
 				EBAFE1D11BF7813600591AEA /* MarvelAPIClient.swift in Sources */,
 				EB49E0C51BF7ED4B00C53347 /* MarvelAPIClientConfig.swift in Sources */,
 				EB5123951C3E9770001EC70B /* ComicDetailDTO.swift in Sources */,
@@ -618,7 +579,6 @@
 				EB29E01D1BF9DEDE00170355 /* StoryDTO.swift in Sources */,
 				EBAFE1D31BF782A600591AEA /* CharacterDTO.swift in Sources */,
 				EB29E0201BF9EA7A00170355 /* EventDTO.swift in Sources */,
-				EB29E0121BF9CE4F00170355 /* CharactersParser.swift in Sources */,
 				EBAFE1CF1BF7812000591AEA /* CharactersAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -655,18 +615,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -706,18 +675,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -814,7 +792,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelAPIClient" */ = {
+		EB52A0BF1BF4EBBA00AE003E /* Build configuration list for PBXProject "MarvelApiClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB52A0D71BF4EBBA00AE003E /* Debug */,

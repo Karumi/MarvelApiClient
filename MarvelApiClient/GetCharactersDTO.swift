@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct GetCharactersDTO {
+public struct GetCharactersDTO: Decodable {
 
     public let offset: Int
     public let limit: Int

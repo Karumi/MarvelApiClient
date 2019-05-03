@@ -51,7 +51,7 @@ class CharactersAPIClientTests: MarvelAPIClientTests {
 
     private func givenACharactersAPIClient() -> CharactersAPIClient {
         let apiClient = givenABothamAPIClient()
-        return CharactersAPIClient(apiClient: apiClient, parser: CharactersParser())
+        return CharactersAPIClient(apiClient: apiClient)
     }
 
     private func assertContainsExpected(getCharactersDTO: GetCharactersDTO?) {

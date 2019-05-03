@@ -13,11 +13,9 @@ import Result
 public class SeriesAPIClient {
 
     private let apiClient: BothamAPIClient
-    private let parser: SeriesParser
 
-    init(apiClient: BothamAPIClient, parser: SeriesParser) {
+    init(apiClient: BothamAPIClient) {
         self.apiClient = apiClient
-        self.parser = parser
     }
 
     public func getAll(offset: Int, limit: Int,
@@ -26,9 +24,7 @@ public class SeriesAPIClient {
             let params =  [MarvelAPIParams.offset: "\(offset)", MarvelAPIParams.limit: "\(limit)"]
             apiClient.GET("series", parameters: params) { response in
                 completion(
-                    response.mapJSON {
-                        return self.parser.fromJSON(json: $0)
-                    }
+                    response.mapJSON()
                 )
             }
     }
@@ -39,9 +35,7 @@ public class SeriesAPIClient {
             let params =  [MarvelAPIParams.offset: "\(offset)", MarvelAPIParams.limit: "\(limit)"]
             apiClient.GET("series/\(seriesId)/comics", parameters: params) { response in
                 completion(
-                    response.mapJSON {
-                        return self.parser.getComicsDTOFromJSON(json: $0)
-                    }
+                    response.mapJSON()
                 )
             }
 

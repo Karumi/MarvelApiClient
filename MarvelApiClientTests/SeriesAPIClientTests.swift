@@ -84,7 +84,7 @@ class SeriesAPIClientTests: MarvelAPIClientTests {
 
     private func givenASeriesAPIClient() -> SeriesAPIClient {
         let bothamAPIClient = givenABothamAPIClient()
-        return SeriesAPIClient(apiClient: bothamAPIClient, parser: SeriesParser())
+        return SeriesAPIClient(apiClient: bothamAPIClient)
     }
 
 }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct SeriesDTO {
+public struct SeriesDTO: Decodable {
 
     public let id: String
     public let title: String?

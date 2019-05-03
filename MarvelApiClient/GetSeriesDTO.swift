@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct GetSeriesDTO {
+public struct GetSeriesDTO: Decodable {
 
     public let offset: Int
     public let limit: Int
