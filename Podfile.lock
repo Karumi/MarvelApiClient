@@ -1,44 +1,41 @@
 PODS:
-  - BothamNetworking (2.0.0):
-    - Result
-    - SwiftyJSON
-  - CryptoSwift (0.7.2)
-  - Nimble (7.0.1)
+  - BothamNetworking (4.0.2):
+    - Result (= 4.1.0)
+  - CryptoSwift (1.0.0)
+  - Nimble (8.0.1)
   - Nocilla (0.11.0)
-  - Result (3.2.3)
-  - SwiftyJSON (3.1.4)
+  - Result (4.1.0)
 
 DEPENDENCIES:
-  - BothamNetworking (from `https://github.com/Karumi/BothamNetworking`, branch `swift4`)
+  - BothamNetworking (from `https://github.com/Karumi/BothamNetworking`, branch `master`)
   - CryptoSwift
-  - Nimble (from `https://github.com/Quick/Nimble.git`, branch `master`)
+  - Nimble
   - Nocilla
-  - SwiftyJSON
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - CryptoSwift
+    - Nimble
+    - Nocilla
+    - Result
 
 EXTERNAL SOURCES:
   BothamNetworking:
-    :branch: swift4
-    :git: https://github.com/Karumi/BothamNetworking
-  Nimble:
     :branch: master
-    :git: https://github.com/Quick/Nimble.git
+    :git: https://github.com/Karumi/BothamNetworking
 
 CHECKOUT OPTIONS:
   BothamNetworking:
-    :commit: 8686976e885f87e7883d2155991166ea4711458c
+    :commit: 2ee4322ca5607f8950a4bcf599fdbfa53718117f
     :git: https://github.com/Karumi/BothamNetworking
-  Nimble:
-    :commit: a63252b16eba6cdebec4e4936388c90552165a68
-    :git: https://github.com/Quick/Nimble.git
 
 SPEC CHECKSUMS:
-  BothamNetworking: 43221122edbbe244f7cf0db72d1248c8c90f8741
-  CryptoSwift: cd2158be2bf639aabc63ec804707c7137c90157c
-  Nimble: 1b6670c36e5750169b9e4cc2e9cfa82a7603c69e
+  BothamNetworking: cd68e7b250959a795f1362294baf3a651e9eceae
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  Nimble: 45f786ae66faa9a709624227fae502db55a8bdd0
   Nocilla: 7af7a386071150cc8aa5da4da97d060f049dd61c
-  Result: 128640a6347e8d2ae48b142556739a2d13f90ce6
-  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
 
-PODFILE CHECKSUM: 6a6357b012c2af9834b36a406ede5827c4315d31
+PODFILE CHECKSUM: 909a3dd0271e577e0988d9ce889951d34f98ea08
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.6.1

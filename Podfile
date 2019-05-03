@@ -3,14 +3,13 @@ platform :ios, '8.0'
 use_frameworks!
 
 def marvelAPIClientPods
-	pod 'BothamNetworking', :git => "https://github.com/Karumi/BothamNetworking", :branch => "swift4"
+	pod 'BothamNetworking', :git => "https://github.com/Karumi/BothamNetworking", :branch => "master"
 	pod 'CryptoSwift'
-	pod 'SwiftyJSON'
 end
 
 def marvelAPIClientPodsTest
     pod 'Nocilla'
-    pod 'Nimble', :git => "https://github.com/Quick/Nimble.git", :branch => "master"
+    pod 'Nimble'
 end
 
 target 'MarvelAPIClient' do
